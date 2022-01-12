@@ -38,8 +38,9 @@ COG-ST : COG-ST
 
 
 PNG.PER : PNG.PER
-  non-3rd <> non-3rd
   3rd <> 3rd
+  2nd <> 2nd
+  1st <> 1st
   * <> *
 
 PNG.NUM : PNG.NUM

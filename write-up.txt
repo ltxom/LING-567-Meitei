@@ -1,0 +1,27 @@
+1. Yes.
+2. (TODO?) No extra steps yet.
+3.
+Before improving the choice file:
+  1. 86 items are parsed.
+  2. The average number of parses per parsed item is 95.45.
+  3. The most ambiguous item (#7560) received 840 parses.
+  4.
+  Some sources of ambiguity comes from multiple semantic (mrs) possibilities. For instance, the i-input of #730 can either has "_learn_v_rel" or "_toward_v_rel."
+  There are also some parsing failures due to "no analysis found corresponding to token." A portion of token is related to person, gender, , such as #50 (NOPI > person-fem) and #90 (NIPA > person-mas).
+  5. TODO
+After:
+  1.
+  2.
+  3.
+  4.
+  5.
+4.
+  TODO
+
+5.
+  TODO
+
+6.
+  TODO
+
+7. Our choice file is ok?
