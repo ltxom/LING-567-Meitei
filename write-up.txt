@@ -1,3 +1,5 @@
+python3 make_item --map orth-seg i-input testsuite.txt item
+
 1. Yes.
 2. (TODO?) No extra steps yet.
 3.
