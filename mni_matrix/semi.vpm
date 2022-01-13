@@ -44,6 +44,9 @@ PNG.PER : PNG.PER
   * <> *
 
 PNG.NUM : PNG.NUM
+  dual <> dual
+  pl <> pl
+  sg <> sg
   * <> *
 
 PNG.GEND : PNG.GEND

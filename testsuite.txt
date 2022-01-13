@@ -1,0 +1,106 @@
+Language: Meithei
+Language code: mni
+Lines: orth orth-seg gloss translat
+Author: Tongxi(Tom) Liu
+Date: Jan 11, 2021
+Source a: Chelliah, S. L. (2011). A grammar of Meithei. De Gruyter Mouton.
+Source b: Singh, S. I. (2013). Agreements in Manipuri. Language in India, 13(11).
+
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {pn}
+ə́y kə́pe
+ə́y kə́p-e
+I cry-ASRT
+'I cry.'
+
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {pn}
+nə́ŋ kə́pe
+nə́ŋ kə́p-e
+You cry-ASRT
+'You cry.'
+
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {pn}
+má kə́pe
+má kə́p-e
+he_she cry-ASRT
+'He/She cries.'
+
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {pn}
+ə́ykhoy kə́pe 
+ə́ykhoy kə́p-e
+we cry-ASRT
+'We cry.'
+
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {pn}
+mə́khoy kə́pe
+mə́khoy kə́p-e
+they cry-ASRT
+'They cry.'
+
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {pn}
+nə́khóy kə́pe
+nə́khóy kə́p-e
+you_all cry-ASRT
+'You all cry.'
+
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {pn}
+íbani kə́pe
+íbani kə́p-e
+we_dual cry-ASRT
+'We two cry.'
+
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {pn}
+nə́bani kə́pe
+nə́bani kə́p-e
+you_dual cry-ASRT
+'You two cry.'
+
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {pn}
+mə́bani kə́pe
+mə́bani kə́p-e
+they_dual cry-ASRT
+'They two cry.'
+
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: u
+Phenomena: {pn}
+ə́y nə́ŋ kə́pe
+ə́y nə́ŋ kə́p-e
+I you cry-ASRT
+'*I you cry.'
+
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: u
+Phenomena: {pn}
+kə́pe mə́bani ə́y
+kə́p-e mə́bani ə́y
+cry-ASRT they_dual I
+'*Cry they two I.'
