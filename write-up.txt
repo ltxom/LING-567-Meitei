@@ -1,29 +1,72 @@
-python3 make_item --map orth-seg i-input testsuite.txt item
-
 1. Yes.
-2. (TODO?) No extra steps yet.
+2. No extra steps in modifying the choice file are required to customize and compile it to generate a grammar matrix.
+   However, there are some technical steps we processed to compile it. For some reason, .bash_profile in not loaded correctly, so we had to copy it to .bashrc to load tsdb's library. Another step to solving [incr tsdb()] test run record no records issue is the LKB-FOS patch for [incr tsdb].
 3.
 Before improving the choice file:
   1. 86 items are parsed.
   2. The average number of parses per parsed item is 95.45.
   3. The most ambiguous item (#7560) received 840 parses.
   4.
-  Some sources of ambiguity comes from multiple semantic (mrs) possibilities. For instance, the i-input of #730 can either has "_learn_v_rel" or "_toward_v_rel."
-  There are also some parsing failures due to "no analysis found corresponding to token." A portion of token is related to person, gender, , such as #50 (NOPI > person-fem) and #90 (NIPA > person-mas).
-  5. TODO
-After:
-  1.
-  2.
-  3.
-  4.
+  The primary source of ambiguity comes from the multi-possibilities of the tree structures. Our choice file contains many lrules so that there are many repeated N/NP nodes in tree constructions.
+  Some sources of ambiguity come from multiple semantic (mrs) possibilities. For instance, the i-input of #730 can either has "_learn_v_rel" or "_toward_v_rel."
   5.
+  Parsed items with one reading are all sentences constructed by a single verb. Their semantics looks reasonable with same pattern: CONT > RELS > LIST > FIRST > PRED has correct interpretation (e.g., _go_v_rel, _do_v_rel), and REST has a list with certain size filling with null-copy items.
+
+After:
+  1. 101 items are parsed.
+  2. The average number of parses per parsed item is 19.68.
+  3. The most ambiguous item (#1580) received 200 parses.
+  4. The primary source of ambiguity is still structural ambiguity, but it is improved since we removed repeated rules in lrule.tdl.
+  5. There are some parsed items with only one reading that are constructed by two words (S -> NP VP), and their semantics (e.g., #5440) look right where CONT > RELS > LIST in S contains all the relations of its children.
 4.
+Phenomena 1: PNG
+  Some parsing failures are due to "no analysis found corresponding to token." A portion of token is related to person, gender, and number, such as #50 (NOPI > person-fem), #90 (NIPA > person-mas), #4210 (ə́ykhoy > 1st-pl), #1000 (nə́bani > 2nd-dual).
+
+Phenomena 2: Aspect
   TODO
 
 5.
+Phenomena 1: PNG
+  We first analyze our choice file to check what is already defined for Meitei's PNG features. We found its person section has 3-non-3, which is the same as English. However, according to Chelliah's A grammar of Meithei, it distinguishes pronouns as the first, second, and third person, despite there being no syntactic agreements between pronouns and other POS. Additionally, pronouns are classified by three types of numbers, single(sg), plural(pl), and dual. For genders, Chelliah indicates that "nouns are not marked for grammatical gender. Semantic gender may be indicated for animate beings by -pi 'female' and -pa 'male.'"
+  Therefore, our improvements focus on defining lexical entries for missing pronouns and adding three types of numbers (sg, pl, dual) to assign them to different pronouns.
+  Here are some examples to test our improvements in Meitei PNG:
+
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {pn}
+ə́y kə́pe
+ə́y kə́p-e
+I cry-ASRT
+'I cry.'
+
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {pn}
+nə́ŋ kə́pe
+nə́ŋ kə́p-e
+You cry-ASRT
+'You cry.'
+
+  Our testsuites.txt contains all 9 pronouns [PER 1st/2nd/3rd NUM sg/pl/dual] test cases in a similar structure as above: [PRONOUN cry-ASRT]. In our choice file, we added the section=number with sg, pl, dual. We revised person=3-noun-3 to 1-2-3. The result improvements involve lexical entries of pronouns. We removed duplicated noun113 (he/she, identical with noun111), revised noun111-112 with person&number features, and added noun 114-121. Therefore, noun111-121 (without 113) contains the combination of 1st, 2nd, 3rd person pronouns with numbers of sg, pl, dual. The pronouns are correctly parsed and marked as the children of NP. Despite ambiguities coming from other parts of the grammar, the reading for [NUM pl/dual] is only 3, for [PER 1st/2nd NUM sg] is 6, and for [PER 3rd NUM sg] is 12. We also confirmed every item contains correct PNG information in its INDEX. The following is an ungrammatical example that test if our improvements overcover the negative items:
+  
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: u
+Phenomena: {pn}
+ə́ynə́ŋ kə́pe
+ə́y-nə́ŋ kə́p-e
+I-you cry-ASRT
+'*I-you cry.'
+
+Since nə́ŋ is a pronoun lexical entry but not an affix, the parse correctly eliminates these ungrammatical cases.
+
+  
+Phenomena 2: Aspect
   TODO
 
 6.
   TODO
 
-7. Our choice file is ok?
+7. As we went over in Thursday's lecture, TODO...

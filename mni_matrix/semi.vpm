@@ -60,6 +60,7 @@ E.ASPECT : E.ASPECT
   prog <> prog
   ipfv <> ipfv
   pot <> pot
+  npot <> npot
   * <> *
 
 E.MOOD : E.MOOD

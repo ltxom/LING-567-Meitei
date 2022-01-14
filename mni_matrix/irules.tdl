@@ -452,3 +452,7 @@ verb-pc68_lrt1-lex-rule.
 verb-pc69_lrt1-prefix :=
 %prefix (* ə́-)
 verb-pc69_lrt1-lex-rule.
+
+verb-pc70_lrt1-suffix :=
+%suffix (* -loy)
+verb-pc70_lrt1-lex-rule.
