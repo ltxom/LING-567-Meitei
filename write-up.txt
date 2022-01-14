@@ -49,7 +49,7 @@ nə́ŋ kə́p-e
 You cry-ASRT
 'You cry.'
 
-  Our testsuites.txt contains all 9 pronouns [PER 1st/2nd/3rd NUM sg/pl/dual] test cases in a similar structure as above: [PRONOUN cry-ASRT]. In our choice file, we added the section=number with sg, pl, dual. We revised person=3-noun-3 to 1-2-3. The result improvements involve lexical entries of pronouns. We removed duplicated noun113 (he/she, identical with noun111), revised noun111-112 with person&number features, and added noun 114-121. Therefore, noun111-121 (without 113) contains the combination of 1st, 2nd, 3rd person pronouns with numbers of sg, pl, dual. The pronouns are correctly parsed and marked as the children of NP. Despite ambiguities coming from other parts of the grammar, the reading for [NUM pl/dual] is only 3, for [PER 1st/2nd NUM sg] is 6, and for [PER 3rd NUM sg] is 12. We also confirmed every item contains correct PNG information in its INDEX. The following is an ungrammatical example that test if our improvements overcover the negative items:
+  Our testsuites.txt contains all 9 pronouns [PER 1st/2nd/3rd NUM sg/pl/dual] test cases in a similar structure as above: [PRONOUN cry-ASRT]. In our choice file, we added the section=number with sg, pl, dual. We revised person=3-noun-3 to 1-2-3. The reset improvements involve lexical entries of pronouns. We removed duplicated noun113 (he/she, identical with noun111), revised noun111-112 with person&number features, and added noun 114-121. Therefore, noun111-121 (without 113) contains the combination of 1st, 2nd, 3rd person pronouns with numbers of sg, pl, dual. The pronouns are correctly parsed and marked as the children of NP. Despite ambiguities coming from other parts of the grammar, the reading for [NUM pl/dual] is only 3, for [PER 1st/2nd NUM sg] is 6, and for [PER 3rd NUM sg] is 12. We also confirmed every item contains correct PNG information in its INDEX. The following is an ungrammatical example that test if our improvements overcover the negative items:
   
 Source: {a: 79, b: 218, author}
 Vetted: t
@@ -60,7 +60,7 @@ Phenomena: {pn}
 I-you cry-ASRT
 '*I-you cry.'
 
-Since nə́ŋ is a pronoun lexical entry but not an affix, the parse correctly eliminates these ungrammatical cases.
+Since nə́ŋ is a pronoun lexical entry but not an affix, the parser correctly eliminates these ungrammatical cases.
 
   
 Phenomena 2: Aspect
