@@ -1,0 +1,25 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+;;; Semantically Empty Lexical Entries
+
+in-marker_kóy-čhin-lə-e_gr_1 := arg0e_gtr &
+  [ CONTEXT.RELS.LIST < [ ARG1 individual & #i ] >,
+    FLAGS [ SUBSUME < #i >,
+            TRIGGER "in-marker_kóy-čhin-lə-e" ] ].
+
+in-marker_kóy-čhin-lə-e_gr_2 := arg0e_gtr &
+  [ CONTEXT.RELS.LIST < [ ARG2 individual & #i ] >,
+    FLAGS [ SUBSUME < #i >,
+            TRIGGER "in-marker_kóy-čhin-lə-e" ] ].
+
+in-marker_kóy-čhin-lə-e_gr_3 := arg0e_gtr &
+  [ CONTEXT.RELS.LIST < [ ARG3 individual & #i ] >,
+    FLAGS [ SUBSUME < #i >,
+            TRIGGER "in-marker_kóy-čhin-lə-e" ] ].
+
+pas_2_gr := arg0e_gtr &
+  [ CONTEXT.RELS.LIST < [ PRED "non_existing_rel" ] >,
+    FLAGS.TRIGGER "pas_2" ].
+
+čə́phú_gr := arg0e_gtr &
+  [ CONTEXT.RELS.LIST < [ ARG0.E.ASPECT pot ] >,
+    FLAGS.TRIGGER "čə́phú" ].
