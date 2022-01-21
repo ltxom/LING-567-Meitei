@@ -1,5 +1,5 @@
 
-version=34
+version=36
 
 section=general
 language=mni
@@ -913,6 +913,13 @@ section=lexicon
   noun112_det=opt
     noun112_stem1_orth=ə́y
     noun112_stem1_pred=pron_rel
+  noun114_name=noun114_here
+  noun114_pron=on
+    noun114_feat1_name=person
+    noun114_feat1_value=3rd
+  noun114_det=opt
+    noun114_stem1_orth=nuŋ
+    noun114_stem1_pred=pron_rel
   noun115_name=noun115_we
   noun115_pron=on
     noun115_feat1_name=person
@@ -1625,16 +1632,11 @@ section=lexicon
   det6_name=det6-proximate-det
     det6_stem1_orth=čhí
     det6_stem1_pred=_pdet_q_rel
-  adp1_orth=kóy-čhin-lə-e
-  adp1_opt=on
-  adp1_order=after
-    adp1_feat1_name=case
-    adp1_feat1_value=in
 
 section=morphology
   noun-pc1_name=noun-case
   noun-pc1_order=suffix
-  noun-pc1_inputs=noun1, noun2, noun111, noun112, noun-pc29, noun-pc36
+  noun-pc1_inputs=noun1, noun2, noun111, noun112, noun114, noun115, noun116, noun117, noun118, noun119, noun120, noun121, noun122, noun-pc29, noun-pc36
     noun-pc1_lrt1_name=noun-case-ablative
       noun-pc1_lrt1_feat1_name=case
       noun-pc1_lrt1_feat1_value=abl
@@ -2209,3 +2211,4 @@ section=test-sentences
 section=gen-options
 
 section=ToolboxLexicon
+
