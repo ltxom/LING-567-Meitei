@@ -150,7 +150,7 @@ I cry-ASRT
 
 Phenomena #3: Case
 
-After referencing Chelliah's A grammar of Meithei(2011), in his section about case, there are agentive(=nə), patient(), locative(), ablative(=təgi), genitive(=ki), associative(=kə) and instrumental(=nə) case markers. In the choices file, cases "all", "in" are deleted. "all" is listed as a case, but is not documented or found in item with a valid instance. Therefore, we deleted this case. "in" is an affix found in item, but is not documented as a case.
+After referencing Chelliah's A grammar of Meithei(2011), in his section about case, there are agentive(=nə), patient(), locative(=tə), ablative(=təgi), genitive(=ki), associative(=kə) and instrumental(=nə) case markers. In the choices file, cases "all", "in" are deleted. "all" is listed as a case, but is not documented or found in item with a valid instance. Therefore, we deleted this case. "in" is an affix found in item, but is not documented as a case.
 We think "in" is not a case marker. "ins" stands for instrumental case, which according to Chelliah, is the same as agentive case and shares spelling, therefore we delete it as a separate case.
 We added "ass" stands for "associative", which marks indicate that the action has been performed in conjunction with another person
 other case markers:
@@ -173,7 +173,7 @@ other changes:
 1. delete noun-pc1_lrt2, the rule has no feature specified, only spelling. By spelling we think this is the genitive case lexical rule type. We will probably come back and add it back.
 2. delete noun-pc36, the rule records -nə́bə as a "in" case, but it stands for a suffix meaning IN.ORDER.TO.
 3. delete noun-pc27_lrt2 spelling: "-čhin", it used to be in case "in". We deleted it in case setion, and we chose to delete this suffix for now.
-4. delete noun-pc5 lrt1, -nə an affix without any feature (should be an adverb suffix)
+4. delete noun-pc5, -nə an affix without any feature (should be an adverb suffix)
 5. delete noun-pc7 lrt1, -pə no feature specified  (should be nominalizer suffix)
 
 While looking throught lexicon, we found several messy miscategorization of some lexicon type. For example, 'i' in Meithei stands for verb means 'write'. However, it was under a noun type. Similar changes were made with other lexicon, and their type was referenced from Chelliah's A grammar of Meithei(2011).
