@@ -42,7 +42,7 @@ Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
 Phenomena: {pn}
-ə́ykhoy kə́pe 
+ə́ykhoy kə́pe
 ə́ykhoy kə́p-e
 we cry-ASRT
 'We cry.'
@@ -227,3 +227,50 @@ tú kə́p-e
 DDET cry-ASRT
 '*The (distal) cries.'
 
+# 23
+Source: {a: 249, author}
+Vetted: t
+Judgment: g
+Phenomena: {c}
+
+# 24
+Source: {a: 249, author}
+Vetted: t
+Judgment: g
+Phenomena: {c}
+
+# 25
+Source: {a: 249, author}
+Vetted: t
+Judgment: g
+Phenomena: {c}
+
+# 26
+Source: {a: 249, author}
+Vetted: t
+Judgment: g
+Phenomena: {c}
+
+# 27
+Source: {a: 249, author}
+Vetted: t
+Judgment: g
+Phenomena: {c}
+
+# 28
+Source: {a: 249, author}
+Vetted: t
+Judgment: g
+Phenomena: {c}
+
+# 29
+Source: {a: 249, author}
+Vetted: t
+Judgment: g
+Phenomena: {c}
+
+# 30
+Source: {a: 249, author}
+Vetted: t
+Judgment: g
+Phenomena: {c}

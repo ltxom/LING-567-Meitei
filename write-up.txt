@@ -1,41 +1,41 @@
-1.1. 
-  Before improvements: 
-	test corpus: 86 items parsed; 
-	test suite: TODO
-  After improvements: 
-	test corpus: 92 items parsed; 
-	test suite: TODO
+1.1.
+  Before improvements:
+  	test corpus: 86 items parsed;
+  	test suite: TODO
+  After improvements:
+  	test corpus: 92 items parsed;
+  	test suite: TODO
 
-1.2. 
-  Before improvements: 
-	test corpus: 95.45 number of parses in average; 
-	test suite: TODO
-  After improvements: 
-	test corpus: 15.76 number of parses in average; 
-	test suite: TODO
+1.2.
+  Before improvements:
+  	test corpus: 95.45 number of parses in average;
+  	test suite: TODO
+  After improvements:
+  	test corpus: 15.76 number of parses in average;
+  	test suite: TODO
 
-1.3. 
-  Before improvements: 
-	test corpus: 840 parses; 
-	test suite: TODO
-  After improvements: 
-	test corpus: 684 parses #13830 which was failed to parse before improvements; 
-	test suite: TODO
+1.3.
+  Before improvements:
+  	test corpus: 840 parses;
+  	test suite: TODO
+  After improvements:
+  	test corpus: 684 parses #13830 which was failed to parse before improvements;
+  	test suite: TODO
 
-1.4. 
-  Before improvements: 
-	test corpus: TODO; 
+1.4.
+  Before improvements:
+	test corpus: TODO;
 	test suite: TODO
-   After improvements: 
-	test corpus: TODO; 
+   After improvements:
+	test corpus: TODO;
 	test suite: TODO
 
 1.5.
-  Before improvements: 
-	test corpus: TODO; 
+  Before improvements:
+	test corpus: TODO;
 	test suite: TODO
-   After improvements: 
-	test corpus: TODO; 
+   After improvements:
+	test corpus: TODO;
 	test suite: TODO
 
 2.
@@ -59,7 +59,7 @@ Before improvements, there are three determiners defined in our choice file:
 
 However, after looking up these determiner stems, I found they are enclitic other than determiners. púm means 'all', nə means 'each', 'mək' means 'only.' But they do not function as 'all,' 'only,' or 'each' in determiners in English. For example, 'all -forget forget -NOM' means 'to forget completely.'
 
-=ki is a genitive case marker, ná can be a agent case marker or a contrastive pragmatic peak. 
+=ki is a genitive case marker, ná can be a agent case marker or a contrastive pragmatic peak.
 
 Therefore, after cleaning det1-3 and adding correct determiners, we have:  det5_name=det5-distance-det
     det5_stem1_orth=tú
@@ -148,6 +148,41 @@ I cry-ASRT
 
 
 
-Phenomena #3: TODO
+Phenomena #3: Case
 
-3. TODO
+After referencing Chelliah's A grammar of Meithei(2011), in his section about case, there are agentive(=nə), patient(), locative(), ablative(=təgi), genitive(=ki), associative(=kə) and instrumental(=nə) case markers. In the choices file, cases "all", "in" are deleted. "all" is listed as a case, but is not documented or found in item with a valid instance. Therefore, we deleted this case. "in" is an affix found in item, but is not documented as a case.
+We think "in" is not a case marker. "ins" stands for instrumental case, which according to Chelliah, is the same as agentive case and shares spelling, therefore we delete it as a separate case.
+We added "ass" stands for "associative", which marks indicate that the action has been performed in conjunction with another person
+other case markers:
+The locative marker may be used to express direction, quantity, or duration.
+The ablative marker is used to express direction of movement from a point in space.
+The genitive marker indicates possession, so we would come back next week.
+The instrumental marker shares spelling with agentive marker, and is argued to be an extension use of agentive case.
+
+There were ambiguities caused by the case since in IGT a subject is marked as =AGN, while -NOM is nominalizer.
+
+
+
+
+
+3. morphotactic choices improvements:
+Morphotactic changes:
+1. for case, we put all cases into one position class, since according to Chelliah, case is the last suffix after (gender), (number), (quantifier) in a noun morphology.
+Therefore, we renamed noun-pc1 to noun-case position class, and keep lrt1 for abl case, combined noun-pc2, noun-pc4 which have different case lrts into noun-case position class.
+other changes:
+1. delete noun-pc1_lrt2, the rule has no feature specified, only spelling. By spelling we think this is the genitive case lexical rule type. We will probably come back and add it back.
+2. delete noun-pc36, the rule records -nə́bə as a "in" case, but it stands for a suffix meaning IN.ORDER.TO.
+3. delete noun-pc27_lrt2 spelling: "-čhin", it used to be in case "in". We deleted it in case setion, and we chose to delete this suffix for now.
+4. delete noun-pc5 lrt1, -nə an affix without any feature (should be an adverb suffix)
+5. delete noun-pc7 lrt1, -pə no feature specified  (should be nominalizer suffix)
+
+While looking throught lexicon, we found several messy miscategorization of some lexicon type. For example, 'i' in Meithei stands for verb means 'write'. However, it was under a noun type. Similar changes were made with other lexicon, and their type was referenced from Chelliah's A grammar of Meithei(2011).
+Lexicon Changes:
+1. delete (spelling: "i" pred: _no_gloss_n_rel) in noun type 1
+2. moved (spelling: "čaw" pred: _be_big_n_rel) in noun type 1 to verb type2 pred -> _be_big_v_nel
+3. moved delete (spelling: "i" pred: _write_n_rel) in noun type 1 to verb type2 pred -> _write_v_rel
+4. noun type29: changed thá from noun to verb _release_v_rel(as recorded in IGT) undeer verb type2 (transitive)
+  e.g. 15060
+  mə́-tú=ki wákhə́ntú mə́-tú thá-thok-u ibuŋŋo
+  NM-=ddet==POSS word-think==DDET NM-ddet release-OUT-IMP dear.sir .
+  Throw out this idea of yours, dear one.@@
