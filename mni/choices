@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 version=34
+=======
+version=32
+>>>>>>> 778eba6111cc05a6897bc368677dea3f62f405a2
 
 section=general
 language=mni
@@ -10,13 +14,18 @@ punctuation-chars-list==-~
 section=word-order
 word-order=free
 has-dets=yes
+<<<<<<< HEAD
 noun-det-order=noun-det
+=======
+noun-det-order=det-noun
+>>>>>>> 778eba6111cc05a6897bc368677dea3f62f405a2
 has-aux=yes
 aux-comp-order=after
 aux-comp=vp
 multiple-aux=no
 
 section=number
+<<<<<<< HEAD
   number1_name=sg
   number2_name=pl
   number3_name=dual
@@ -24,6 +33,11 @@ section=number
 section=person
 person=1-2-3
 first-person=none
+=======
+
+section=person
+person=3-non-3
+>>>>>>> 778eba6111cc05a6897bc368677dea3f62f405a2
 
 section=gender
 
@@ -40,7 +54,10 @@ nom-acc-acc-case-name=acc
 section=adnom-poss
 
 section=direct-inverse
+<<<<<<< HEAD
 scale-equal=direct
+=======
+>>>>>>> 778eba6111cc05a6897bc368677dea3f62f405a2
 
 section=tense-aspect-mood
   aspect1_name=pfv
@@ -51,8 +68,11 @@ section=tense-aspect-mood
     aspect3_supertype3_name=aspect
   aspect4_name=pot
     aspect4_supertype4_name=aspect
+<<<<<<< HEAD
   aspect5_name=npot
     aspect5_supertype1_name=aspect
+=======
+>>>>>>> 778eba6111cc05a6897bc368677dea3f62f405a2
   mood1_name=recip
     mood1_supertype1_name=mood
   mood2_name=opt
@@ -77,8 +97,11 @@ section=coordination
 
 section=matrix-yes-no
 
+<<<<<<< HEAD
 section=wh-q
 
+=======
+>>>>>>> 778eba6111cc05a6897bc368677dea3f62f405a2
 section=info-str
 
 section=arg-opt
@@ -332,6 +355,11 @@ section=lexicon
     noun1_stem116_pred=_smell_n_rel
     noun1_stem117_orth=nə́há
     noun1_stem117_pred=_younger.brother_n_rel
+<<<<<<< HEAD
+=======
+    noun1_stem118_orth=nə́ŋ
+    noun1_stem118_pred=_you_n_rel
+>>>>>>> 778eba6111cc05a6897bc368677dea3f62f405a2
     noun1_stem119_orth=ophís
     noun1_stem119_pred=_office_n_rel
     noun1_stem120_orth=oǰa
@@ -486,6 +514,11 @@ section=lexicon
     noun1_stem194_pred=_tip_n_rel
     noun1_stem195_orth=tóp
     noun1_stem195_pred=_cover_n_rel
+<<<<<<< HEAD
+=======
+    noun1_stem196_orth=tú
+    noun1_stem196_pred=_==ddet_n_rel
+>>>>>>> 778eba6111cc05a6897bc368677dea3f62f405a2
     noun1_stem197_orth=tə
     noun1_stem197_pred=_earnestly,_n_rel
     noun1_stem198_orth=təpta
@@ -560,6 +593,11 @@ section=lexicon
     noun1_stem232_pred=_elephant_n_rel
     noun1_stem233_orth=čhén
     noun1_stem233_pred=_money_n_rel
+<<<<<<< HEAD
+=======
+    noun1_stem234_orth=čhí
+    noun1_stem234_pred=_==pdet_n_rel
+>>>>>>> 778eba6111cc05a6897bc368677dea3f62f405a2
     noun1_stem235_orth=čhəm
     noun1_stem235_pred=_fence_n_rel
     noun1_stem236_orth=čhən
@@ -674,6 +712,11 @@ section=lexicon
     noun6_stem3_pred=_close_n_rel
     noun6_stem4_orth=kánnə
     noun6_stem4_pred=_use_n_rel
+<<<<<<< HEAD
+=======
+    noun6_stem5_orth=kə́p
+    noun6_stem5_pred=_cry_n_rel
+>>>>>>> 778eba6111cc05a6897bc368677dea3f62f405a2
     noun6_stem6_orth=law
     noun6_stem6_pred=_shout_n_rel
     noun6_stem7_orth=loy
@@ -904,6 +947,7 @@ section=lexicon
     noun110_stem8_pred=_career_n_rel
     noun110_stem9_orth=lu
     noun110_stem9_pred=_clear.water_n_rel
+<<<<<<< HEAD
   noun111_name=noun111_he_she
   noun111_pron=on
     noun111_feat1_name=person
@@ -1001,6 +1045,30 @@ section=lexicon
   noun122_det=opt
     noun122_stem1_orth=nə́ŋ
     noun122_stem1_pred=_pron_n_rel
+=======
+  noun111_name=noun111
+  noun111_pron=on
+  noun111_det=opt
+    noun111_stem1_orth=má
+    noun111_stem1_pred=_pron_n_rel
+  noun112_name=noun112
+  noun112_pron=on
+  noun112_det=opt
+    noun112_stem1_orth=ə́y
+    noun112_stem1_pred=_pron_n_rel
+  noun113_name=noun113
+  noun113_pron=on
+  noun113_det=opt
+    noun113_stem1_orth=má
+    noun113_stem1_pred=_pron_n_rel
+  noun114_name=noun114
+  noun114_pron=on
+    noun114_feat1_name=case
+    noun114_feat1_value=in
+  noun114_det=opt
+    noun114_stem1_orth=nuŋ
+    noun114_stem1_pred=_pron_n_rel
+>>>>>>> 778eba6111cc05a6897bc368677dea3f62f405a2
   verb2_name=verb2
   verb2_valence=trans
     verb2_stem1_orth=edvərtais
@@ -1031,6 +1099,11 @@ section=lexicon
     verb2_stem13_pred=_take.care.of_v_rel
     verb2_stem14_orth=čhi
     verb2_stem14_pred=_die_v_rel
+<<<<<<< HEAD
+=======
+    verb2_stem15_orth=čhí
+    verb2_stem15_pred=_=pdet_v_rel
+>>>>>>> 778eba6111cc05a6897bc368677dea3f62f405a2
     verb2_stem16_orth=čiŋ
     verb2_stem16_pred=_pull_v_rel
     verb2_stem17_orth=čá
@@ -1121,6 +1194,11 @@ section=lexicon
     verb14_stem13_pred=_take.care.of_v_rel
     verb14_stem14_orth=čhi
     verb14_stem14_pred=_die_v_rel
+<<<<<<< HEAD
+=======
+    verb14_stem15_orth=čhí
+    verb14_stem15_pred=_=pdet_v_rel
+>>>>>>> 778eba6111cc05a6897bc368677dea3f62f405a2
     verb14_stem16_orth=čiŋ
     verb14_stem16_pred=_pull_v_rel
     verb14_stem17_orth=čá
@@ -1207,6 +1285,11 @@ section=lexicon
     verb61_stem9_pred=_take.care.of_v_rel
     verb61_stem10_orth=čhi
     verb61_stem10_pred=_die_v_rel
+<<<<<<< HEAD
+=======
+    verb61_stem11_orth=čhí
+    verb61_stem11_pred=_=pdet_v_rel
+>>>>>>> 778eba6111cc05a6897bc368677dea3f62f405a2
     verb61_stem12_orth=čiŋ
     verb61_stem12_pred=_pull_v_rel
     verb61_stem13_orth=čá
@@ -1225,6 +1308,11 @@ section=lexicon
     verb61_stem19_pred=_join_v_rel
   verb68_name=verb68
   verb68_valence=trans
+<<<<<<< HEAD
+=======
+    verb68_stem1_orth=mí
+    verb68_stem1_pred=_man_v_rel
+>>>>>>> 778eba6111cc05a6897bc368677dea3f62f405a2
     verb68_stem2_orth=mót
     verb68_stem2_pred=_dirty_v_rel
     verb68_stem3_orth=niŋŋay
@@ -1249,6 +1337,11 @@ section=lexicon
     verb68_stem12_pred=_take.care.of_v_rel
     verb68_stem13_orth=čhi
     verb68_stem13_pred=_die_v_rel
+<<<<<<< HEAD
+=======
+    verb68_stem14_orth=čhí
+    verb68_stem14_pred=_=pdet_v_rel
+>>>>>>> 778eba6111cc05a6897bc368677dea3f62f405a2
     verb68_stem15_orth=čiŋ
     verb68_stem15_pred=_pull_v_rel
     verb68_stem16_orth=čá
@@ -1343,6 +1436,11 @@ section=lexicon
     verb124_stem2_pred=_change_v_rel
     verb124_stem3_orth=na
     verb124_stem3_pred=_sick_v_rel
+<<<<<<< HEAD
+=======
+    verb124_stem4_orth=tú
+    verb124_stem4_pred=_ddet_v_rel
+>>>>>>> 778eba6111cc05a6897bc368677dea3f62f405a2
   verb127_name=verb127
   verb127_valence=intrans
     verb127_stem1_orth=tok
@@ -1381,6 +1479,11 @@ section=lexicon
     verb138_stem7_pred=_(ideo)-or-feed_v_rel
     verb138_stem8_orth=thók
     verb138_stem8_pred=_out_v_rel
+<<<<<<< HEAD
+=======
+    verb138_stem9_orth=tú
+    verb138_stem9_pred=_==ddet_v_rel
+>>>>>>> 778eba6111cc05a6897bc368677dea3f62f405a2
     verb138_stem10_orth=túŋ
     verb138_stem10_pred=_store_v_rel
     verb138_stem11_orth=tə́k
@@ -1393,6 +1496,11 @@ section=lexicon
     verb138_stem14_pred=_take.care.of_v_rel
     verb138_stem15_orth=čhi
     verb138_stem15_pred=_die_v_rel
+<<<<<<< HEAD
+=======
+    verb138_stem16_orth=čhí
+    verb138_stem16_pred=_=pdet_v_rel
+>>>>>>> 778eba6111cc05a6897bc368677dea3f62f405a2
     verb138_stem17_orth=čiŋ
     verb138_stem17_pred=_drag-or-pull_v_rel
     verb138_stem18_orth=čá
@@ -1569,6 +1677,13 @@ section=lexicon
     verb156_stem4_pred=_compress_v_rel
     verb156_stem5_orth=ŋáŋ~
     verb156_stem5_pred=_speak_v_rel
+<<<<<<< HEAD
+=======
+  verb157_name=verb157
+  verb157_valence=trans
+    verb157_stem1_orth=čhí~
+    verb157_stem1_pred=_==pdet_v_rel
+>>>>>>> 778eba6111cc05a6897bc368677dea3f62f405a2
   aux1_name=aux1
   aux1_sem=add-pred
   aux1_subj=np
@@ -1633,12 +1748,26 @@ section=lexicon
     aux9_compfeature1_name=form
     aux9_compfeature1_value=finite
     aux9_stem1_orth=čə́phú
+<<<<<<< HEAD
   det5_name=det5-distance-det
     det5_stem1_orth=tú
     det5_stem1_pred=_ddet_q_rel
   det6_name=det6-proximate-det
     det6_stem1_orth=čhí
     det6_stem1_pred=_pdet_q_rel
+=======
+  det1_name=det1
+    det1_stem1_orth=púm-nə-mək
+    det1_stem1_pred=_exist_q_rel
+    det1_feat1_name=case
+    det1_feat1_value=all
+  det2_name=det2
+    det2_stem1_orth=bie=ki
+    det2_stem1_pred=_exist_q_rel
+  det3_name=det3
+    det3_stem1_orth=ná
+    det3_stem1_pred=_exist_q_rel
+>>>>>>> 778eba6111cc05a6897bc368677dea3f62f405a2
   adp1_orth=kóy-čhin-lə-e
   adp1_opt=on
   adp1_order=after
@@ -1648,11 +1777,18 @@ section=lexicon
 section=morphology
   noun-pc1_name=noun-pc1
   noun-pc1_order=suffix
+<<<<<<< HEAD
   noun-pc1_inputs=noun1, noun2, noun-pc36, noun-pc7, noun-pc29, noun111, noun112, noun114
     noun-pc1_lrt1_name=noun-pc1_lrt1
       noun-pc1_lrt1_feat1_name=case
       noun-pc1_lrt1_feat1_value=abl
       noun-pc1_lrt1_feat1_head=itself
+=======
+  noun-pc1_inputs=noun1, noun2, noun-pc36, noun-pc7, noun-pc29, noun111, noun112, noun113, noun114
+    noun-pc1_lrt1_name=noun-pc1_lrt1
+      noun-pc1_lrt1_feat1_name=case
+      noun-pc1_lrt1_feat1_value=abl
+>>>>>>> 778eba6111cc05a6897bc368677dea3f62f405a2
       noun-pc1_lrt1_lri1_inflecting=yes
       noun-pc1_lrt1_lri1_orth==təgi
     noun-pc1_lrt2_name=noun-pc1_lrt2
@@ -1660,11 +1796,18 @@ section=morphology
       noun-pc1_lrt2_lri1_orth==ki
   noun-pc2_name=noun-pc2
   noun-pc2_order=suffix
+<<<<<<< HEAD
   noun-pc2_inputs=noun1, noun-pc1, noun2, noun-pc7, noun-pc38, noun-pc8, noun-pc43, noun-pc21, noun-pc26, noun-pc29, noun111, noun112, noun114
     noun-pc2_lrt1_name=noun-pc2_lrt1
       noun-pc2_lrt1_feat1_name=case
       noun-pc2_lrt1_feat1_value=loc
       noun-pc2_lrt1_feat1_head=itself
+=======
+  noun-pc2_inputs=noun1, noun-pc1, noun2, noun-pc7, noun-pc38, noun-pc8, noun-pc43, noun-pc21, noun-pc26, noun-pc29, noun111, noun112, noun113, noun114
+    noun-pc2_lrt1_name=noun-pc2_lrt1
+      noun-pc2_lrt1_feat1_name=case
+      noun-pc2_lrt1_feat1_value=loc
+>>>>>>> 778eba6111cc05a6897bc368677dea3f62f405a2
       noun-pc2_lrt1_lri1_inflecting=yes
       noun-pc2_lrt1_lri1_orth==tə
     noun-pc2_lrt2_name=noun-pc2_lrt2
@@ -1688,7 +1831,10 @@ section=morphology
     noun-pc7_lrt1_name=noun-pc7_lrt1
       noun-pc7_lrt1_feat1_name=case
       noun-pc7_lrt1_feat1_value=nom
+<<<<<<< HEAD
       noun-pc7_lrt1_feat1_head=itself
+=======
+>>>>>>> 778eba6111cc05a6897bc368677dea3f62f405a2
       noun-pc7_lrt1_lri1_inflecting=yes
       noun-pc7_lrt1_lri1_orth=-pə
   noun-pc8_name=noun-pc8
@@ -1773,14 +1919,21 @@ section=morphology
       noun-pc26_lrt1_lri1_orth=-lə́bə
   noun-pc27_name=noun-pc27
   noun-pc27_order=suffix
+<<<<<<< HEAD
   noun-pc27_inputs=noun29, noun111, noun114
+=======
+  noun-pc27_inputs=noun29, noun113, noun114
+>>>>>>> 778eba6111cc05a6897bc368677dea3f62f405a2
     noun-pc27_lrt1_name=noun-pc27_lrt1
       noun-pc27_lrt1_lri1_inflecting=yes
       noun-pc27_lrt1_lri1_orth=-thok
     noun-pc27_lrt2_name=noun-pc27_lrt2
       noun-pc27_lrt2_feat1_name=case
       noun-pc27_lrt2_feat1_value=in
+<<<<<<< HEAD
       noun-pc27_lrt2_feat1_head=itself
+=======
+>>>>>>> 778eba6111cc05a6897bc368677dea3f62f405a2
       noun-pc27_lrt2_lri1_inflecting=yes
       noun-pc27_lrt2_lri1_orth=-čhin
   noun-pc29_name=noun-pc29
@@ -1806,7 +1959,10 @@ section=morphology
     noun-pc30_lrt2_name=noun-pc30_lrt2
       noun-pc30_lrt2_feat1_name=case
       noun-pc30_lrt2_feat1_value=ins
+<<<<<<< HEAD
       noun-pc30_lrt2_feat1_head=itself
+=======
+>>>>>>> 778eba6111cc05a6897bc368677dea3f62f405a2
       noun-pc30_lrt2_lri1_inflecting=yes
       noun-pc30_lrt2_lri1_orth=-nə
       noun-pc30_lrt2_lri2_inflecting=yes
@@ -1835,7 +1991,10 @@ section=morphology
     noun-pc36_lrt1_name=noun-pc36_lrt1
       noun-pc36_lrt1_feat1_name=case
       noun-pc36_lrt1_feat1_value=in
+<<<<<<< HEAD
       noun-pc36_lrt1_feat1_head=itself
+=======
+>>>>>>> 778eba6111cc05a6897bc368677dea3f62f405a2
       noun-pc36_lrt1_lri1_inflecting=yes
       noun-pc36_lrt1_lri1_orth=-nə́bə
   noun-pc38_name=noun-pc38
@@ -2205,6 +2364,15 @@ section=morphology
       verb-pc65_lrt1_feat1_head=verb
       verb-pc65_lrt1_lri1_inflecting=yes
       verb-pc65_lrt1_lri1_orth=-nə
+<<<<<<< HEAD
+=======
+  verb-pc66_name=verb-pc66
+  verb-pc66_order=suffix
+  verb-pc66_inputs=verb157
+    verb-pc66_lrt1_name=verb-pc66_lrt1
+      verb-pc66_lrt1_lri1_inflecting=yes
+      verb-pc66_lrt1_lri1_orth==nə
+>>>>>>> 778eba6111cc05a6897bc368677dea3f62f405a2
   verb-pc68_name=verb-pc68
   verb-pc68_order=suffix
   verb-pc68_inputs=verb-pc3, verb-pc69
@@ -2221,6 +2389,7 @@ section=morphology
     verb-pc69_lrt1_name=verb-pc69_lrt1
       verb-pc69_lrt1_lri1_inflecting=yes
       verb-pc69_lrt1_lri1_orth=ə́-
+<<<<<<< HEAD
   verb-pc70_name=verb-pc70
   verb-pc70_order=suffix
   verb-pc70_inputs=verb138, verb-pc2, verb-pc10
@@ -2233,6 +2402,8 @@ section=morphology
   det-pc1_name=det-pc1
   det-pc1_order=suffix
   det-pc1_inputs=det5, det6
+=======
+>>>>>>> 778eba6111cc05a6897bc368677dea3f62f405a2
 
 section=toolbox-import
 
