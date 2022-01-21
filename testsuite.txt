@@ -186,3 +186,43 @@ mə́bani loyčá
 mə́bani loy-čá
 they_dual NPOT-eat
 '*They two will not eat'
+
+# 19
+Source: {a: 249, author}
+Vetted: t
+Judgment: g
+Phenomena: {det}
+míčhí kə́pe
+mí čhí kə́p-e
+man PDET cry-ASRT
+'The (proximate) man cries.'
+
+# 20
+Source: {a: 249, author}
+Vetted: t
+Judgment: g
+Phenomena: {det}
+mítú kə́pe
+mí tú kə́p-e
+man DDET cry-ASRT
+'The (distal) man cries.'
+
+# 21
+Source: {a: 249, author}
+Vetted: t
+Judgment: u
+Phenomena: {det}
+čhí kə́pe
+čhí kə́p-e
+PDET cry-ASRT
+'*The (proximate) cries.'
+
+# 22
+Source: {a: 249, author}
+Vetted: t
+Judgment: u
+Phenomena: {det}
+tú kə́pe
+tú kə́p-e
+DDET cry-ASRT
+'*The (distal) cries.'
