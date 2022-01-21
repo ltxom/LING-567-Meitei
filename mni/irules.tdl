@@ -433,13 +433,6 @@ verb-pc65_lrt1-suffix :=
 %suffix (* -nə)
 verb-pc65_lrt1-lex-rule.
 
-<<<<<<< HEAD
-=======
-verb-pc66_lrt1-suffix :=
-%suffix (* =nə)
-verb-pc66_lrt1-lex-rule.
-
->>>>>>> 778eba6111cc05a6897bc368677dea3f62f405a2
 verb-pc68_lrt1-suffix1 :=
 %suffix (* =kə)
 verb-pc68_lrt1-lex-rule.
@@ -455,10 +448,7 @@ verb-pc68_lrt1-lex-rule.
 verb-pc69_lrt1-prefix :=
 %prefix (* ə́-)
 verb-pc69_lrt1-lex-rule.
-<<<<<<< HEAD
 
 verb-pc70_lrt1-suffix :=
 %suffix (* -loy)
 verb-pc70_lrt1-lex-rule.
-=======
->>>>>>> 778eba6111cc05a6897bc368677dea3f62f405a2

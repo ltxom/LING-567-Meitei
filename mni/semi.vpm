@@ -38,7 +38,6 @@ COG-ST : COG-ST
 
 
 PNG.PER : PNG.PER
-<<<<<<< HEAD
   3rd <> 3rd
   2nd <> 2nd
   1st <> 1st
@@ -48,13 +47,6 @@ PNG.NUM : PNG.NUM
   dual <> dual
   pl <> pl
   sg <> sg
-=======
-  non-3rd <> non-3rd
-  3rd <> 3rd
-  * <> *
-
-PNG.NUM : PNG.NUM
->>>>>>> 778eba6111cc05a6897bc368677dea3f62f405a2
   * <> *
 
 PNG.GEND : PNG.GEND
@@ -68,10 +60,7 @@ E.ASPECT : E.ASPECT
   prog <> prog
   ipfv <> ipfv
   pot <> pot
-<<<<<<< HEAD
   npot <> npot
-=======
->>>>>>> 778eba6111cc05a6897bc368677dea3f62f405a2
   * <> *
 
 E.MOOD : E.MOOD

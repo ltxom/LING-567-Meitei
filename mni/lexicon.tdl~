@@ -1478,23 +1478,42 @@ lu_3 := noun110-noun-lex &
   [ STEM < "lu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_clear.water_n_rel" ].
 
-má_2 := noun111-noun-lex &
+má_2 := noun111_he_she-noun-lex &
   [ STEM < "má" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
 
-ə́y := noun112-noun-lex &
+ə́y := noun112_I-noun-lex &
   [ STEM < "ə́y" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
 
-má_3 := noun113-noun-lex &
-  [ STEM < "má" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
-
-nuŋ_2 := noun114-noun-lex &
+nuŋ_2 := noun114_here-noun-lex &
   [ STEM < "nuŋ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
 
-<<<<<<< HEAD:mni/lexicon.tdl~
+ə́ykhoy := noun115_we-noun-lex &
+  [ STEM < "ə́ykhoy" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+
+mə́khoy := noun116_they-noun-lex &
+  [ STEM < "mə́khoy" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+
+nə́khóy := noun117_you_all-noun-lex &
+  [ STEM < "nə́khóy" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+
+íbani := noun118_we_dual-noun-lex &
+  [ STEM < "íbani" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+
+nə́bani := noun119_you_dual-noun-lex &
+  [ STEM < "nə́bani" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+
+mə́bani := noun120_they_dual-noun-lex &
+  [ STEM < "mə́bani" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+
 núpí := noun121-noun-lex &
   [ STEM < "núpí" >,
     SYNSEM.LKEYS.KEYREL.PRED "_female_n_rel" ].
@@ -1507,8 +1526,6 @@ nə́ŋ := noun122-noun-lex &
   [ STEM < "nə́ŋ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
 
-=======
->>>>>>> 778eba6111cc05a6897bc368677dea3f62f405a2:mni/lexicon.tdl
 ;;; Adjectives
 
 ;;; Case-marking adpositions

@@ -68,6 +68,12 @@ Therefore, after cleaning det1-3 and adding correct determiners, we have:  det5_
     det6_stem1_orth=čhí
     det6_stem1_pred=_pdet_q_rel
 
+We observed DDET and PDET are also defined as nouns and verbs, so we removed them:
+    noun1_stem196_orth=tú
+    noun1_stem196_pred=_==ddet_n_rel
+    verb2_stem15_orth=čhí
+    verb2_stem15_pred=_=pdet_v_rel
+
 We added test cases #19 to #22 to test determiners. #19 is a grammatical sentence with PDET, #20 grammatical with DDET, #21 ungrammatical with PDET and #22 ungrammatical with DDET.
 # 19
 Source: {a: 249, author}
@@ -111,3 +117,37 @@ DDET cry-ASRT
 
 #19 and #20 were parsed successfully after improvements. However, we observed it treated "man PDET cry-ASRT" as "V D N." We observed our choice file had multiple lexical entries for "man" and "cry," they are both in noun and verb categories at the same time. So we cleaned that up (removed _man_v_rel and _cry_n_rel), and changed "noun-det-order=det-noun" to "noun-det." Therefore, #21 and #22 are correctly ruled out because there's no rule for "D V" to form a constituent.
 
+
+Phenomena #2: PNG
+
+In previous lab, we attempted to improve PNG but there are still some mistakes. We changed numbers from 3-noun-3 to 1-2-3 but didn't add this feature to the lexical entries of _pron_rel_. Therefore, we made added these features in our choice file:
+
+noun122_name=noun122
+    noun122_feat1_name=person
+    noun122_feat1_value=2nd
+    noun122_feat2_name=number
+    noun122_feat2_value=sg
+  noun122_det=opt
+    noun122_stem1_orth=nə́ŋ
+    noun122_stem1_pred=_pron_rel_
+
+We observed some pronouns are defined twice so we removed them:
+    noun1_stem118_orth=nə́ŋ
+    noun1_stem118_pred=_you_n_rel
+
+Additionally, we revised pred of pronouns to be _pron_rel_. Now, our examples #1-11 show correct CONT values for pronouns.
+# 1
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {pn}
+ə́y kə́pe
+ə́y kə́p-e
+I cry-ASRT
+'I cry.'
+
+
+
+Phenomena #3: TODO
+
+3. TODO
