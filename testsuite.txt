@@ -2,7 +2,7 @@ Language: Meithei
 Language code: mni
 Lines: orth orth-seg gloss translat
 Author: Tongxi(Tom) Liu, Jessie Zeng
-Date: Jan 11, 2021
+Date: Jan 21, 2021
 Source a: Chelliah, S. L. (2011). A grammar of Meithei. De Gruyter Mouton.
 Source b: Singh, S. I. (2013). Agreements in Manipuri. Language in India, 13(11).
 
@@ -228,49 +228,82 @@ DDET cry-ASRT
 '*The (distal) cries.'
 
 # 23
-Source: {a: 249, author}
+Source: {a: 126, author}
 Vetted: t
 Judgment: g
 Phenomena: {c}
+yúmtə mí ləyí
+yúm=tə mí ləy-í
+house=LOC man be-NHYP
+'(A) man live in this house.'
 
 # 24
-Source: {a: 249, author}
+Source: {a: 126, author}
 Vetted: t
 Judgment: g
 Phenomena: {c}
+má kə́ytəgi hənləmí
+má kə́y=təgi hən-ləm-í
+he granary=ABL return-EVD-HYNP
+'He returned from the granary.'
 
 # 25
 Source: {a: 249, author}
 Vetted: t
 Judgment: g
 Phenomena: {c}
+ə́ynə mápu səɡol tóŋhənləmí
+ə́y=nə má=pu səɡol tóŋ-hən-ləm-í
+I=AGN he/she=PAT horse ride-CAUS-EVD-HYNP
+'I made him/her ride the horse'
 
 # 26
-Source: {a: 249, author}
+Source: {a: 128, author}
 Vetted: t
 Judgment: g
 Phenomena: {c}
+ə́ykhoykə mákə khə́tnələmí
+ə́ykhoy=kə má=kə khə́t-nə-ləm-í
+we=ASS he_she=ASS fight-RECIP-EVD-HYNP
+'We and he/she fought each other.'
 
 # 27
 Source: {a: 249, author}
 Vetted: t
 Judgment: g
 Phenomena: {c}
+ə́ynə tháŋ ə́mənə perstú kə́kí
+ə́y-nə tháŋ ə́-mə=nə pers tú kə́k-í
+I-ADV knife ATT-one=INST pears DDET cut-NHYP
+'I cut the pears with a knife.'
 
 # 28
 Source: {a: 249, author}
 Vetted: t
-Judgment: g
+Judgment: u
 Phenomena: {c}
+ə́ynə mánə səɡol tóŋhənləmí
+ə́y=nə má=nə səɡol tóŋ-hən-ləm-í
+I=AGN he_she=AGN horse ride-CAUS-EVD-HYNP
+'*I made he/she(AGN) ride the horse'
 
 # 29
 Source: {a: 249, author}
 Vetted: t
-Judgment: g
+Judgment: u
 Phenomena: {c}
+təyum mí ləyí
+tə=yum mí ləy-í
+LOC=house men be-NHYP
+'*Men live in this house.'
 
 # 30
 Source: {a: 249, author}
 Vetted: t
-Judgment: g
+Judgment: u
 Phenomena: {c}
+yum mí ləyítə
+yum mí ləy-í=tə
+house men be-NHYP=LOC
+'*men live in this house.'
+
