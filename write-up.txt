@@ -42,5 +42,72 @@
 
 Phenomena #1: Determiners
 
+According to Chelliah's A grammar of Meithei(2011), Meitei has two types of determiners, -si 'proximate' PDET and -tu 'distal' DDET. PDET indicates that "the object or person being spoken of is near or currently seen or known to be near, even if not viewable by the speaker, or is currently the topic of conversation"; DDET "signifies something or someone not present at the time of speech or newly introduced in the conversation. (p.81)"
 
+Before improvements, there are three determiners defined in our choice file:
+  det1_name=det1
+    det1_stem1_orth=púm-nə-mək
+    det1_stem1_pred=_exist_q_rel
+    det1_feat1_name=case
+    det1_feat1_value=all
+  det2_name=det2
+    det2_stem1_orth=bie=ki
+    det2_stem1_pred=_exist_q_rel
+  det3_name=det3
+    det3_stem1_orth=ná
+    det3_stem1_pred=_exist_q_rel
+
+However, after looking up these determiner stems, I found they are enclitic other than determiners. púm means 'all', nə means 'each', 'mək' means 'only.' But they do not function as 'all,' 'only,' or 'each' in determiners in English. For example, 'all -forget forget -NOM' means 'to forget completely.'
+
+=ki is a genitive case marker, ná can be a agent case marker or a contrastive pragmatic peak. 
+
+Therefore, after cleaning det1-3 and adding correct determiners, we have:  det5_name=det5-distance-det
+    det5_stem1_orth=tú
+    det5_stem1_pred=_ddet_q_rel
+  det6_name=det6-proximate-det
+    det6_stem1_orth=čhí
+    det6_stem1_pred=_pdet_q_rel
+
+We added test cases #19 to #22 to test determiners. #19 is a grammatical sentence with PDET, #20 grammatical with DDET, #21 ungrammatical with PDET and #22 ungrammatical with DDET.
+# 19
+Source: {a: 249, author}
+Vetted: t
+Judgment: g
+Phenomena: {det}
+míčhí kə́pe
+mí čhí kə́p-e
+man PDET cry-ASRT
+'The (proximate) man cries.'
+
+# 20
+Source: {a: 249, author}
+Vetted: t
+Judgment: g
+Phenomena: {det}
+mítú kə́pe
+mí tú kə́p-e
+man DDET cry-ASRT
+'The (distal) man cries.'
+
+# 21
+Source: {a: 249, author}
+Vetted: t
+Judgment: u
+Phenomena: {det}
+čhí kə́pe
+čhí kə́p-e
+PDET cry-ASRT
+'*The (proximate) cries.'
+
+# 22
+Source: {a: 249, author}
+Vetted: t
+Judgment: u
+Phenomena: {det}
+tú kə́pe
+tú kə́p-e
+DDET cry-ASRT
+'*The (distal) cries.'
+
+#19 and #20 were parsed successfully after improvements. However, we observed it treated "man PDET cry-ASRT" as "V D N." We observed our choice file had multiple lexical entries for "man" and "cry," they are both in noun and verb categories at the same time. So we cleaned that up (removed _man_v_rel and _cry_n_rel), and changed "noun-det-order=det-noun" to "noun-det." Therefore, #21 and #22 are correctly ruled out because there's no rule for "D V" to form a constituent.
 
