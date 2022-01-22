@@ -1,33 +1,29 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
 ;;; Inflecting Lexical Rule Instances
 
-noun-pc1_lrt1-suffix :=
+noun-case-ablative-suffix :=
 %suffix (* =təgi)
-noun-pc1_lrt1-lex-rule.
+noun-case-ablative-lex-rule.
 
-noun-pc1_lrt2-suffix :=
-%suffix (* =ki)
-noun-pc1_lrt2-lex-rule.
-
-noun-pc2_lrt1-suffix :=
+noun-case-locative-suffix :=
 %suffix (* =tə)
-noun-pc2_lrt1-lex-rule.
+noun-case-locative-lex-rule.
 
-noun-pc2_lrt2-suffix :=
-%suffix (* =nə)
-noun-pc2_lrt2-lex-rule.
-
-noun-pc4_lrt1-suffix :=
+noun-case-associative-suffix :=
 %suffix (* =kə)
-noun-pc4_lrt1-lex-rule.
+noun-case-associative-lex-rule.
+
+noun-case-agentive-suffix :=
+%suffix (* =nə)
+noun-case-agentive-lex-rule.
+
+noun-case-patient-suffix :=
+%suffix (* =pu)
+noun-case-patient-lex-rule.
 
 noun-pc5_lrt1-suffix :=
 %suffix (* -nə)
 noun-pc5_lrt1-lex-rule.
-
-noun-pc7_lrt1-suffix :=
-%suffix (* -pə)
-noun-pc7_lrt1-lex-rule.
 
 noun-pc8_lrt1-suffix1 :=
 %suffix (* =ni)
@@ -105,10 +101,6 @@ noun-pc27_lrt1-suffix :=
 %suffix (* -thok)
 noun-pc27_lrt1-lex-rule.
 
-noun-pc27_lrt2-suffix :=
-%suffix (* -čhin)
-noun-pc27_lrt2-lex-rule.
-
 noun-pc29_lrt1-prefix :=
 %prefix (* mə́-)
 noun-pc29_lrt1-lex-rule.
@@ -152,10 +144,6 @@ noun-pc34_lrt1-lex-rule.
 noun-pc35_lrt1-suffix :=
 %suffix (* -lu)
 noun-pc35_lrt1-lex-rule.
-
-noun-pc36_lrt1-suffix :=
-%suffix (* -nə́bə)
-noun-pc36_lrt1-lex-rule.
 
 noun-pc38_lrt1-prefix :=
 %prefix (* í-)

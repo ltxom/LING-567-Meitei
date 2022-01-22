@@ -157,10 +157,6 @@ hə́ŋčit := noun1-noun-lex &
   [ STEM < "hə́ŋčit" >,
     SYNSEM.LKEYS.KEYREL.PRED "_day.after.tomorrow_n_rel" ].
 
-i_1 := noun1-noun-lex &
-  [ STEM < "i" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_no_gloss_n_rel" ].
-
 ibetombi := noun1-noun-lex &
   [ STEM < "ibetombi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_ibetombi_n_rel" ].
@@ -854,7 +850,7 @@ yénčhaŋ := noun1-noun-lex &
   [ STEM < "yénčhaŋ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_curry-or-vegetable_n_rel" ].
 
-yúm_1 := noun1-noun-lex &
+yúm := noun1-noun-lex &
   [ STEM < "yúm" >,
     SYNSEM.LKEYS.KEYREL.PRED "_house_n_rel" ].
 
@@ -889,10 +885,6 @@ yúm_1 := noun1-noun-lex &
 íšro := noun1-noun-lex &
   [ STEM < "íšro" >,
     SYNSEM.LKEYS.KEYREL.PRED "_god_n_rel" ].
-
-čaw := noun1-noun-lex &
-  [ STEM < "čaw" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_big_n_rel" ].
 
 čeŋ := noun1-noun-lex &
   [ STEM < "čeŋ" >,
@@ -1033,6 +1025,10 @@ yúm_1 := noun1-noun-lex &
 əygya := noun1-noun-lex &
   [ STEM < "əygya" >,
     SYNSEM.LKEYS.KEYREL.PRED "_minister_n_rel" ].
+
+səɡol := noun1-noun-lex &
+  [ STEM < "səɡol" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_horse_n_rel" ].
 
 ə́ŋáŋ := noun1-noun-lex &
   [ STEM < "ə́ŋáŋ" >,
@@ -1226,10 +1222,6 @@ lukhra := noun6-noun-lex &
   [ STEM < "lukhra" >,
     SYNSEM.LKEYS.KEYREL.PRED "_widow_n_rel" ].
 
-hən_2 := noun8-noun-lex &
-  [ STEM < "hən" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_return_n_rel" ].
-
 them := noun8-noun-lex &
   [ STEM < "them" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pacify_n_rel" ].
@@ -1242,21 +1234,9 @@ kém := noun17-noun-lex &
   [ STEM < "kém" >,
     SYNSEM.LKEYS.KEYREL.PRED "_decay_n_rel" ].
 
-kə́k := noun19-noun-lex &
-  [ STEM < "kə́k" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_cut_n_rel" ].
-
 lí_2 := noun29-noun-lex &
   [ STEM < "lí" >,
     SYNSEM.LKEYS.KEYREL.PRED "_behavior_n_rel" ].
-
-thá_1 := noun29-noun-lex &
-  [ STEM < "thá" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_release_n_rel" ].
-
-lə́y_1 := noun33-noun-lex &
-  [ STEM < "lə́y" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_poor_n_rel" ].
 
 mot := noun35-noun-lex &
   [ STEM < "mot" >,
@@ -1358,10 +1338,6 @@ wóŋ := noun61-noun-lex &
   [ STEM < "wóŋ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_method_n_rel" ].
 
-yúm_2 := noun61-noun-lex &
-  [ STEM < "yúm" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_house_n_rel" ].
-
 čhék := noun61-noun-lex &
   [ STEM < "čhék" >,
     SYNSEM.LKEYS.KEYREL.PRED "_ray_n_rel" ].
@@ -1433,10 +1409,6 @@ yon_1 := noun96-noun-lex &
 hiŋ := noun110-noun-lex &
   [ STEM < "hiŋ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_night_n_rel" ].
-
-i_2 := noun110-noun-lex &
-  [ STEM < "i" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_write_n_rel" ].
 
 mə := noun110-noun-lex &
   [ STEM < "mə" >,
@@ -1516,16 +1488,6 @@ nə́ŋ := noun122-noun-lex &
 
 ;;; Adjectives
 
-;;; Case-marking adpositions
-
-in-marker_kóy-čhin-lə-e := case-marking-adp-lex &
-  [ STEM < "kóy-čhin-lə-e" >,
-    SYNSEM.LOCAL [ CONT [ HOOK [ ICONS-KEY.IARG1 #clause,
-                                 CLAUSE-KEY #clause ],
-                          ICONS.LIST < > ],
-                   CAT.HEAD [ CASE in,
-                              CASE-MARKED + ] ] ].
-
 ;;; Verbs
 
 edvərtais := verb2-verb-lex &
@@ -1603,6 +1565,22 @@ yók_1 := verb2-verb-lex &
 ŋáŋ_1 := verb2-verb-lex &
   [ STEM < "ŋáŋ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_speak_v_rel" ].
+
+čaw := verb2-verb-lex &
+  [ STEM < "čaw" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be_big_v_rel" ].
+
+thá_1 := verb2-verb-lex &
+  [ STEM < "thá" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_release_v_rel" ].
+
+tóŋ := verb2-verb-lex &
+  [ STEM < "tóŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ride_v_rel" ].
+
+kə́k := verb2-verb-lex &
+  [ STEM < "kə́k" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cut_v_rel" ].
 
 hay_2 := verb3-verb-lex &
   [ STEM < "hay" >,
@@ -1692,7 +1670,7 @@ tan_1 := verb12-verb-lex &
   [ STEM < "tan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_chase_v_rel" ].
 
-hən_3 := verb14-verb-lex &
+hən_2 := verb14-verb-lex &
   [ STEM < "hən" >,
     SYNSEM.LKEYS.KEYREL.PRED "_old-or-return_v_rel" ].
 
@@ -1798,7 +1776,7 @@ khét_7E := verb30-verb-lex &
 
 khə́t := verb37-verb-lex &
   [ STEM < "khə́t" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_differ_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_fight_v_rel" ].
 
 nuŋčhi_2 := verb37-verb-lex &
   [ STEM < "nuŋčhi" >,
@@ -2288,7 +2266,7 @@ hék_2 := verb138-verb-lex &
   [ STEM < "hék" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pick-or-pluck_v_rel" ].
 
-hən_4 := verb138-verb-lex &
+hən_3 := verb138-verb-lex &
   [ STEM < "hən" >,
     SYNSEM.LKEYS.KEYREL.PRED "_plant_v_rel" ].
 
@@ -2352,11 +2330,11 @@ tu := verb138-verb-lex &
   [ STEM < "ŋan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_steam_v_rel" ].
 
-i_3 := verb138-verb-lex &
+i := verb138-verb-lex &
   [ STEM < "i" >,
     SYNSEM.LKEYS.KEYREL.PRED "_write_v_rel" ].
 
-lə́y_2 := verb138-verb-lex &
+lə́y := verb138-verb-lex &
   [ STEM < "lə́y" >,
     SYNSEM.LKEYS.KEYREL.PRED "_buy-or-circle_v_rel" ].
 
