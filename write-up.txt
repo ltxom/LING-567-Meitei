@@ -32,14 +32,14 @@
     adp1_feat1_value=in
 
 	After researching, we found phrase "kóy-čhin-lə-e" is constructed with different phenomena, so it should not appear here. After removing it, the number of parses on average significantly reduced.
-	
+
 	We also found some affixes are both defined as noun pc and verb pc, while some lexicons are both described as nouns and verbs simultaneously. Thus it leads to an enormous ambiguity. We also cleaned that up. Details are discussed below.
    After improvements:
-	The primary source of ambiguity is multiple possible combinations in combining a N and a V. We observe there are multiple grammar rules to regulate S, such as 
+	The primary source of ambiguity is multiple possible combinations in combining a N and a V. We observe there are multiple grammar rules to regulate S, such as
 	1. (BASIC-HEAD-OPT-COMP) S -> V, V -> NP V
 	2. (DECL-HEAD-OPT-SUBJ) S -> VP, VP -> NP V
-	3. (SUBJ-HEAD) S -> NP VP 
-	
+	3. (SUBJ-HEAD) S -> NP VP
+
 	We didn't research this phenomenon this week, but we plan to study it and improve it later.
 
 1.5.
@@ -160,7 +160,7 @@ I cry-ASRT
 
 Phenomena #3: Case
 
-After referencing Chelliah's A grammar of Meithei(2011), in his section about case, there are agentive(=nə), patient(), locative(=tə), ablative(=təgi), genitive(=ki), associative(=kə) and instrumental(=nə) case markers. In the choices file, cases "all", "in" are deleted. "all" is listed as a case, but is not documented or found in item with a valid instance. Therefore, we deleted this case. "in" is an affix found in item, but is not documented as a case.
+After referencing Chelliah's A grammar of Meithei(2011), in his section about case, there are agentive(=nə), patient(=pu), locative(=tə), ablative(=təgi), genitive(=ki), associative(=kə) and instrumental(=nə) case markers. In the choices file, cases "all", "in" are deleted. "all" is listed as a case, but is not documented or found in item with a valid instance. Therefore, we deleted this case. "in" is an affix found in item, but is not documented as a case.
 We think "in" is not a case marker. "ins" stands for instrumental case, which according to Chelliah, is the same as agentive case and shares spelling, therefore we delete it as a separate case.
 We added "ass" stands for "associative", which marks indicate that the action has been performed in conjunction with another person
 other case markers:
@@ -169,8 +169,106 @@ The ablative marker is used to express direction of movement from a point in spa
 The genitive marker indicates possession, so we would come back next week.
 The instrumental marker shares spelling with agentive marker, and is argued to be an extension use of agentive case.
 
-There were ambiguities caused by the case since in IGT a subject is marked as =AGN, while -NOM is nominalizer.
+The case section now looks like:
+section=case
+case-marking=nom-acc
+nom-acc-nom-case-name=agn
+nom-acc-acc-case-name=pat
+  case1_name=abl
+  case2_name=loc
+  case3_name=ass
+  case4_name=inst
 
+Before improvements, case markers are scattered in noun-pc1, noun-pc2, noun-pc4, and was incorrectly identified noun-pc7_lrt1 as a case "nom", which is in fact a adverb suffix instead of a nominative case.
+The clean-up is listed in section3. IGT examples are listed above as in testsuites.
+
+locative:
+# 23
+Source: {a: 126, author}
+Vetted: t
+Judgment: g
+Phenomena: {c}
+yúmtə mí ləyí
+yúm=tə mí ləy-í
+house=LOC man be-NHYP
+'(A) man live in this house.'
+
+ablative:
+# 24
+Source: {a: 126, author}
+Vetted: t
+Judgment: g
+Phenomena: {c}
+má kə́ytəgi hənləmí
+má kə́y=təgi hən-ləm-í
+he granary=ABL return-EVD-HYNP
+'He returned from the granary.'
+
+agentive, patient
+# 25
+Source: {a: 249, author}
+Vetted: t
+Judgment: g
+Phenomena: {c}
+ə́ynə mápu səɡol tóŋhənləmí
+ə́y=nə má=pu səɡol tóŋ-hən-ləm-í
+I=AGN he/she=PAT horse ride-CAUS-EVD-HYNP
+'I made him/her ride the horse'
+
+associative:
+# 26
+Source: {a: 128, author}
+Vetted: t
+Judgment: g
+Phenomena: {c}
+ə́ykhoykə mákə khə́tnələmí
+ə́ykhoy=kə má=kə khə́t-nə-ləm-í
+we=ASS he_she=ASS fight-RECIP-EVD-HYNP
+'We and he/she fought each other.'
+
+instrumental
+# 27
+Source: {a: 249, author}
+Vetted: t
+Judgment: g
+Phenomena: {c}
+ə́ynə tháŋ ə́mənə perstú kə́kí
+ə́y-nə tháŋ ə́-mə=nə pers tú kə́k-í
+I-ADV knife ATT-one=INST pears DDET cut-NHYP
+'I cut the pears with a knife.'
+
+a negative case which should not parse because both arguments are affixed as agentive, but our current version still parses this sentence.
+# 28
+Source: {a: 249, author}
+Vetted: t
+Judgment: u
+Phenomena: {c}
+ə́ynə mánə səɡol tóŋhənləmí
+ə́y=nə má=nə səɡol tóŋ-hən-ləm-í
+I=AGN he_she=AGN horse ride-CAUS-EVD-HYNP
+'*I made he/she(AGN) ride the horse'
+
+negative example successfully rejects case as a prefix
+# 29
+Source: {a: 249, author}
+Vetted: t
+Judgment: u
+Phenomena: {c}
+təyum mí ləyí
+tə=yum mí ləy-í
+LOC=house men be-NHYP
+'*Men live in this house.'
+
+negative example successfully rejects case on a verb
+# 30
+Source: {a: 249, author}
+Vetted: t
+Judgment: u
+Phenomena: {c}
+yum mí ləyítə
+yum mí ləy-í=tə
+house men be-NHYP=LOC
+'*men live in this house.'
 
 
 
@@ -183,16 +281,28 @@ other changes:
 1. delete noun-pc1_lrt2, the rule has no feature specified, only spelling. By spelling we think this is the genitive case lexical rule type. We will probably come back and add it back.
 2. delete noun-pc36, the rule records -nə́bə as a "in" case, but it stands for a suffix meaning IN.ORDER.TO.
 3. delete noun-pc27_lrt2 spelling: "-čhin", it used to be in case "in". We deleted it in case setion, and we chose to delete this suffix for now.
-4. delete noun-pc5, -nə an affix without any feature (should be an adverb suffix)
-5. delete noun-pc7 lrt1, -pə no feature specified  (should be nominalizer suffix)
+4. delete noun-pc5_lrt1 feature as a case "nom", -nə an affix without any feature (should be an adverb suffix) we kept noun-pc5 because we will probably work on this later.
+5. delete noun-pc7, -pə no feature specified  (should be nominalizer suffix)
 
 While looking throught lexicon, we found several messy miscategorization of some lexicon type. For example, 'i' in Meithei stands for verb means 'write'. However, it was under a noun type. Similar changes were made with other lexicon, and their type was referenced from Chelliah's A grammar of Meithei(2011).
 Lexicon Changes:
-1. delete (spelling: "i" pred: _no_gloss_n_rel) in noun type 1
+1. delete (spelling: "i" pred: _no_gloss_n_rel) in noun type 1, "i" is a verb stem "write"
+IGT example see 4.
 2. moved (spelling: "čaw" pred: _be_big_n_rel) in noun type 1 to verb type2 pred -> _be_big_v_nel
+ə́y čaw-pə.
+I big-NOM.
+'I am big'
+Here this sentence does not handle -NOM correctly, we will work on that later. "big" now stems as a verb.
 3. moved delete (spelling: "i" pred: _write_n_rel) in noun type 1 to verb type2 pred -> _write_v_rel
+ə́y layrík i.
+I book write.
+I write (a) book.
+
 4. noun type29: changed thá from noun to verb _release_v_rel(as recorded in IGT) undeer verb type2 (transitive)
   e.g. 15060
   mə́-tú=ki wákhə́ntú mə́-tú thá-thok-u ibuŋŋo
   NM-=ddet==POSS word-think==DDET NM-ddet release-OUT-IMP dear.sir .
   Throw out this idea of yours, dear one.@@
+Althought this IGT is still unsuccessfully parsed, we cleaned up thá-thok-u's expansion from a N -> V.
+
+5. delete duplicate words "yum", pred: _house_n_rel. IGT the same as #23
