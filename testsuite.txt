@@ -108,8 +108,37 @@ má kə́y=təgi-tú hən-ləm-í
 he granary=ABL-PDET return-EVD-HYNP
 '*He returned from the (proximate) granary.'
 
-
 # 11
+Source: {a: 78&126, author}
+Vetted: t
+Judgment: g
+Phenomena: {poss, case, pn}
+íyúmtə mí ləyí
+í-yúm=tə mí ləy-í
+1P-house=LOC man be-NHYP
+'(A) man live in my house.'
+
+# 12
+Source: {a: 78&126, author}
+Vetted: t
+Judgment: g
+Phenomena: {poss, case, pn}
+nəyúmtə mí ləyí
+nə́-yúm=tə mí ləy-í
+2P-house=LOC man be-NHYP
+'(A) man live in your house.'
+
+# 13
+Source: {a: 78&126, author}
+Vetted: t
+Judgment: g
+Phenomena: {poss, case, pn}
+mə́yúmtə mí ləyí
+mə́-yúm=tə mí ləy-í
+3P-house=LOC man be-NHYP
+'(A) man live in his/her house.'
+
+# 14
 Source: {a: 78&126, author}
 Vetted: t
 Judgment: g
@@ -119,7 +148,7 @@ Phenomena: {poss, case, pn}
 1P=POSS house=LOC man be-NHYP
 '(A) man live in my house.'
 
-# 12
+# 15
 Source: {a: 78&126, author}
 Vetted: t
 Judgment: g
@@ -129,7 +158,7 @@ nə́ŋ=ki yúm=tə mí ləy-í
 2P=POSS house=LOC man be-NHYP
 '(A) man live in your house.'
 
-# 13
+# 16
 Source: {a: 78&126, author}
 Vetted: t
 Judgment: g
@@ -139,7 +168,7 @@ má=ki yúm=tə mí ləy-í
 3P=POSS house=LOC man be-NHYP
 '(A) man live in his/her house.'
 
-# 14
+# 17
 Source: {a: 78&126, author}
 Vetted: t
 Judgment: u
@@ -149,7 +178,7 @@ ki=ə́y yúm=tə mí ləy-í
 POSS=1P house=LOC man be-NHYP
 '*(A) man live in my house.'
 
-# 15
+# 18
 Source: {a: 78&126, author}
 Vetted: t
 Judgment: u
@@ -159,7 +188,7 @@ ki=nə́ŋ yúm=tə mí ləy-í
 POSS=2P house=LOC man be-NHYP
 '*(A) man live in your house.'
 
-# 16
+# 19
 Source: {a: 78&126, author}
 Vetted: t
 Judgment: u
@@ -169,7 +198,7 @@ ki=má yúm=tə mí ləy-í
 POSS=3P house=LOC man be-NHYP
 '*(A) man live in his/her house.'
 
-# 17
+# 20
 Source: {a: 249, author}
 Vetted: t
 Judgment: g
@@ -179,7 +208,7 @@ má ŋə́čhi lak-kə=ni háy-í
 he today come-POT=COP say-NHYP
 'He said that he would come today'
 
-# 18
+# 21
 Source: {a: 249, author}
 Vetted: t
 Judgment: g
@@ -190,7 +219,7 @@ he=AGN win-PERF-ASRT say-DCOMP he=AGN know-NHYP
 'He knew that she had won'
 
 
-# 19
+# 22
 Source: {a: 249, author}
 Vetted: t
 Judgment: g
@@ -201,7 +230,7 @@ he=AGN water-GPL drink-DCOMP I=AGN stop-PERF-NHYP.
 "I stopped him from drinking water"
 
 
-# 20
+# 23
 Source: {a: 249, author}
 Vetted: t
 Judgment: g
@@ -211,7 +240,7 @@ Phenomena: {cl-mod}
 ATT-tall-NOM man ATT-DDET water-bath-prog
 "The tall man is swimming"
 
-# 21
+# 24
 Source: {a: 249, author}
 Vetted: t
 Judgment: u
@@ -221,7 +250,7 @@ Phenomena: {cl-mod}
 ATT-NOM-tall man ATT-DDET water-bath-prog
 "*The tall man is swimming"
 
-# 22
+# 25
 Source: {a: 249, author}
 Vetted: t
 Judgment: u
