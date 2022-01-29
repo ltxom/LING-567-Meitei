@@ -83,8 +83,8 @@ Source: {a: 126, author}
 Vetted: t
 Judgment: g
 Phenomena: {det, c}
-má kə́ytútəgi hənləmí
-má kə́y-tú=təgi hən-ləm-í
+má kə́yčhítəgi hənləmí
+má kə́y-čhí=təgi hən-ləm-í
 he granary-PDET=ABL return-EVD-HYNP
 'He returned from the (proximate) granary.'
 
