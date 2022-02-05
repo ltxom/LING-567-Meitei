@@ -112,7 +112,77 @@ We investigated the lexicon defination for _chase_v_rel and found it has valence
     verb12_stem1_pred=_chase_v_rel
 }
 
-Phenomenon 3: TODO
+Phenomenon 3: Clausal comps
+
+Instead of defining complentizers as suffixes, which is not really a doable way to parse out the correct sentence structure, we have redefined complementizers to be treated as a word instead of word + c-suffix. Four complementizers differ in evidential values(Chelliah, p171).
+
+háy=nə
+say=INST
+
+háy-pə
+say-NOM
+
+háy-pəsi
+say-DCOMP
+
+háy-pədu
+say-DCOMP
+
+{code in choices file
+section=clausal-comp
+  comps1_clause-pos-same=on
+  comps1_ques=prop
+  comps1_comp-pos-after=on
+  comps1_comp=opt
+    comps1_stem1_orth=háy=nə
+    comps1_stem2_orth=háy-pəsi
+    comps1_stem3_orth=háy-pədu
+}
+
+We have also made changes to the verb argument structures to comp1(case unspecified)
+
+
+nóŋ takəni háynə ə́ynə tháǰəí
+nóŋ ta-kə=ni háy=nə ə́y=nə tháǰə-í
+rain fall-POT=COP say=INST I=AGN believe-NHYP
+'I believe that it will rain.'
+
+In #33, the parses were successful with the complementizer, and the parses recognize the complement clause. However, the lower tree recognize the subject and object of the comp clause, "mə skul" as a NP that applied np coordination rule. This is wrong, and the coordination rule mistake happened not only for this IGT, but in #34 as well that a vp-coordination rule applied to a single verb. 
+We therefore went into choices file and delete the coordination section. After that, this sentence did not go through parsing. This is because lexicon _go_v_rel is not under the transitive verb type】、
+【, and therefor the parse did not recognize subject and object.  
+
+# 33
+
+ə́y khəŋde mə skul čə́tkhre háybə
+ə́y khəŋ-tə-e mə skul čə́t-khi-lə-e háy-pə
+I know-NEG-ASRT 3p school go-still-PERF-ASRT say-NOM
+'I didn't know that he had gone to school.'
+
+# 34
+
+ə́ynə mə čə́tkhre háybəsi níŋləmmí
+ə́y=nə mə čə́t-khi-lə-e háy-pəsi khə́ŋ-í
+I=AGN 3p go-still-PERF-ASRT say-DCOMP know-NHYP
+'I know that he had gone'
+
+revision to example: the IGT took incorrect suffix marker. Agentive suffix is supposed to be marked by =nə, but mistakenly used "-". -nə(what we mistakenly put in the writeup lab4) is an adverbial suffix and cannot take nouns/pronouns as possible inputs, and this is why this IGT did not parse correctly. Now it parses with 1 parse possible, and the structure is correct, but we might need to look deeper in the tree to see if there's extraneous or anomaly use of lexical rules.
+
+
+    # 35
+    mənə thoyre háybəsi mənə khə́ŋŋí
+    mə=nə thoy-lə-e háy-pəsi mə=nə khə́ŋ-í
+    she=CNTR win-PERF-ASRT say-DCOMP he=CNTR know-NHYP
+    'He knew that she had won'
+
+
+
+Morphotactic and Lexicon changes: 
+1. delete noun-pc36 for nothing in there
+2. add lexicon rain
+3. for potential tense, change possible inputs to any verb
+4. add word "remember" to transitive verb type 14, with argument structure transitive-clausal-comps1
+5. delete duplicate suffix "=kə"， ‘-pə’
+6. add perfect-nominalizer to verb-pc3, with perfect pc_lrt and perfect-associative suffix. According to the book, they are adverbial participials so I put them in the same position class ，. 
 
 2.
 A description of your process for translating the MMT sentences and your documentation about which sentences may be impossible.
@@ -230,13 +300,18 @@ When translating English into Meitei, it processed very slow and generated 25229
 
 4.4.
   Before improvements:
-    TODO
+    Last week our parses receives 95 parse readings on average for the corpus, the major problem we believe is the coordination rule that allows extra readings for parses. 
   After improvements:
-    TODO
-
+    The ambiguity after improvements now comes from the use of subj-head rule or comp-head rules, this is the ambiguity that's due to the freer word order in Meithei. Another ambiguity comes from the forming of VP or V. Example in our testsuite would be: 
+    {
+    ə́y khəŋ-tə-e mə skul čə́t-khi-lə-e háy-pə
+		I know-NEG-ASRT 3p school go-still-PERF-ASRT say-NOM
+		'I didn't know that he had gone to school.'
+    }
+  	The parser gives V or VP readings to the VP "school go". When it gives V to this phrase, it used subj-head rule. However, we think this is a huge improvement that the comp clauses now have valid parse tree that is correctly identifying comp clause when the matrix clause word order is not fixed.
 4.5.
   Before improvements:
-    TODO
+    We had wrongly defined the pseudofeature in the other feature section which caused a semantic mismatch. Th
   After improvements:
-    TODO
+    We looked into some IGT in our testsuite to find out parses of semantic. After we did improvements on possessive pronouns, we now have the correct semantic relation with poss_rel and pron_rel as the example is illustrated above in the possessive section. In the comp clause, the same IGT is used as in 4.4. The semantics could be the other source of ambiguity that in the first tree it is linking arg1 of the verb "go" to the school. But the other reading is correct that correctly identifies the agent and the patient of verb "go".
 
