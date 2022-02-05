@@ -6,353 +6,173 @@ Date: Jan 27, 2021
 Source a: Chelliah, S. L. (2011). A grammar of Meithei. De Gruyter Mouton.
 Source b: Singh, S. I. (2013). Agreements in Manipuri. Language in India, 13(11).
 
-
-# 1
+# 1 Translation 1
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
-Phenomena: {pn}
-ə́y kə́pe
-ə́y kə́p-e
-I cry-ASRT
-'I cry.'
+Phenomena: {}
+húy túme
+húy túm-e
+dog sleep-ASRT
+'Dog(s) sleep.'
 
-# 2
+# 2 Translation 2
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
-Phenomena: {pn}
-nə́ŋ kə́pe
-nə́ŋ kə́p-e
-You cry-ASRT
-'You cry.'
+Phenomena: {}
+húy garípu tane
+húy garí=pu tan-e
+dog car=ACC chase-ASRT
+'Dog(s) chase car(s).'
 
-# 3
+# 3 Translation 3
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
-Phenomena: {pn}
-má kə́pe
-má kə́p-e
-he_she cry-ASRT
-'He/She cries.'
+Phenomena: {}
+ə́y nə́ŋpu tane
+ə́y nə́ŋ=pu tan-e
+I you=ACC chase-ASRT
+'I chase you.'
 
-# 4
-Source: {a: 79, b: 218, author}
-Vetted: t
-Judgment: g
-Phenomena: {pn}
-ə́ykhoy kə́pe
-ə́ykhoy kə́p-e
-we cry-ASRT
-'We cry.'
-
-# 5
-Source: {a: 79, b: 218, author}
-Vetted: t
-Judgment: g
-Phenomena: {pn}
-mə́khoy kə́pe
-mə́khoy kə́p-e
-they cry-ASRT
-'They cry.'
-
-# 6
-Source: {a: 79, b: 218, author}
-Vetted: t
-Judgment: g
-Phenomena: {pn}
-nə́khóy kə́pe
-nə́khóy kə́p-e
-you_all cry-ASRT
-'You all cry.'
-
-# 7
-Source: {a: 79, b: 218, author}
-Vetted: t
-Judgment: g
-Phenomena: {pn}
-íbani kə́pe
-íbani kə́p-e
-we_dual cry-ASRT
-'We two cry.'
-
-# 8
-Source: {a: 79, b: 218, author}
-Vetted: t
-Judgment: g
-Phenomena: {pn}
-nə́bani kə́pe
-nə́bani kə́p-e
-you_dual cry-ASRT
-'You two cry.'
-
-# 9
-Source: {a: 79, b: 218, author}
-Vetted: t
-Judgment: g
-Phenomena: {pn}
-mə́bani kə́pe
-mə́bani kə́p-e
-they_dual cry-ASRT
-'They two cry.'
-
-# 10
-Source: {a: 79, b: 218, author}
-Vetted: t
-Judgment: u
-Phenomena: {pn}
-ə́ynə́ŋ kə́pe
-ə́y-nə́ŋ kə́p-e
-I-you cry-ASRT
-'*I-you cry.'
-
-# 11
-Source: {a: 79, b: 218, author}
-Vetted: t
-Judgment: g
-Phenomena: {pn}
-ə́y nə́ŋpu khə́ŋe
-ə́y nə́ŋ=pu khə́ŋ-e
-I you=ACC know-ASRT
-'I know you.'
-
-# 12
-Source: {a: 231, b: 218, author}
-Vetted: t
-Judgment: g
-Phenomena: {tam}
-ə́y paloy
-ə́y pa-loy
-I read-NPOT
-'I will not read.'
-
-# 13
-Source: {a: 231, b: 218, author}
-Vetted: t
-Judgment: g
-Phenomena: {tam}
-ə́y pakəni
-ə́y pa-kə=ni
-I read-POT=COP
-'I will read.'
-
-# 14
-Source: {a: 231, b: 218, author}
-Vetted: t
-Judgment: g
-Phenomena: {tam}
-ə́y čə́tkəni
-ə́y čə́t-kə=ni
-I go-POT=COP
-'I will go.'
-
-# 15
-Source: {a: 231, b: 218, author}
-Vetted: t
-Judgment: g
-Phenomena: {tam}
-ə́y čə́tloy
-ə́y čə́t-loy
-I go-NPOT
-'I will not go.'
-
-# 16
-Source: {a: 231, b: 218, author}
-Vetted: t
-Judgment: u
-Phenomena: {tam}
-ə́yloy čə́t
-ə́y-loy čə́t
-I-NPOT go
-'*I not will go.'
-
-# 17
-Source: {a: 231, b: 218, author}
-Vetted: t
-Judgment: g
-Phenomena: {tam}
-mə́bani čároy
-mə́bani čá-loy
-they_dual eat-NPOT
-'They two will not eat'
-
-# 18
-Source: {a: 231, b: 218, author}
-Vetted: t
-Judgment: u
-Phenomena: {tam}
-mə́bani loyčá
-mə́bani loy-čá
-they_dual NPOT-eat
-'*They two will not eat'
-
-# 19
-Source: {a: 249, author}
-Vetted: t
-Judgment: g
-Phenomena: {det}
-míčhí kə́pe
-mí čhí kə́p-e
-man PDET cry-ASRT
-'The (proximate) man cries.'
-
-# 20
-Source: {a: 249, author}
-Vetted: t
-Judgment: g
-Phenomena: {det}
-mítú kə́pe
-mí tú kə́p-e
-man DDET cry-ASRT
-'The (distal) man cries.'
-
-# 21
-Source: {a: 249, author}
-Vetted: t
-Judgment: u
-Phenomena: {det}
-čhí kə́pe
-čhí kə́p-e
-PDET cry-ASRT
-'*The (proximate) cries.'
-
-# 22
-Source: {a: 249, author}
-Vetted: t
-Judgment: u
-Phenomena: {det}
-tú kə́pe
-tú kə́p-e
-DDET cry-ASRT
-'*The (distal) cries.'
-
-# 23
-Source: {a: 126, author}
-Vetted: t
-Judgment: g
-Phenomena: {c}
-yúmtə mí ləyí
-yúm=tə mí ləy-í
-house=LOC man be-NHYP
-'(A) man live in this house.'
-
-# 24
-Source: {a: 126, author}
-Vetted: t
-Judgment: g
-Phenomena: {c}
-má kə́ytəgi hənləmí
-má kə́y=təgi hən-ləm-í
-he granary=ABL return-EVD-HYNP
-'He returned from the granary.'
-
-# 25
-Source: {a: 249, author}
-Vetted: t
-Judgment: g
-Phenomena: {c}
-ə́ynə mápu səɡol tóŋhənləmí
-ə́y=nə má=pu səɡol tóŋ-hən-ləm-í
-I=AGN he/she=PAT horse ride-CAUS-EVD-HYNP
-'I made him/her ride the horse'
-
-# 26
-Source: {a: 128, author}
-Vetted: t
-Judgment: g
-Phenomena: {c}
-ə́ykhoykə mákə khə́tnələmí
-ə́ykhoy=kə má=kə khə́t-nə-ləm-í
-we=ASS he_she=ASS fight-RECIP-EVD-HYNP
-'We and he/she fought each other.'
-
-# 27
-Source: {a: 249, author}
-Vetted: t
-Judgment: g
-Phenomena: {c}
-ə́ynə tháŋ ə́mənə perstú kə́kí
-ə́y-nə tháŋ ə́-mə=nə pers tú kə́k-í
-I-ADV knife ATT-one=INST pears DDET cut-NHYP
-'I cut the pears with a knife.'
-
-# 28
-Source: {a: 249, author}
-Vetted: t
-Judgment: u
-Phenomena: {c}
-ə́ynə mánə səɡol tóŋhənləmí
-ə́y=nə má=nə səɡol tóŋ-hən-ləm-í
-I=AGN he_she=AGN horse ride-CAUS-EVD-HYNP
-'*I made he/she(AGN) ride the horse'
-
-# 29
-Source: {a: 249, author}
-Vetted: t
-Judgment: u
-Phenomena: {c}
-təyum mí ləyí
-tə=yum mí ləy-í
-LOC=house men be-NHYP
-'*Men live in this house.'
-
-# 30
-Source: {a: 249, author}
-Vetted: t
-Judgment: u
-Phenomena: {c}
-yum mí ləyítə
-yum mí ləy-í=tə
-house men be-NHYP=LOC
-'*men live in this house.'
-
-# 31
-Source: {a: 249, author}
-Vetted: t
-Judgment: g
-Phenomena: {c}
-yum mí ləytəí
-yum mí ləy=tə-í
-house men be-NHYP=LOC
-'*men live in this house.'
-
-# 32
-Source: {a: 249, author}
-Vetted: t
-Judgment: g
-Phenomena: {c}
-yum mí ləytəí
-yum mí ləy=tə-í
-house men be-NHYP=LOC
-'*men live in this house.'
-
-# 33
+# 4 nominalizer & complement 1
 Source: {a: 249, author}
 Vetted: t
 Judgment: g
 Phenomena: {cl-mod}
-əy khəŋde məhák skul čə́tkhre háybə
-əy khəŋ-tə-e mə-hák skul čə́t-khi-lə-e háy-pə
-I know-NEG-ASRT 3p-here school go-still-PERF-ASRT say-NOM
+nóŋ takəni háynə ə́ynə tháǰəí
+nóŋ ta-kə=ni háy=nə ə́y=nə tháǰə-í
+rain fall-POT=COP say=INST I=AGN believe-NHYP
+'I believe that it will rain.'
+
+# 5 nominalizer & complement 2
+Source: {a: 249, author}
+Vetted: t
+Judgment: g
+Phenomena: {cl-mod}
+ə́y khəŋtəe mə skul čə́tkhre háynə
+ə́y khəŋ-tə-e mə skul čə́t-khi-lə-e háy=nə
+I know-NEG-ASRT 3p school go-still-PERF-ASRT say=INST
 'I didn't know that he had gone to school.'
 
-# 34
+# 6 nominalizer & complement 3
 Source: {a: 249, author}
 Vetted: t
 Judgment: g
 Phenomena: {cl-mod}
 ə́ynə mə čə́tkhre háybəsi níŋləmmí
-ə́y=nə  mə čə́t-khi-lə-e háy-pəsi níŋ-ləm-í
-I=AGN 3p go-still-PERF-ASRT say-DCOMP wish-EVD-NHYP
-'I remembered that he had gone'
+ə́y=nə mə čə́t-khi-lə-e háy-pəsi khə́ŋ-í
+I=AGN 3p go-still-PERF-ASRT say-DCOMP know-NHYP
+'I know that he had gone'
 
-# 35
-Source: {a: 249, author}
+# 7
+Source: {a: 78&126, author}
 Vetted: t
 Judgment: g
+Phenomena: {poss}
+ímí kə́pe
+í-mí kə́p-e
+1P-man cry-ASRT
+'My man cries.'
+
+# 8
+Source: {a: 78&126, author}
+Vetted: t
+Judgment: g
+Phenomena: {poss}
+nə́mí kə́pe
+nə́-mí kə́p-e
+2P-man cry-ASRT
+'Your man cries.'
+
+# 9
+Source: {a: 78&126, author}
+Vetted: t
+Judgment: g
+Phenomena: {poss}
+mə́mí kə́pe
+mə́-mí kə́p-e
+3P-man cry-ASRT
+'His/her man cries.'
+
+# 10
+Source: {a: 78&126, author}
+Vetted: t
+Judgment: g
+Phenomena: {case}
+yúmtə mí ləyí
+yúm=tə mí ləy-í
+house=LOC man be-NHYP
+'(A) man live in house.'
+
+# 11
+Source: {a: 78&126, author}
+Vetted: t
+Judgment: g
+Phenomena: {case}
+yúmtə húy ləyí
+yúm=tə húy ləy-í
+house=LOC dog be-NHYP
+'Dog(s) live in house.'
+
+# 12
+Source: {a: 78&126, author}
+Vetted: t
+Judgment: g
+Phenomena: {case}
+garítə húy ləyí
+garí=tə húy ləy-í
+car=LOC dog be-NHYP
+'Dog(s) live in car.'
+
+# 13
+Source: {a: 249, author}
+Vetted: t
+Judgment: u
 Phenomena: {cl-mod}
-mənə thoyre háybəsi mənə khə́ŋŋí
-mə=nə thoy-lə-e háy-pəsi mə=nə khə́ŋ-í
-she=CNTR win-PERF-ASRT say-DCOMP he=CNTR know-NHYP
-'He knew that she had won'
+ə́pəwaŋ mí ə́tu iloyli
+ə́-pə-waŋ mí ə́-tu i-loy-li
+ATT-NOM-tall man ATT-DDET water-bath-prog
+"*The tall man is swimming"
+
+# 14
+Source: {a: 249, author}
+Vetted: t
+Judgment: u
+Phenomena: {cl-mod}
+mánə isiŋ pəduthə́k ə́ynə khámmí
+má=nə i-siŋ pədu-thə́k ə́y=nə khám-lə-í
+he=AGN water-GPL DCOMP-drink I=AGN stop-PERF-NHYP.
+"*I stopped him from drinking water"
+
+# 15
+Source: {a: 78&126, author}
+Vetted: t
+Judgment: u
+Phenomena: {poss}
+míí kə́pe
+mí-í kə́p-e
+man-1P cry-ASRT
+'*man my cries.'
+
+# 16
+Source: {a: 78&126, author}
+Vetted: t
+Judgment: u
+Phenomena: {poss}
+mí-nə́ kə́pe
+mí-nə́ kə́p-e
+man-2P cry-ASRT
+'*man your cries.'
+
+# 17
+Source: {a: 78&126, author}
+Vetted: t
+Judgment: u
+Phenomena: {poss}
+mímə́ kə́pe
+mí-mə́ kə́p-e
+man-3P cry-ASRT
+'*man his/her cries.'
+
