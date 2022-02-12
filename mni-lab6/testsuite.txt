@@ -1,0 +1,229 @@
+Language: Meithei
+Language code: mni
+Lines: orth orth-seg gloss translat
+Author: Tongxi(Tom) Liu, Jessie Zeng
+Date: Jan 27, 2021
+Source a: Chelliah, S. L. (2011). A grammar of Meithei. De Gruyter Mouton.
+Source b: Singh, S. I. (2013). Agreements in Manipuri. Language in India, 13(11).
+
+# 1 Translation 1
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+húy túmí
+húy túm-í
+dog sleep-NHYP
+'Dogs sleep.'
+
+# 2 Translation 2
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+húy garípu taní
+húy garí=pu tan-í
+dog car=ACC chase-NHYP
+'Dogs chase cars.'
+
+# 3 Translation 3
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+ə́y nə́ŋpu taní
+ə́y nə́ŋ=pu tan-í
+I you=ACC chase-NHYP
+'I chase you.'
+
+# 4
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+húy čáí
+húy čá-í
+dogs eat-NHYP
+'Dogs eat.'
+
+# 5
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+húyki garí túmí
+húy=ki garí túm-í
+Dogs=POSS cars sleep-NHYP
+'The dog's cars sleeps'
+
+# 6
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+garíki húy túmí
+garí=ki húy túm-í
+Car=POSS dogs sleep-NHYP
+'The car's dogs sleeps'
+
+# 7
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+ə́yki húy túmí
+ə́y=ki húy túm-í
+1P=POSS dogs sleep-NHYP
+'My dogs sleep'
+
+# 8
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+nə́ŋki húy túmí
+nə́ŋ=ki húy túm-í
+2P=POSS dogs sleep-NHYP
+'Your dogs sleep'
+
+# 9
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+máki húy túmí
+má=ki húy túm-í
+3P=POSS dogs sleep-NHYP
+'His/her dogs sleep'
+
+# 10
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+íhúy túmí
+í-húy túm-í
+1P-dogs sleep-NHYP
+'My dogs sleep'
+
+# 11
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+nə́húy túmí
+nə́-húy túm-í
+2P-dogs sleep-NHYP
+'Your dogs sleep'
+
+# 12
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+mə́húy túmí
+mə́-húy túm-í
+3P-dogs sleep-NHYP
+'His/her dogs sleep'
+
+# 13
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+ə́y čən čáí
+ə́y čən čá-í
+I rice eat-NHYP
+'I eat rice'
+
+# 14
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+ə́yki húy čən čáí
+ə́y=ki húy čən čá-í
+1P=POSS dogs rice eat-NHYP
+'My dogs eat rice'
+
+# 15
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+nə́ŋki húy čən čáí
+nə́ŋ=ki húy čən čá-í
+2P=POSS dogs rice eat-NHYP
+'Your dogs eat rice'
+
+# 16
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+máki húy čən čáí
+má=ki húy čən čá-í
+3P=POSS dogs rice eat-NHYP
+'His/her dogs eat rice'
+
+# 17
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+íhúy čən čáí
+í-húy čən čá-í
+1P-dogs rice eat-NHYP
+'My dogs eat rice'
+
+# 18
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+nə́húy čən čáí
+nə́-húy čən čá-í
+2P-dogs rice eat-NHYP
+'Your dogs eat rice'
+
+# 19
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+mə́húy čən čáí
+mə́-húy čən čá-í
+3P-dogs rice eat-NHYP
+'His/her dogs eat rice'
+
+# 20
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: u
+Phenomena: {}
+íhúy čáí čən
+í-húy čá-í čən
+1P-dogs eat-NHYP rice 
+'*My dogs rice eat'
+
+# 21
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: u
+Phenomena: {}
+nə́húy čáí čən
+nə́-húy čá-í čən
+2P-dogs eat-NHYP rice
+'Your dogs eat rice'
+
+# 22
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: u
+Phenomena: {}
+mə́húy čáí čən
+mə́-húy čá-í čən
+3P-dogs eat-NHYP rice
+'His/her dogs eat rice'
+
+

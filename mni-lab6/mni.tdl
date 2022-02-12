@@ -775,8 +775,7 @@ sentence-mood-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
     DTR verb-lex ].
 
 nhyp-lex-rule := sentence-mood-lex-rule-super &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX [ E.MOOD nhyp-declarative ],
-				 [ SF prop ]].
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.MOOD nhyp-declarative ].
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Phrasal Types
