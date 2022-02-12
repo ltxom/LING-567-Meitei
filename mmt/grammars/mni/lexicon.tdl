@@ -1110,10 +1110,6 @@ thə́k_1 := noun4-noun-lex &
   [ STEM < "čhéŋ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_true_n_rel" ].
 
-čá_1 := noun4-noun-lex &
-  [ STEM < "čá" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_eat_n_rel" ].
-
 šéŋ := noun4-noun-lex &
   [ STEM < "šéŋ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_true_n_rel" ].
@@ -1214,7 +1210,7 @@ u_2 := noun6-noun-lex &
   [ STEM < "čhíǰinnə" >,
     SYNSEM.LKEYS.KEYREL.PRED "_use_n_rel" ].
 
-čá_2 := noun6-noun-lex &
+čá_1 := noun6-noun-lex &
   [ STEM < "čá" >,
     SYNSEM.LKEYS.KEYREL.PRED "_make_n_rel" ].
 
@@ -1378,7 +1374,7 @@ taw_1 := noun61-noun-lex &
   [ STEM < "čhú" >,
     SYNSEM.LKEYS.KEYREL.PRED "_grandchild_n_rel" ].
 
-čá_3 := noun61-noun-lex &
+čá_2 := noun61-noun-lex &
   [ STEM < "čá" >,
     SYNSEM.LKEYS.KEYREL.PRED "_child_n_rel" ].
 
@@ -1562,10 +1558,6 @@ yók_1 := verb2-verb-lex &
   [ STEM < "čiŋ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pull_v_rel" ].
 
-čá_4 := verb2-verb-lex &
-  [ STEM < "čá" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
-
 čən_2 := verb2-verb-lex &
   [ STEM < "čən" >,
     SYNSEM.LKEYS.KEYREL.PRED "_assemble_v_rel" ].
@@ -1690,6 +1682,10 @@ ləy_1 := verb12-verb-lex &
   [ STEM < "ləy" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be_v_rel" ].
 
+čá_3 := verb12-verb-lex &
+  [ STEM < "čá" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
+
 hən_2 := verb14-verb-lex &
   [ STEM < "hən" >,
     SYNSEM.LKEYS.KEYREL.PRED "_old-or-return_v_rel" ].
@@ -1749,10 +1745,6 @@ yók_2 := verb14-verb-lex &
 čiŋ_2 := verb14-verb-lex &
   [ STEM < "čiŋ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pull_v_rel" ].
-
-čá_5 := verb14-verb-lex &
-  [ STEM < "čá" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
 
 čən_3 := verb14-verb-lex &
   [ STEM < "čən" >,
@@ -1890,10 +1882,6 @@ yók_3 := verb61-verb-lex &
   [ STEM < "čiŋ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pull_v_rel" ].
 
-čá_6 := verb61-verb-lex &
-  [ STEM < "čá" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
-
 čən_4 := verb61-verb-lex &
   [ STEM < "čən" >,
     SYNSEM.LKEYS.KEYREL.PRED "_assemble_v_rel" ].
@@ -1970,10 +1958,6 @@ yók_4 := verb68-verb-lex &
   [ STEM < "čiŋ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pull_v_rel" ].
 
-čá_7 := verb68-verb-lex &
-  [ STEM < "čá" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
-
 čən_5 := verb68-verb-lex &
   [ STEM < "čən" >,
     SYNSEM.LKEYS.KEYREL.PRED "_assemble_v_rel" ].
@@ -2010,7 +1994,7 @@ pan_2 := verb79-verb-lex &
   [ STEM < "pan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_subtract_v_rel" ].
 
-pas_1 := verb79-verb-lex &
+pas := verb79-verb-lex &
   [ STEM < "pas" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pass_v_rel" ].
 
@@ -2205,10 +2189,6 @@ yók_5 := verb138-verb-lex &
 čiŋ_5 := verb138-verb-lex &
   [ STEM < "čiŋ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_drag-or-pull_v_rel" ].
-
-čá_8 := verb138-verb-lex &
-  [ STEM < "čá" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
 
 čən_6 := verb138-verb-lex &
   [ STEM < "čən" >,
@@ -2534,10 +2514,6 @@ kham := verb138-verb-lex &
   [ STEM < "čhíŋ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_wise_v_rel" ].
 
-čá_9 := verb156-verb-lex &
-  [ STEM < "čá" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_hundred_v_rel" ].
-
 čə́p := verb156-verb-lex &
   [ STEM < "čə́p" >,
     SYNSEM.LKEYS.KEYREL.PRED "_compress_v_rel" ].
@@ -2551,36 +2527,6 @@ kham := verb138-verb-lex &
 nə́tte_7 := aux1-aux-lex &
   [ STEM < "nə́tte" >,
     SYNSEM.LKEYS.KEYREL.PRED "_is_v_rel" ].
-
-nə́tte_8 := aux2-aux-lex &
-  [ STEM < "nə́tte" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_is_v_rel" ].
-
-nə́tte_9 := aux3-aux-lex &
-  [ STEM < "nə́tte" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_is_v_rel" ].
-
-nə́tte_10 := aux4-aux-lex &
-  [ STEM < "nə́tte" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_is_v_rel" ].
-
-nə́tte_11 := aux5-aux-lex &
-  [ STEM < "nə́tte" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_is_v_rel" ].
-
-pas_2 := aux6-aux-lex &
-  [ STEM < "pas" > ].
-
-nə́tte_12 := aux7-aux-lex &
-  [ STEM < "nə́tte" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_is_v_rel" ].
-
-nəttə := neg8-aux-lex &
-  [ STEM < "nəttə" >,
-    SYNSEM.LKEYS.KEYREL.PRED "neg_rel" ].
-
-čə́phú := aux9-aux-lex &
-  [ STEM < "čə́phú" > ].
 
 ;;; Adverbs
 

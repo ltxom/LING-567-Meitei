@@ -1,317 +1,181 @@
 lab5 write-up
 By Tongxi(Tom) Liu, Jessie Zeng
-Feb 2nd, 2022
-1.
-Phenomenon 1: Possessive
+Feb 11th, 2022
+1. 
 
-In lab4, we correctly defined the suffix possessive marker (=ki), and created noun-pc for possessive pronominal prefixes (í-(my)/nə́-(your)/mə́-(his or her)). However, when defined the following persudo-features cause errors in our grammar:
-{    
-      feature1_name=poss-pron1
-      feature1_type=head
-      feature1_cat=noun
-      feature1_new=yes
-	feature1_value1_name=possessive
-	  feature1_value1_supertype1_name=poss-pron1
-	feature1_value2_name=nonpossessive
-	  feature1_value2_supertype1_name=poss-pron1
-}
+20k+ results
 
-In the lecture this week, you kindly helped us figure out the semantics unmatching in defining persudo-features. Instead, we should define a poss-pron1 under adnom-poss section:
-{
-	section=adnom-poss
-	  poss-strat1_order=head-final
-	  poss-strat1_mod-spec=mod
-	  poss-strat1_mark-loc=possessor
-	  poss-strat1_possessor-type=affix
-	  poss-strat1_possessor-affix-agr=non-agree
-	  poss-strat1_possessum-type=affix
-	  poss-strat1_possessum-affix-agr=non-agree
-	  poss-pron1_type=affix
-	  poss-pron1_agr=non-agree
-	  poss-pron1_mod-spec=spec
-}
+delete morphology / aux >> 18 results
 
-Then, we assigned this feature with person feature to our noun-pc46:
-{
-  noun-pc46_name=noun-possessum-pc
-  noun-pc46_order=prefix
-  noun-pc46_inputs=noun1, noun2, noun61, noun79
-    noun-pc46_lrt1_name=noun-possessum-pc_lrt1
-      noun-pc46_lrt1_feat1_name=poss-pron1
-      noun-pc46_lrt1_feat1_value=plus
-      noun-pc46_lrt1_feat1_head=itself
-      noun-pc46_lrt1_feat2_name=person
-      noun-pc46_lrt1_feat2_value=1st
-      noun-pc46_lrt1_feat2_head=possessor
-      noun-pc46_lrt1_lri1_inflecting=yes
-      noun-pc46_lrt1_lri1_orth=í-
-    noun-pc46_lrt2_name=noun-possessum-pc_lrt2
-      noun-pc46_lrt2_feat1_name=poss-pron1
-      noun-pc46_lrt2_feat1_value=plus
-      noun-pc46_lrt2_feat1_head=itself
-      noun-pc46_lrt2_feat2_name=person
-      noun-pc46_lrt2_feat2_value=2nd
-      noun-pc46_lrt2_feat2_head=possessor
-      noun-pc46_lrt2_lri1_inflecting=yes
-      noun-pc46_lrt2_lri1_orth=nə́-
-    noun-pc46_lrt3_name=noun-possessum-pc_lrt3
-      noun-pc46_lrt3_feat1_name=poss-pron1
-      noun-pc46_lrt3_feat1_value=plus
-      noun-pc46_lrt3_feat1_head=itself
-      noun-pc46_lrt3_feat2_name=person
-      noun-pc46_lrt3_feat2_value=3rd
-      noun-pc46_lrt3_feat2_head=possessor
-      noun-pc46_lrt3_lri1_inflecting=yes
-      noun-pc46_lrt3_lri1_orth=mə́-
-}
+Húy túm
+Húy=tə túm
+Húy=pu túm
+Húy=təgi túm-í
+Húy=nə túm-kə
+Húy=kə túm
+Húy=tə túm-kə
+Húy=pu túm-í
+Húy túm-kə
+Húy=nə túm-í
+Húy=tə túm-í
+Húy=təgi túm
+Húy=təgi túm-kə
+Húy=kə túm-í
+Húy=pu túm-kə
+Húy=nə túm
+Húy túm-í
+Húy=kə túm-kə
 
-Here are some IGTs to test:
-	í-mí kə́p-e
-	1P-man cry-ASRT
-	'My man cries.'
-	
-	nə́-mí kə́p-e
-	2P-man cry-ASRT
-	'Your man cries.'
+change semi >> 12 results
+Húy túm
+Húy=tə túm
+Húy=pu túm
+Húy=nə túm-í
+Húy=kə túm
+Húy=tə túm-í
+Húy túm-í
+Húy=təgi túm
+Húy=təgi túm-í
+Húy=pu túm-í
+Húy=nə túm
+Húy=kə túm-í
 
-	mə́-mí kə́p-e
-	3P-man cry-ASRT
-	'His/her man cries.'
+Obligatory occur >> 6 results
+Húy túm-í
+Húy=tə túm-í
+Húy=pu túm-í
+Húy=kə túm-í
+Húy=təgi túm-í
+Húy=nə túm-í
 
-Each IGT should have two parses results with identical MRS. The source of the two results comes from applying different head rules. In MRS of each NP contains the possessive pronominal prefix, the pron_rel now has correct PNG.PER value corresponding to each prefix while _man_n_rel always has PER 3rd value. The source of the two results comes from applying different head rules.
+We noticed intransitive verbs do not need case on their subjects. >>
+verb132-verb-lex := agn-intransitive-verb-lex.
 
-Phenomenon 2: Coordination & Case
-When testing the following IGT for cases:
-	húy garí=pu tan-e
-	dog car=ACC chase-ASRT
-	'Dog(s) chase car(s).'
+2 results:
+Húy túm-í
+Húy=nə túm-í
 
-The semantic was incorrect since it takes "dog" and "car=ACC" as a constituent, and translation in ACE shows "dogs and cars chase." This was an incorrect result and we guess it was related to coordination. We didn't start to improve coordination yet. However, we found our default choice file has the following defination for coordination:
-{
-	cs1_vp=on
-	cs1_pat=a
-	cs2_np=on
-	cs2_pat=a
-}
-
-And we started to test some random pairs of nouns that appear in a sequence, such as:
-	yúmtə mí ləyí
-	yúm=tə mí ləy-í
-	house=LOC man be-NHYP
-	'(A) man live in house.'
-
-It has incorrect MRS interpreted as "In house and man be/live." Therefore, we decided to remove the coordination defination from our choice file for now. However, we found the following IGT cannot parse since "car=ACC" and "chase-ASRT" cannot form a constituent.
-	húy garí=pu tan-e
-	dog car=ACC chase-ASRT
-	'Dog(s) chase car(s).'
-
-We investigated the lexicon defination for _chase_v_rel and found it has valence of "intrans." We fixed it by changing it to "nom-acc." Now, above IGT can be parse correct with only one reading.
-{
-  verb12_valence=nom-acc
-    verb12_stem1_orth=tan
-    verb12_stem1_pred=_chase_v_rel
-}
-
-Phenomenon 3: Clausal comps
-
-Instead of defining complentizers as suffixes, which is not really a doable way to parse out the correct sentence structure, we have redefined complementizers to be treated as a word instead of word + c-suffix. Four complementizers differ in evidential values(Chelliah, p171).
-
-háy=nə
-say=INST
-
-háy-pə
-say-NOM
-
-háy-pəsi
-say-DCOMP
-
-háy-pədu
-say-DCOMP
-
-{code in choices file
-section=clausal-comp
-  comps1_clause-pos-same=on
-  comps1_ques=prop
-  comps1_comp-pos-after=on
-  comps1_comp=opt
-    comps1_stem1_orth=háy=nə
-    comps1_stem2_orth=háy-pəsi
-    comps1_stem3_orth=háy-pədu
-}
-
-We have also made changes to the verb argument structures to comp1(case unspecified)
-
-
-nóŋ takəni háynə ə́ynə tháǰəí
-nóŋ ta-kə=ni háy=nə ə́y=nə tháǰə-í
-rain fall-POT=COP say=INST I=AGN believe-NHYP
-'I believe that it will rain.'
-
-In #33, the parses were successful with the complementizer, and the parses recognize the complement clause. However, the lower tree recognize the subject and object of the comp clause, "mə skul" as a NP that applied np coordination rule. This is wrong, and the coordination rule mistake happened not only for this IGT, but in #34 as well that a vp-coordination rule applied to a single verb. 
-We therefore went into choices file and delete the coordination section. After that, this sentence did not go through parsing. This is because lexicon _go_v_rel is not under the transitive verb type】、
-【, and therefor the parse did not recognize subject and object.  
-
-# 33
-
-ə́y khəŋde mə skul čə́tkhre háybə
-ə́y khəŋ-tə-e mə skul čə́t-khi-lə-e háy-pə
-I know-NEG-ASRT 3p school go-still-PERF-ASRT say-NOM
-'I didn't know that he had gone to school.'
-
-# 34
-
-ə́ynə mə čə́tkhre háybəsi níŋləmmí
-ə́y=nə mə čə́t-khi-lə-e háy-pəsi khə́ŋ-í
-I=AGN 3p go-still-PERF-ASRT say-DCOMP know-NHYP
-'I know that he had gone'
-
-revision to example: the IGT took incorrect suffix marker. Agentive suffix is supposed to be marked by =nə, but mistakenly used "-". -nə(what we mistakenly put in the writeup lab4) is an adverbial suffix and cannot take nouns/pronouns as possible inputs, and this is why this IGT did not parse correctly. Now it parses with 1 parse possible, and the structure is correct, but we might need to look deeper in the tree to see if there's extraneous or anomaly use of lexical rules.
-
-
-    # 35
-    mənə thoyre háybəsi mənə khə́ŋŋí
-    mə=nə thoy-lə-e háy-pəsi mə=nə khə́ŋ-í
-    she=CNTR win-PERF-ASRT say-DCOMP he=CNTR know-NHYP
-    'He knew that she had won'
-
-
-
-Morphotactic and Lexicon changes: 
-1. delete noun-pc36 for nothing in there
-2. add lexicon rain
-3. for potential tense, change possible inputs to any verb
-4. add word "remember" to transitive verb type 14, with argument structure transitive-clausal-comps1
-5. delete duplicate suffix "=kə"， ‘-pə’
-6. add perfect-nominalizer to verb-pc3, with perfect pc_lrt and perfect-associative suffix. According to the book, they are adverbial participials so I put them in the same position class ，. 
 
 2.
-A description of your process for translating the MMT sentences and your documentation about which sentences may be impossible.
+abnomial poss
 
-We tried to translate the following three sentences:
-	# 1
-	húy túm-e
-	dog sleep-ASRT
-	'Dog(s) sleep.'
-	# 2
-	húy garí=pu tan-e
-	dog car=ACC chase-ASRT
-	'Dog(s) chase car(s).'
-	# 3
-	ə́y nə́ŋ=pu tan-e
-	I you=ACC chase-ASRT
-	'I chase you.'
+31 results >
 
-First, we didn't make any modifications to our grammar and attempted to translate them into English. We found it cannot find some PRED values, such as _dog_n_rel, _car_n_rel, _chase_n_rel, so we went to our text to find the corresponding lexicons and added them into our choice file:
-{
-    noun1_stem265_orth=húy
-    noun1_stem265_pred=_dog_n_rel
-    noun1_stem266_orth=garí
-    noun1_stem266_pred=_car_n_rel
-    verb12_stem2_orth=tan
-    verb12_stem2_pred=_chase_v_rel
-}
+Má=ki húy túm-í
+Nə́-húy túm-í
+Í-húy=pu túm-í
+Má=ki húy=tə túm-í
+Nə́-húy=pu túm-í
+Í-húy=nə túm-í
+Mə́-húy=tə túm-í
+Mə́-húy=təgi túm-í
+Í-húy=kə túm-í
+Mə́-húy=nə túm-í
+Nə́-húy=təgi túm-í
+Mə́-húy=kə túm-í
+Í-húy túm-í
+Mə́-húy=pu túm-í
+Í-húy=tə túm-í
+Nə́-húy=tə túm-í
+Ə́y=ki húy=kə túm-í
+Í-húy=təgi túm-í
+Nə́ŋ=ki húy=kə túm-í
+Mə́-húy túm-í
+Nə́-húy=kə túm-í
+Nə́-húy=nə túm-í
+Nə́ŋ=ki húy=tə túm-í
+Má=ki húy=nə túm-í
+Ə́y=ki húy túm-í
+Ə́y=ki húy=pu túm-í
+Nə́ŋ=ki húy túm-í
+Má=ki húy=təgi túm-í
+Má=ki húy=pu túm-í
+Nə́ŋ=ki húy=təgi túm-í
+Nə́ŋ=ki húy=pu túm-í
+Ə́y=ki húy=tə túm-í
+Nə́ŋ=ki húy=nə túm-í
+Má=ki húy=kə túm-í
+Ə́y=ki húy=nə túm-í
+Ə́y=ki húy=təgi túm-í
 
-Now, we found sentence # 1 can be translated, but with a list of results:
-{
-	Dogs will sleep
-	The dogs sleep
-	A dog slept
-	A dog sleeps
-	The dog slept
-	Dogs slept
-	A dog will sleep
-	The dogs will sleep
-	The dog will sleep
-	Dogs sleep
-	The dogs slept
-	The dog sleeps
-}
+semi.vpm PNG.PER > PER > 12 results
+Ə́y=ki húy túm-í
+Í-húy=nə túm-í
+Í-húy túm-í
+Í-húy=pu túm-í
+Í-húy=tə túm-í
+Í-húy=təgi túm-í
+Í-húy=kə túm-í
+Ə́y=ki húy=tə túm-í
+Ə́y=ki húy=nə túm-í
+Ə́y=ki húy=təgi túm-í
+Ə́y=ki húy=pu túm-í
+Ə́y=ki húy=kə túm-í
 
-These results are reasonable since Meitei does not mark nouns with numbers, determiners are optional, nor has tense markers. These are all possible interpretations for sentence # 1.
+18. 6 results
+Húy=ki garí túm-í
+Húy=ki garí=tə túm-í
+Húy=ki garí=nə túm-í
+Húy=ki garí=təgi túm-í
+Húy=ki garí=pu túm-í
+Húy=ki garí=kə túm-í
 
-However, when translating sentences # 2 and #3, we were getting incorrect results:
-{
-	# 2
-	Dogs and cars chase
-	A dog and a car chase
-	Dogs and a car chase
-	...
-	# 3
-	You and I chased
-	Him and you chased
-	Him and us will chase
-	He and we chase
-	Her and she chased
-	...
-}
+3. Dogs chase cars
+Húy garí tan-í
+Garí húy tan-í
+Garí=pu húy tan-í
+Húy=nə garí tan-í
+Húy=nə garí=pu tan-í
+Garí=pu húy=nə tan-í
+Garí húy=nə tan-í
+Húy garí=pu tan-í
 
-We then investigated MRS in our parsed tree for sentences #2 and # 3 and realized it was a problem of incorrect coordination rule as stated in the Problem 1 Phenomenon Coordination section. After fixing, we got reasonable results:
-{
-	# 2
-	Dogs chased cars
-	Dogs chased a car
-	The dogs chased the car
-	The dog chased cars
-	A dog chased the car
-	...
-	# 3
-	I chased it
-	You chased me
-	It chases it
-	We chased her
-	He chased us
-	It chased him
-	You chased it
-	You chase us
-	...
-}
+>> SOV order
+Húy garí tan-í
+Húy=nə garí tan-í
+Húy=nə garí=pu tan-í
+Húy garí=pu tan-í
+
+4. I chase you
+Ə́y nə́ŋ tan-í
+Ə́y nə́bani tan-í
+Ə́y=nə nə́bani tan-í
+Ə́y=nə nə́ŋ tan-í
+Ə́y=nə nə́khóy tan-í
+Ə́-ə́y=nə nə́bani tan-í
+Ə́y nə́bani=pu tan-í
+Ə́-ə́y nə́khóy tan-í
+Ə́y=nə nə́bani=pu tan-í
+Ə́-ə́y nə́khóy=pu tan-í
+Ə́-ə́y nə́ŋ tan-í
+Ə́y nə́khóy tan-í
+Ə́-ə́y=nə nə́ŋ tan-í
+Ə́-ə́y=nə nə́bani=pu tan-í
+Ə́-ə́y nə́bani tan-í
+Ə́-ə́y nə́bani=pu tan-í
+Ə́y nə́khóy=pu tan-í
+Ə́y nə́ŋ=pu tan-í
+Ə́-ə́y=nə nə́khóy tan-í
+Ə́-ə́y nə́ŋ=pu tan-í
+Ə́y=nə nə́khóy=pu tan-í
+Ə́-ə́y=nə nə́khóy=pu tan-í
+Ə́y=nə nə́ŋ=pu tan-í
+Ə́-ə́y=nə nə́ŋ=pu tan-í
+
+> remove Ə́- morphome
+
+Ə́y nə́ŋ tan-í
+Ə́y=nə nə́ŋ tan-í
+Ə́y=nə nə́khóy tan-í
+Ə́y=nə nə́ŋ=pu tan-í
+Ə́y=nə nə́bani tan-í
+Ə́y nə́bani tan-í
+Ə́y nə́ŋ=pu tan-í
+Ə́y=nə nə́bani=pu tan-í
+Ə́y nə́khóy tan-í
+Ə́y nə́bani=pu tan-í
+Ə́y nə́khóy=pu tan-í
+Ə́y=nə nə́khóy=pu tan-í
 
 
-3.
-A description what happened when you tried the MT set up. What difficulties did you encounter and how did you resolve them? What output did you get?
-
-I followed the instructions in lab5, and everything worked perfectly. The primary difficulty was modifying the choice file (especially adding/changing PRED values as stated above). The slight problem is that we noticed sentence # 3 is still weird since we confirm it is parsed correctly in semantics (with the correct number and person). However, the results have all possible combinations of number and person. You answered in the discussion, "This is probably an issue with the variable property mapping --- something we will work on next week." So we left it for now.
-
-When translating English into Meitei, it processed very slow and generated 25229 results for the sentence "Dogs sleep." This was probably because Meitei has a lot of mood/aspect and other noun/verbal affixes that can build up together. Thus, more complicated sentences, such as "a dog chase a car" and "I chase you," are unable to translate to Meitei with our current grammar. We hope to improve this in our MT system in the future.
-
-4.1.
-  Before improvements:
-  	test corpus: 86/1784 items parsed;
-  	test suite: 2/17 items parsed (with 1 ungrammatical sentence parse).
-  After improvements:
-  	test corpus: 71/1784 items parsed (p.s. probably because we removed incorrect coordination rule that combined nouns/verbs freely so that our improvements eliminated some false-positive results);
-  	test suite: all (12/17) items parsed (with 5 ungrammatical sentences eliminated).
-
-4.2.
-  Before improvements:
-  	test corpus: 95.45 parses on average;
-  	test suite: 140 parses on average.
-  After improvements:
-  	test corpus: 5.28 parses on average;
-  	test suite: 2.33 parses on average.
-
-4.3.
-  Before improvements:
-  	test corpus: 840 parses;
-  	test suite: 256 parses.
-  After improvements:
-  	test corpus: 104 parses;
-  	test suite: 7 parses;
-
-4.4.
-  Before improvements:
-    Last week our parses receives 95 parse readings on average for the corpus, the major problem we believe is the coordination rule that allows extra readings for parses. 
-  After improvements:
-    The ambiguity after improvements now comes from the use of subj-head rule or comp-head rules, this is the ambiguity that's due to the freer word order in Meithei. Another ambiguity comes from the forming of VP or V. Example in our testsuite would be: 
-    {
-    ə́y khəŋ-tə-e mə skul čə́t-khi-lə-e háy-pə
-		I know-NEG-ASRT 3p school go-still-PERF-ASRT say-NOM
-		'I didn't know that he had gone to school.'
-    }
-  	The parser gives V or VP readings to the VP "school go". When it gives V to this phrase, it used subj-head rule. However, we think this is a huge improvement that the comp clauses now have valid parse tree that is correctly identifying comp clause when the matrix clause word order is not fixed.
-4.5.
-  Before improvements:
-    We had wrongly defined the pseudofeature in the other feature section which caused a semantic mismatch. Th
-  After improvements:
-    We looked into some IGT in our testsuite to find out parses of semantic. After we did improvements on possessive pronouns, we now have the correct semantic relation with poss_rel and pron_rel as the example is illustrated above in the possessive section. In the comp clause, the same IGT is used as in 4.4. The semantics could be the other source of ambiguity that in the first tree it is linking arg1 of the verb "go" to the school. But the other reading is correct that correctly identifies the agent and the patient of verb "go".
 

@@ -37,34 +37,30 @@ COG-ST : COG-ST
   * <> *
 
 
-PNG.PER : PNG.PER
-  3rd <> 3rd
-  2nd <> 2nd
-  1st <> 1st
+PNG.PER : PER
+  3rd <> third
+  2nd <> second
+  1st <> first
   * <> *
 
-PNG.NUM : PNG.NUM
+PNG.NUM : NUM
   dual <> dual
   pl <> pl
   sg <> sg
   * <> *
 
-PNG.GEND : PNG.GEND
-  * <> *
-
-E.TENSE : E.TENSE
-  * <> *
-
-E.ASPECT : E.ASPECT
+E.ASPECT : ASPECT
   pfv <> pfv
   prog <> prog
   ipfv <> ipfv
   pot <> pot
   npot <> npot
+  pfv << [e]
   * <> *
 
-E.MOOD : E.MOOD
+E.MOOD : MOOD
   recip <> recip
   opt <> opt
   intt <> intt
+  nhyp-declarative <> nhyp-declarative
   * <> *

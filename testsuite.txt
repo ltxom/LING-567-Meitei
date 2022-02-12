@@ -11,168 +11,219 @@ Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
 Phenomena: {}
-húy túme
-húy túm-e
-dog sleep-ASRT
-'Dog(s) sleep.'
+húy túmí
+húy túm-í
+dog sleep-NHYP
+'Dogs sleep.'
 
 # 2 Translation 2
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
 Phenomena: {}
-húy garípu tane
-húy garí=pu tan-e
-dog car=ACC chase-ASRT
-'Dog(s) chase car(s).'
+húy garípu taní
+húy garí=pu tan-í
+dog car=ACC chase-NHYP
+'Dogs chase cars.'
 
 # 3 Translation 3
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
 Phenomena: {}
-ə́y nə́ŋpu tane
-ə́y nə́ŋ=pu tan-e
-I you=ACC chase-ASRT
+ə́y nə́ŋpu taní
+ə́y nə́ŋ=pu tan-í
+I you=ACC chase-NHYP
 'I chase you.'
 
-# 4 nominalizer & complement 1
-Source: {a: 249, author}
+# 4
+Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
-Phenomena: {cl-mod}
-nóŋ takəni háynə ə́ynə tháǰəí
-nóŋ ta-kə=ni háy=nə ə́y=nə tháǰə-í
-rain fall-POT=COP say=INST I=AGN believe-NHYP
-'I believe that it will rain.'
+Phenomena: {}
+húy čáí
+húy čá-í
+dogs eat-NHYP
+'Dogs eat.'
 
-# 5 nominalizer & complement 2
-Source: {a: 249, author}
+# 5
+Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
-Phenomena: {cl-mod}
-ə́y khəŋtəe mə skul čə́tkhre háynə
-ə́y khəŋ-tə-e mə skul čə́t-khi-lə-e háy=nə
-I know-NEG-ASRT 3p school go-still-PERF-ASRT say=INST
-'I didn't know that he had gone to school.'
+Phenomena: {}
+húyki garí túmí
+húy=ki garí túm-í
+Dogs=POSS cars sleep-NHYP
+'The dog's cars sleeps'
 
-# 6 nominalizer & complement 3
-Source: {a: 249, author}
+# 6
+Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
-Phenomena: {cl-mod}
-ə́ynə mə čə́tkhre háybəsi níŋləmmí
-ə́y=nə mə čə́t-khi-lə-e háy-pəsi khə́ŋ-í
-I=AGN 3p go-still-PERF-ASRT say-DCOMP know-NHYP
-'I know that he had gone'
+Phenomena: {}
+garíki húy túmí
+garí=ki húy túm-í
+Car=POSS dogs sleep-NHYP
+'The car's dogs sleeps'
 
 # 7
-Source: {a: 78&126, author}
+Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
-Phenomena: {poss}
-ímí kə́pe
-í-mí kə́p-e
-1P-man cry-ASRT
-'My man cries.'
+Phenomena: {}
+ə́yki húy túmí
+ə́y=ki húy túm-í
+1P=POSS dogs sleep-NHYP
+'My dogs sleep'
 
 # 8
-Source: {a: 78&126, author}
+Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
-Phenomena: {poss}
-nə́mí kə́pe
-nə́-mí kə́p-e
-2P-man cry-ASRT
-'Your man cries.'
+Phenomena: {}
+nə́ŋki húy túmí
+nə́ŋ=ki húy túm-í
+2P=POSS dogs sleep-NHYP
+'Your dogs sleep'
 
 # 9
-Source: {a: 78&126, author}
+Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
-Phenomena: {poss}
-mə́mí kə́pe
-mə́-mí kə́p-e
-3P-man cry-ASRT
-'His/her man cries.'
+Phenomena: {}
+máki húy túmí
+má=ki húy túm-í
+3P=POSS dogs sleep-NHYP
+'His/her dogs sleep'
 
 # 10
-Source: {a: 78&126, author}
+Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
-Phenomena: {case}
-yúmtə mí ləyí
-yúm=tə mí ləy-í
-house=LOC man be-NHYP
-'(A) man live in house.'
+Phenomena: {}
+íhúy túmí
+í-húy túm-í
+1P-dogs sleep-NHYP
+'My dogs sleep'
 
 # 11
-Source: {a: 78&126, author}
+Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
-Phenomena: {case}
-yúmtə húy ləyí
-yúm=tə húy ləy-í
-house=LOC dog be-NHYP
-'Dog(s) live in house.'
+Phenomena: {}
+nə́húy túmí
+nə́-húy túm-í
+2P-dogs sleep-NHYP
+'Your dogs sleep'
 
 # 12
-Source: {a: 78&126, author}
+Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
-Phenomena: {case}
-garítə húy ləyí
-garí=tə húy ləy-í
-car=LOC dog be-NHYP
-'Dog(s) live in car.'
+Phenomena: {}
+mə́húy túmí
+mə́-húy túm-í
+3P-dogs sleep-NHYP
+'His/her dogs sleep'
 
 # 13
-Source: {a: 249, author}
+Source: {a: 79, b: 218, author}
 Vetted: t
-Judgment: u
-Phenomena: {cl-mod}
-ə́pəwaŋ mí ə́tu iloyli
-ə́-pə-waŋ mí ə́-tu i-loy-li
-ATT-NOM-tall man ATT-DDET water-bath-prog
-"*The tall man is swimming"
+Judgment: g
+Phenomena: {}
+ə́y čən čáí
+ə́y čən čá-í
+I rice eat-NHYP
+'I eat rice'
 
 # 14
-Source: {a: 249, author}
+Source: {a: 79, b: 218, author}
 Vetted: t
-Judgment: u
-Phenomena: {cl-mod}
-mánə isiŋ pəduthə́k ə́ynə khámmí
-má=nə i-siŋ pədu-thə́k ə́y=nə khám-lə-í
-he=AGN water-GPL DCOMP-drink I=AGN stop-PERF-NHYP.
-"*I stopped him from drinking water"
+Judgment: g
+Phenomena: {}
+ə́yki húy čən čáí
+ə́y=ki húy čən čá-í
+1P=POSS dogs rice eat-NHYP
+'My dogs eat rice'
 
 # 15
-Source: {a: 78&126, author}
+Source: {a: 79, b: 218, author}
 Vetted: t
-Judgment: u
-Phenomena: {poss}
-míí kə́pe
-mí-í kə́p-e
-man-1P cry-ASRT
-'*man my cries.'
+Judgment: g
+Phenomena: {}
+nə́ŋki húy čən čáí
+nə́ŋ=ki húy čən čá-í
+2P=POSS dogs rice eat-NHYP
+'Your dogs eat rice'
 
 # 16
-Source: {a: 78&126, author}
+Source: {a: 79, b: 218, author}
 Vetted: t
-Judgment: u
-Phenomena: {poss}
-mí-nə́ kə́pe
-mí-nə́ kə́p-e
-man-2P cry-ASRT
-'*man your cries.'
+Judgment: g
+Phenomena: {}
+máki húy čən čáí
+má=ki húy čən čá-í
+3P=POSS dogs rice eat-NHYP
+'His/her dogs eat rice'
 
 # 17
-Source: {a: 78&126, author}
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+íhúy čən čáí
+í-húy čən čá-í
+1P-dogs rice eat-NHYP
+'My dogs eat rice'
+
+# 18
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+nə́húy čən čáí
+nə́-húy čən čá-í
+2P-dogs rice eat-NHYP
+'Your dogs eat rice'
+
+# 19
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+mə́húy čən čáí
+mə́-húy čən čá-í
+3P-dogs rice eat-NHYP
+'His/her dogs eat rice'
+
+# 20
+Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: u
-Phenomena: {poss}
-mímə́ kə́pe
-mí-mə́ kə́p-e
-man-3P cry-ASRT
-'*man his/her cries.'
+Phenomena: {}
+íhúy čáí čən
+í-húy čá-í čən
+1P-dogs eat-NHYP rice 
+'*My dogs rice eat'
+
+# 21
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: u
+Phenomena: {}
+nə́húy čáí čən
+nə́-húy čá-í čən
+2P-dogs eat-NHYP rice
+'Your dogs eat rice'
+
+# 22
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: u
+Phenomena: {}
+mə́húy čáí čən
+mə́-húy čá-í čən
+3P-dogs eat-NHYP rice
+'His/her dogs eat rice'
+
 

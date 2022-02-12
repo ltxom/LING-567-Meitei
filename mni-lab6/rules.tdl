@@ -1,0 +1,16 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+decl-head-opt-subj := decl-head-opt-subj-phrase.
+
+basic-head-opt-comp := basic-head-opt-comp-phrase.
+
+non-event-subj-head := non-event-subj-head-phrase.
+
+comp-head := comp-head-phrase.
+
+subj-head := subj-head-phrase.
+
+adj-head-int := adj-head-int-phrase.
+
+head-spec := head-spec-phrase.
+
+bare-np := bare-np-phrase.
