@@ -1,124 +1,123 @@
-lab5 write-up
+lab6 write-up
 By Tongxi(Tom) Liu, Jessie Zeng
 Feb 11th, 2022
-1. 
 
-20k+ results
-
-delete morphology / aux >> 18 results
-
-Húy túm
-Húy=tə túm
-Húy=pu túm
-Húy=təgi túm-í
-Húy=nə túm-kə
-Húy=kə túm
-Húy=tə túm-kə
-Húy=pu túm-í
-Húy túm-kə
-Húy=nə túm-í
-Húy=tə túm-í
-Húy=təgi túm
-Húy=təgi túm-kə
-Húy=kə túm-í
-Húy=pu túm-kə
-Húy=nə túm
-Húy túm-í
-Húy=kə túm-kə
-
-change semi >> 12 results
-Húy túm
-Húy=tə túm
-Húy=pu túm
-Húy=nə túm-í
-Húy=kə túm
-Húy=tə túm-í
-Húy túm-í
-Húy=təgi túm
-Húy=təgi túm-í
-Húy=pu túm-í
-Húy=nə túm
-Húy=kə túm-í
-
-Obligatory occur >> 6 results
-Húy túm-í
-Húy=tə túm-í
-Húy=pu túm-í
-Húy=kə túm-í
-Húy=təgi túm-í
-Húy=nə túm-í
-
-We noticed intransitive verbs do not need case on their subjects. >>
-verb132-verb-lex := agn-intransitive-verb-lex.
-
-2 results:
-Húy túm-í
-Húy=nə túm-í
+1. Changes made to semi.vpm:
+  In semi.vpm, for each phenomena, the right hand side we deleted E. and PNG.. We deleted unnecessary sections for Gender and Tense that mni grammar does not exhibit.
+  For PER section, we changed the right hand side, from 1st, 2nd, 3rd to first second and third. We have set default aspect to be perfective. We do have mood marker on every sentence(illocutionary markers), so we did not put any default value in Mood section.
 
 
 2.
-abnomial poss
+Morphology clean-up:
+We deleted a large section of the morphology section, because many of them have no constraint on and we were not sure which changes but it is hard to define in grammars for now. It caused MMT to produce over 20k sentences possible for just "Dogs sleep".
+Therefore, the first step we did was to go into the customization and deleted all of the suffixes we don't recognize. Since our grammar are heavily inflected, this move could potentially cause our corpus to parse even fewer sentences. We plan to add them back
+after we limit readings to a reasonable number. We've also looked into auxiliaries and deleted them because so far we have not seen any sentence (either in corpus or in the literature) that mentions auxiliaries. We deleted them for now to eliminate readings.
 
-31 results >
+20k+ results >>
 
-Má=ki húy túm-í
-Nə́-húy túm-í
-Í-húy=pu túm-í
-Má=ki húy=tə túm-í
-Nə́-húy=pu túm-í
-Í-húy=nə túm-í
-Mə́-húy=tə túm-í
-Mə́-húy=təgi túm-í
-Í-húy=kə túm-í
-Mə́-húy=nə túm-í
-Nə́-húy=təgi túm-í
-Mə́-húy=kə túm-í
-Í-húy túm-í
-Mə́-húy=pu túm-í
-Í-húy=tə túm-í
-Nə́-húy=tə túm-í
-Ə́y=ki húy=kə túm-í
-Í-húy=təgi túm-í
-Nə́ŋ=ki húy=kə túm-í
-Mə́-húy túm-í
-Nə́-húy=kə túm-í
-Nə́-húy=nə túm-í
-Nə́ŋ=ki húy=tə túm-í
-Má=ki húy=nə túm-í
-Ə́y=ki húy túm-í
-Ə́y=ki húy=pu túm-í
-Nə́ŋ=ki húy túm-í
-Má=ki húy=təgi túm-í
-Má=ki húy=pu túm-í
-Nə́ŋ=ki húy=təgi túm-í
-Nə́ŋ=ki húy=pu túm-í
-Ə́y=ki húy=tə túm-í
-Nə́ŋ=ki húy=nə túm-í
-Má=ki húy=kə túm-í
-Ə́y=ki húy=nə túm-í
-Ə́y=ki húy=təgi túm-í
+delete morphology / aux >> 18 results
+  {
+  Húy túm
+  Húy=tə túm
+  Húy=pu túm
+  Húy=təgi túm-í
+  Húy=nə túm-kə
+  Húy=kə túm
+  Húy=tə túm-kə
+  Húy=pu túm-í
+  Húy túm-kə
+  Húy=nə túm-í
+  Húy=tə túm-í
+  Húy=təgi túm
+  Húy=təgi túm-kə
+  Húy=kə túm-í
+  Húy=pu túm-kə
+  Húy=nə túm
+  Húy túm-í
+  Húy=kə túm-kə
+  }
 
-semi.vpm PNG.PER > PER > 12 results
-Ə́y=ki húy túm-í
-Í-húy=nə túm-í
-Í-húy túm-í
-Í-húy=pu túm-í
-Í-húy=tə túm-í
-Í-húy=təgi túm-í
-Í-húy=kə túm-í
-Ə́y=ki húy=tə túm-í
-Ə́y=ki húy=nə túm-í
-Ə́y=ki húy=təgi túm-í
-Ə́y=ki húy=pu túm-í
-Ə́y=ki húy=kə túm-í
+After the clean-up, we use "dogs sleep" to continue analysis. The correct translation we expect is "Húy túm-í", or "Húy=nə túm-í". The agentive suffix is not required, because the subject could be agentive(with suffix=nə) or actor(no affix).
+We successfully eliminate the possible translations to 18 after morphology clean up. After semi.vpm editing, the number goes down to 12 for correct mapping to English.
 
-18. 6 results
-Húy=ki garí túm-í
-Húy=ki garí=tə túm-í
-Húy=ki garí=nə túm-í
-Húy=ki garí=təgi túm-í
-Húy=ki garí=pu túm-í
-Húy=ki garí=kə túm-í
+change semi >> 12 results
+  {
+  Húy túm
+  Húy=tə túm
+  Húy=pu túm
+  Húy=nə túm-í
+  Húy=kə túm
+  Húy=tə túm-í
+  Húy túm-í
+  Húy=təgi túm
+  Húy=təgi túm-í
+  Húy=pu túm-í
+  Húy=nə túm
+  Húy=kə túm-í
+  }
+
+
+Then, observing the translations, we found out that the matrix clause mood marker -í for non-hypothetical declaratives appear optional to matrix clause.
+This is incorrect. In Meithei, every sentence should be marked with a illocutionary mood marker on its matrix clause verb. We went back to customization system and mark the verb-pc72 as obligatory, and we then eliminate another 6 translations.
+
+Obligatory occur >> 6 results
+{
+Húy túm-í
+Húy=tə túm-í
+Húy=pu túm-í
+Húy=kə túm-í
+Húy=təgi túm-í
+Húy=nə túm-í
+}
+
+For the left 6 sentences, we observed that all cases are marked to the subject, we raised this question to the discussion board, and found out in the lexicon for verb sleep, we need to specify its argument structure as agn-intransitive to give a correct case marking to the verb's subject.
+  mni.tdl:
+    verb132-verb-lex := agn-intransitive-verb-lex.
+
+The case is optional, and we did mark that in the case position class, so both of possible outputs are allowed.
+After the steps, we successfully elimintate possible output to 2, and it is what we expected.
+  final result >> 2
+  {
+  Húy túm-í
+  Húy=nə túm-í
+  }
+
+
+
+For sentence "Dogs chase cars", we found out that the translation gives possibilities that free ordering of subject and object. However, in the literature, we did not observe this phenomena in simple sentences. Therefore, we then defined mni's word order to SOV.
+The literature documented Meithei's word order as free, but in simple sentence IGTs in the document, they are all SOV without exceptions. Therefore, we changed the word order, but it is possible that when we meet longer sentences, it is more free in word order.
+
+In adnominal possession, we did the customization editing last week, and the problems raised in translating sentence 1 helped us to successfully parsed adnominal possession sentences.
+For sentence "The dog's car sleeps", there could be several translations. "Húy=ki garí túm-í" or "Húy=ki garí=nə túm-í". The translation gives us the results quickly without any other changes.
+The other sentence "My dogs sleep" also gives correct translations.
+
+"The dog's car sleeps" >> 2
+  {
+  Húy=ki garí túm-í
+  Húy=ki garí=nə túm-í
+  }
+
+"My dogs sleep"
+  {Ə́y=ki húy túm-í
+  Í-húy=nə túm-í
+  Í-húy túm-í
+  Ə́y=ki húy=nə túm-í
+  }
+
+A last change we made is include SF prop to the nhyp-declarative rule, to make sure that only the matrix verb gets the suffix.
+
+tdl:
+nhyp-lex-rule := sentence-mood-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX [ E.MOOD nhyp-declarative ],
+				 [ SF prop ]].
+
+
+
+
+
+
+
+
 
 3. Dogs chase cars
 Húy garí tan-í
@@ -176,6 +175,3 @@ Húy garí=pu tan-í
 Ə́y nə́bani=pu tan-í
 Ə́y nə́khóy=pu tan-í
 Ə́y=nə nə́khóy=pu tan-í
-
-
-
