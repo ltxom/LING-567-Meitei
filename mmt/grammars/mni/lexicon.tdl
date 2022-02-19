@@ -1038,6 +1038,14 @@ húy := noun1-noun-lex &
   [ STEM < "húy" >,
     SYNSEM.LKEYS.KEYREL.PRED "_dog_n_rel" ].
 
+waŋ_4 := noun1-noun-lex &
+  [ STEM < "waŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tall_n_rel" ].
+
+nuŋčhi_1 := noun1-noun-lex &
+  [ STEM < "nuŋčhi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sweet_n_rel" ].
+
 garí := noun1-noun-lex &
   [ STEM < "garí" >,
     SYNSEM.LKEYS.KEYREL.PRED "_car_n_rel" ].
@@ -1162,9 +1170,6 @@ ni_1 := noun6-noun-lex &
   [ STEM < "ni" >,
     SYNSEM.LKEYS.KEYREL.PRED "_beg_n_rel" ].
 
-nuŋčhi_1 := noun6-noun-lex &
-  [ STEM < "nuŋčhi" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_love_n_rel" ].
 
 níŋ_1 := noun6-noun-lex &
   [ STEM < "níŋ" >,
@@ -1490,7 +1495,7 @@ núpí := noun121-noun-lex &
   [ STEM < "núpí" >,
     SYNSEM.LKEYS.KEYREL.PRED "_female_n_rel" ].
 
-núpá := noun121-noun-lex &
+núpá := noun1-noun-lex &
   [ STEM < "núpá" >,
     SYNSEM.LKEYS.KEYREL.PRED "_male_n_rel" ].
 
@@ -1573,10 +1578,6 @@ yók_1 := verb2-verb-lex &
 ŋáŋ_1 := verb2-verb-lex &
   [ STEM < "ŋáŋ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_speak_v_rel" ].
-
-čaw := verb2-verb-lex &
-  [ STEM < "čaw" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_be_big_v_rel" ].
 
 thá_1 := verb2-verb-lex &
   [ STEM < "thá" >,
@@ -1797,10 +1798,6 @@ khét_7E := verb30-verb-lex &
 khə́t := verb37-verb-lex &
   [ STEM < "khə́t" >,
     SYNSEM.LKEYS.KEYREL.PRED "_fight_v_rel" ].
-
-nuŋčhi_2 := verb37-verb-lex &
-  [ STEM < "nuŋčhi" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_love_v_rel" ].
 
 thoy := verb37-verb-lex &
   [ STEM < "thoy" >,
@@ -2514,7 +2511,7 @@ kham := verb138-verb-lex &
   [ STEM < "čhét" >,
     SYNSEM.LKEYS.KEYREL.PRED "_wear_v_rel" ].
 
-čhíŋ := verb156-verb-lex &
+čhíŋ := verb-attributive-lex &
   [ STEM < "čhíŋ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_wise_v_rel" ].
 
@@ -2526,6 +2523,10 @@ kham := verb138-verb-lex &
   [ STEM < "ŋáŋ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_speak_v_rel" ].
 
+čaw := verb-attributive-lex &
+  [ STEM < "čaw" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be+big_v_rel" ].
+
 ŋəw := verb-attributive-lex &
   [ STEM < "ŋəw" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be+white_v_rel" ].
@@ -2533,6 +2534,14 @@ kham := verb138-verb-lex &
 nuŋŋay := verb-attributive-lex &
   [ STEM < "nuŋŋay" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be+happy_v_rel" ].
+
+hungry := verb-attributive-lex &
+  [ STEM < "hungryInMNI" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be+hungry_v_rel" ].
+
+nuŋčhi_2 := verb-attributive-lex &
+  [ STEM < "nuŋčhi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be+lovely_v_rel" ].
 
 ;;; Auxiliaries
 

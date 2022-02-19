@@ -1,0 +1,112 @@
+
+3.
+When translating #15, The dogs are hungry, from English to Meitei, we got
+    NOTE: EP '"_hungry_a_rel"' is unknown in the semantic index
+    WARNING: EP '"_hungry_a_rel"' is not covered
+This is because "hungry" in Meitei functions as a stative verb mentioned above, and its MRS is "_be+hungry_v_rel," which indicates that we need a transfer rule to account for this.
+
+When translating #16, The dogs are in the park, we got 0 results without any error messages. We attempted to translate this sentence from Meitei to English, and it gave correct results. When we translate it from mni to mni, we still got 0 results. However, we can get one identical sentence from generating from the parse of it in the LKB. We posted it on Canvas and were waiting to find a solution to it.
+We compared their MRS and found they are about identical (differences are marked between ***):
+ENG:
+    [ LTOP: h0 INDEX: e1 [ e
+
+        ***TENSE: present***
+
+    ASPECT: aspect SF: prop-or-ques ] RELS: < [ "
+    exist_q_rel"<-1:-1> LBL: h2 ARG0: x3 [ x PER: third NUM: pl
+
+        ***COG-ST: uniq+fam+act***
+
+    ] RS
+    TR: h4 BODY: h5 ]  [ "_dog_n_rel"<-1:-1> LBL: h6 ARG0: x3 ]  [ "_in_p_rel"<-1:-1> LBL
+    : h7 ARG0: e1 ARG1: x3 ARG2: x8 [ x PER: third NUM:
+
+        ***sg COG-ST: uniq+fam+act***
+
+    ] ]  [ "exist_q_rel"<-1:-1> LBL: h9 ARG0: x8 RSTR: h10 BODY: h11 ]  [ "_park_n_rel"<-1:-1> LBL
+    : h12 ARG0: x8 ] > HCONS: < h0 qeq h7 h4 qeq h6 h10 qeq h12 > ICONS: < > ]
+
+MNI:
+    [ LTOP: h0 INDEX: e1 [ e
+
+        *** ***
+
+     ASPECT: aspect SF: prop-or-ques ] RELS: < [ "exist_q_rel"<-1
+    :-1> LBL: h2 ARG0: x3 [ x PER: third NUM: number
+
+        ***COG-ST: cog-st***
+
+     ] RSTR: h4 BODY: h5 ] [ "_dog_n_rel"<-1:-1> LBL: h6 ARG0: x3 ]  [ "_in_p_rel"<-1:-1> LBL: h7 ARG0: e1 ARG
+    1: x3 ARG2: x8 [ x PER: third
+
+        ***NUM: number COG-ST: cog-st***
+
+     ] ]  [ "exist_q_rel"<-1:-1>
+    LBL: h9 ARG0: x8 RSTR: h10 BODY: h11 ]  [ "_park_n_rel"<-1:-1> LBL: h12 ARG0: x8 ] >
+    HCONS: < h0 qeq h7 h4 qeq h6 h10 qeq h12 > ICONS: < > ]
+
+We wonder the problem comes from COG-ST or PNG.NUM sections in our semi.vpm, but we don't find any issues:
+    COG-ST : COG-ST
+      type-id <> type-id
+      uniq-id <> uniq-id
+      familiar <> familiar
+      activated <> activated
+      in-foc <> in-foc
+      activ+fam <> activ+fam
+      uniq+fam <> uniq+fam
+      activ-or-more <> activ-or-more
+      uniq-or-less <> uniq-or-less
+      uniq+fam+act <> uniq+fam+act
+      fam-or-more <> fam-or-more
+      fam-or-less <> fam-or-less
+      uniq-or-more <> uniq-or-more
+      activ-or-less <> activ-or-less
+      * <> *
+
+
+    PNG.PER : PER
+      3rd <> third
+      2nd <> second
+      1st <> first
+      * <> *
+
+    PNG.NUM : NUM
+      dual <> dual
+      pl <> pl
+      sg <> sg
+      * <> *
+
+It can translate #17, The dogs are the cats, from English to Meitei and give 1 correct result:
+    Húy hə́wdóŋ =ni
+
+
+4. We haven't worked on wh questions and couldn't find wh questions of non-verbal predicates examples yet since our literature doesn't have a specific section to discuss this phenomenon. We would like to consult Prof. Shobhana Chelliah to learn more about it.
+
+5.
+How many items parsed?
+  Before improvements:
+  	test corpus: 3/1784 items parsed;
+  	test suite: 16/35.
+  After improvements:
+  	test corpus: 5/1784 items parsed;
+  	test suite: all 35 items parsed.
+
+What is the average number of parses per parsed item?
+  Before improvements:
+  	test corpus: 1.33 parses on average;
+  	test suite: 1.13 parses on average.
+  After improvements:
+  	test corpus: 1.2 parses on average;
+  	test suite: 1.25 parses on average.
+
+How many parses did the most ambiguous item receive?
+  Before improvements:
+  	test corpus: 2 parses;
+  	test suite: 2 parses.
+  After improvements:
+  	test corpus: 2 parses;
+  	test suite: 2 parses;
+
+What NEW sources of ambiguity can you identify?
+  The source of ambiguity comes from lexical ambiguity of má, which means "mother" or "he or she." This ambiguity should be legit.
+

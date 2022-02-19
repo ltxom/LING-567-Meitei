@@ -2535,6 +2535,9 @@ nuŋŋay := verb-attributive-lex &
   [ STEM < "nuŋŋay" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be+happy_v_rel" ].
 
+hungry := verb-attributive-lex &
+  [ STEM < "hungryInMNI" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be+hungry_v_rel" ].
 
 nuŋčhi_2 := verb-attributive-lex &
   [ STEM < "nuŋčhi" >,
