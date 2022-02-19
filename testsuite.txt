@@ -51,62 +51,12 @@ Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
 Phenomena: {}
-húyki garí túmí
-húy=ki garí túm-í
-Dogs=POSS cars sleep-NHYP
-'The dog's cars sleeps'
-
-# 6
-Source: {a: 79, b: 218, author}
-Vetted: t
-Judgment: g
-Phenomena: {}
-garíki húy túmí
-garí=ki húy túm-í
-Car=POSS dogs sleep-NHYP
-'The car's dogs sleeps'
-
-# 7
-Source: {a: 79, b: 218, author}
-Vetted: t
-Judgment: g
-Phenomena: {}
-ə́yki húy túmí
-ə́y=ki húy túm-í
-1P=POSS dogs sleep-NHYP
-'My dogs sleep'
-
-# 8
-Source: {a: 79, b: 218, author}
-Vetted: t
-Judgment: g
-Phenomena: {}
-nə́ŋki húy túmí
-nə́ŋ=ki húy túm-í
-2P=POSS dogs sleep-NHYP
-'Your dogs sleep'
-
-# 9
-Source: {a: 79, b: 218, author}
-Vetted: t
-Judgment: g
-Phenomena: {}
-máki húy túmí
-má=ki húy túm-í
-3P=POSS dogs sleep-NHYP
-'His/her dogs sleep'
-
-# 10
-Source: {a: 79, b: 218, author}
-Vetted: t
-Judgment: g
-Phenomena: {}
 íhúy túmí
 í-húy túm-í
 1P-dogs sleep-NHYP
 'My dogs sleep'
 
-# 11
+# 6
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
@@ -116,7 +66,7 @@ nə́-húy túm-í
 2P-dogs sleep-NHYP
 'Your dogs sleep'
 
-# 12
+# 7
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
@@ -126,7 +76,7 @@ mə́-húy túm-í
 3P-dogs sleep-NHYP
 'His/her dogs sleep'
 
-# 13
+# 8
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
@@ -136,37 +86,37 @@ Phenomena: {}
 I rice eat-NHYP
 'I eat rice'
 
-# 14
+# 9
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
 Phenomena: {}
 ə́yki húy čən čáí
-ə́y=ki húy čən čá-í
-1P=POSS dogs rice eat-NHYP
+í-húy čən čá-í
+1P-dogs rice eat-NHYP
 'My dogs eat rice'
 
-# 15
+# 10
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
 Phenomena: {}
 nə́ŋki húy čən čáí
-nə́ŋ=ki húy čən čá-í
-2P=POSS dogs rice eat-NHYP
+nə́-húy čən čá-í
+2P-dogs rice eat-NHYP
 'Your dogs eat rice'
 
-# 16
+# 11
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
 Phenomena: {}
 máki húy čən čáí
-má=ki húy čən čá-í
-3P=POSS dogs rice eat-NHYP
+mə́-húy čən čá-í
+3P-dogs rice eat-NHYP
 'His/her dogs eat rice'
 
-# 17
+# 12
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
@@ -176,7 +126,7 @@ Phenomena: {}
 1P-dogs rice eat-NHYP
 'My dogs eat rice'
 
-# 18
+# 13
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
@@ -186,7 +136,7 @@ nə́-húy čən čá-í
 2P-dogs rice eat-NHYP
 'Your dogs eat rice'
 
-# 19
+# 14
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
@@ -196,7 +146,7 @@ mə́-húy čən čá-í
 3P-dogs rice eat-NHYP
 'His/her dogs eat rice'
 
-# 20
+# 15
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: u
@@ -206,7 +156,7 @@ Phenomena: {}
 1P-dogs eat-NHYP rice 
 '*My dogs rice eat'
 
-# 21
+# 16
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: u
@@ -214,9 +164,9 @@ Phenomena: {}
 nə́húy čáí čən
 nə́-húy čá-í čən
 2P-dogs eat-NHYP rice
-'Your dogs eat rice'
+'*Your dogs eat rice'
 
-# 22
+# 17
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: u
@@ -224,6 +174,184 @@ Phenomena: {}
 mə́húy čáí čən
 mə́-húy čá-í čən
 3P-dogs eat-NHYP rice
-'His/her dogs eat rice'
+'*His/her dogs eat rice'
 
+# 18
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+má oǰani
+má oǰa =ni
+3P teacher =COP
+'He/she is a teacher.'
 
+# 19
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+ə́y nuŋŋayí
+ə́y nuŋŋay-í
+1P happy-NHYP
+'I am happy.'
+
+# 20
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+ə́y bəzartəni
+ə́y bəzar=tə =ni
+1P park=LOC =COP
+'I am in the park.'
+
+# 21
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+phurit ŋəwí
+phurit ŋəw-í
+shirt white-NHYP
+'The shirt is white'
+
+# 22
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+húy bəzartə =ni
+húy bəzar=tə =ni
+dog market=LOC =COP
+'The dog is in the market.'
+
+# 23
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+nə́húy bəzartə =ni
+nə́-húy bəzar=tə =ni
+2P-dogs market=LOC =COP
+'Our dogs are in the market.'
+
+# 24
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+húy hə́wdóŋ =ni
+húy hə́wdóŋ =ni
+dog  cat =COP
+'The dog is the cat.'
+
+# 25
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+mə́húy mə́hə́wdóŋ =ni
+mə́-húy mə́-hə́wdóŋ =ni
+3P-dog  3P-cat =COP
+'Our dogs are our cats.'
+
+# 26
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+núpí daktər =ni
+núpí daktər =ni
+female  doctor =COP
+'The woman is a doctor.'
+
+# 27
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+mə́hárani čhíŋí
+mə́hárani čhíŋ-í
+queen wise-NHYP
+'The queen is wise.'
+
+# 28
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+núpí ə́yki mə́rúp =ni
+núpí mə́-mə́rúp =ni
+female 3P-friend =COP
+'The woman is his or her friend.'
+
+# 29
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+húy čawí
+húy čaw-í
+húy big-NHYP
+'The dog is big.'
+
+# 30
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: u
+Phenomena: {}
+čhíŋí mə́hárani
+čhíŋ-í mə́hárani
+wise-NHYP queen
+'*The queen is wise.'
+
+# 31
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: u
+Phenomena: {}
+mə́húy mə́hə́wdóŋ =ni-í
+mə́-húy mə́-hə́wdóŋ =ni-í
+3P-dog  3P-cat =COP-í
+'*The dogs are the cats.'
+
+# 32
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: u
+Phenomena: {}
+ə́y təbəzar =ni
+ə́y tə=bəzar =ni
+I LOC=market =COP
+'*I am in the market.'
+
+# 33
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: u
+Phenomena: {}
+núpí =ni daktər
+núpí =ni daktər
+female =COP doctor
+'*The woman is a doctor.'
+
+# 34
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+núpá nuŋčhi =ni
+núpá nuŋčhi =ni
+male love =COP
+'The man is sweet.'
+
+# 35
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+núpá nuŋčhi-í
+núpá nuŋčhi-í
+male love-NHYP
+'The man is sweet.'

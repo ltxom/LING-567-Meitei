@@ -2,7 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of mni
 ;;; created at:
-;;;     Fri Feb 11 23:37:06 UTC 2022
+;;;     Wed Feb 16 23:11:06 UTC 2022
 ;;; based on Matrix customization system version of:
 ;;;     Mon Aug  2 23:22:15 UTC 2021
 ;;;
@@ -24,15 +24,18 @@ basic-head-comp-phrase :+ [ SYNSEM [ LIGHT -,
 
 head :+ [ PRON bool,
     AUX bool,
+    PRD bool,
     NMZ bool,
     POSSESSOR poss,
     FORM form ].
 
 noun :+ [ CASE case ].
 
-inflected :+ [ SENTENCE-MOOD-FLAG luk ].
+inflected :+ [ SENTENCE-MOOD-FLAG luk,
+                                         NOUN-CASE-FLAG luk  ].
 
-infl-satisfied :+ [ SENTENCE-MOOD-FLAG na-or-+ ].
+infl-satisfied :+ [ SENTENCE-MOOD-FLAG na-or-+,
+                                                  NOUN-CASE-FLAG na-or-+  ].
 
 png :+ [ PER person,
     NUM number ].
@@ -63,8 +66,9 @@ poss-case := case.
 
 case := *top*.
 real-case := case.  ; intermediate case type for all real cases
-agn := real-case.  ; agn
-pat := real-case.  ; pat
+agn+pat := real-case.
+agn := agn+pat.
+pat := agn+pat.  ; pat
 abl := real-case.  ; abl
 loc := real-case.  ; loc
 ass := real-case.  ; ass
@@ -128,7 +132,7 @@ nhyp-declarative := mood.
 
 ;;; Nouns
 
-noun-lex := basic-noun-lex & basic-non-wh-word-lex & non-local-none-lex-item & no-hcons-lex-item & non-mod-lex-item &
+noun-lex := basic-noun-lex & basic-non-wh-word-lex & non-local-none-lex-item & noun-determiner-pc-dtr & no-hcons-lex-item & non-mod-lex-item &
   [ ARG-ST < #spr >,
     SYNSEM.LOCAL.CAT [ VAL [ SPR < #spr &
                                    [ LOCAL.CAT.HEAD det ] >,
@@ -138,10 +142,12 @@ noun-lex := basic-noun-lex & basic-non-wh-word-lex & non-local-none-lex-item & n
                        HEAD.NMZ - ] ].
 
 noun1-noun-lex := noun-lex & noun-case-rule-dtr & noun-possessor-pc-rule-dtr & noun-possessum-pc-rule-dtr &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd ].
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd,
+                                                INFLECTED.NOUN-CASE-FLAG -  ].
 
 noun2-noun-lex := noun-lex & noun-case-rule-dtr & noun-possessor-pc-rule-dtr & noun-possessum-pc-rule-dtr &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd ].
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd,
+                                                INFLECTED.NOUN-CASE-FLAG -  ].
 
 noun4-noun-lex := noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd ].
@@ -162,13 +168,15 @@ noun35-noun-lex := noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd ].
 
 noun61-noun-lex := noun-lex & noun-case-rule-dtr & noun-possessor-pc-rule-dtr & noun-possessum-pc-rule-dtr &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd ].
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd,
+                                                INFLECTED.NOUN-CASE-FLAG -  ].
 
 noun69-noun-lex := noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd ].
 
 noun79-noun-lex := noun-lex & noun-case-rule-dtr & noun-possessor-pc-rule-dtr & noun-possessum-pc-rule-dtr &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd ].
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd,
+                                                INFLECTED.NOUN-CASE-FLAG -  ].
 
 noun89-noun-lex := noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd ].
@@ -186,68 +194,79 @@ noun100-noun-lex := noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd ].
 
 noun110-noun-lex := noun-lex & noun-case-rule-dtr &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd ].
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd,
+                                                INFLECTED.NOUN-CASE-FLAG -  ].
 
 noun111_he_she-noun-lex := noun-lex & noun-case-rule-dtr & noun-possessor-pc-rule-dtr &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
                    CONT.HOOK.INDEX.PNG [ PER 3rd,
-                                         NUM sg ] ] ].
+                                         NUM sg ] ],
+                                                       INFLECTED.NOUN-CASE-FLAG -  ].
 
 noun112_I-noun-lex := noun-lex & noun-case-rule-dtr & noun-possessor-pc-rule-dtr &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
                    CONT.HOOK.INDEX.PNG [ PER 1st,
-                                         NUM sg ] ] ].
+                                         NUM sg ] ],
+                                                       INFLECTED.NOUN-CASE-FLAG -  ].
 
 noun114_here-noun-lex := noun-lex & noun-case-rule-dtr &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
-                   CONT.HOOK.INDEX.PNG.PER 3rd ] ].
+                   CONT.HOOK.INDEX.PNG.PER 3rd ],
+                                                    INFLECTED.NOUN-CASE-FLAG -  ].
 
 noun115_we-noun-lex := noun-lex & noun-case-rule-dtr & noun-possessor-pc-rule-dtr &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
                    CONT.HOOK.INDEX.PNG [ PER 1st,
-                                         NUM pl ] ] ].
+                                         NUM pl ] ],
+                                                       INFLECTED.NOUN-CASE-FLAG -  ].
 
 noun116_they-noun-lex := noun-lex & noun-case-rule-dtr & noun-possessor-pc-rule-dtr &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
                    CONT.HOOK.INDEX.PNG [ PER 3rd,
-                                         NUM pl ] ] ].
+                                         NUM pl ] ],
+                                                       INFLECTED.NOUN-CASE-FLAG -  ].
 
 noun117_you_all-noun-lex := noun-lex & noun-case-rule-dtr & noun-possessor-pc-rule-dtr &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
                    CONT.HOOK.INDEX.PNG [ PER 2nd,
-                                         NUM pl ] ] ].
+                                         NUM pl ] ],
+                                                       INFLECTED.NOUN-CASE-FLAG -  ].
 
 noun118_we_dual-noun-lex := noun-lex & noun-case-rule-dtr & noun-possessor-pc-rule-dtr &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
                    CONT.HOOK.INDEX.PNG [ PER 1st,
-                                         NUM dual ] ] ].
+                                         NUM dual ] ],
+                                                         INFLECTED.NOUN-CASE-FLAG -  ].
 
 noun119_you_dual-noun-lex := noun-lex & noun-case-rule-dtr & noun-possessor-pc-rule-dtr &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
                    CONT.HOOK.INDEX.PNG [ PER 2nd,
-                                         NUM dual ] ] ].
+                                         NUM dual ] ],
+                                                         INFLECTED.NOUN-CASE-FLAG -  ].
 
 noun120_they_dual-noun-lex := noun-lex & noun-case-rule-dtr & noun-possessor-pc-rule-dtr &
   [ SYNSEM.LOCAL [ CAT.HEAD.PRON +,
                    CONT.HOOK.INDEX.PNG [ PER 3rd,
-                                         NUM dual ] ] ].
+                                         NUM dual ] ],
+                                                         INFLECTED.NOUN-CASE-FLAG -  ].
 
 noun121-noun-lex := noun-lex & noun-case-rule-dtr &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd ].
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd,
+                                                INFLECTED.NOUN-CASE-FLAG -  ].
 
 noun122-noun-lex := noun-lex & noun-case-rule-dtr & noun-possessor-pc-rule-dtr &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ PER 2nd,
-                                       NUM sg ] ].
+                                       NUM sg ],
+                                                   INFLECTED.NOUN-CASE-FLAG -  ].
 
 ;;; Verbs
 
-verb-lex := non-mod-lex-item & nominalizer-rule-dtr & verb-pc27-rule-dtr &
+verb-lex := non-mod-lex-item & nominalizer-rule-dtr & 
   [ SYNSEM [ L-QUE -,
              LOCAL.CAT.HEAD verb &
-                            [ NMZ - ] ],
-    INFLECTED.SENTENCE-MOOD-FLAG - ].
+                            [ NMZ - ] ] ].
 
-main-verb-lex := verb-lex & basic-verb-lex & basic-non-wh-word-lex &
+main-verb-lex := verb-lex & basic-verb-lex & basic-non-wh-word-lex & verb-mood-not-satisfied-dtr &
   [ SYNSEM [ L-QUE -,
              LOCAL [ CAT [ HEAD.AUX -,
                            VAL [ SPEC < >,
@@ -257,7 +276,21 @@ main-verb-lex := verb-lex & basic-verb-lex & basic-non-wh-word-lex &
                  [ LOCAL [ CAT cat-sat &
                                [ VAL [ SPR < >,
                                        COMPS < > ] ],
-                           CONT.HOOK.INDEX #xarg ] ] ].
+                           CONT.HOOK.INDEX #xarg ] ],
+    INFLECTED.SENTENCE-MOOD-FLAG - ].
+
+main-verb-mood-satisfied-lex := verb-lex & basic-verb-lex & basic-non-wh-word-lex & verb-pc27-rule-dtr &
+  [ SYNSEM [ L-QUE -,
+             LOCAL [ CAT [ HEAD.AUX -,
+                           VAL [ SPEC < >,
+                                 SUBJ < #subj > ] ],
+                     CONT.HOOK.XARG #xarg ] ],
+    ARG-ST.FIRST #subj &
+                 [ LOCAL [ CAT cat-sat &
+                               [ VAL [ SPR < >,
+                                       COMPS < > ] ],
+                           CONT.HOOK.INDEX #xarg ] ],
+    INFLECTED.SENTENCE-MOOD-FLAG + ].
 
 aux-lex := verb-lex & basic-icons-lex-item &
   [ SYNSEM [ LOCAL.CAT.HEAD.AUX +,
@@ -269,6 +302,17 @@ intransitive-verb-lex := main-verb-lex & intransitive-lex-item &
                               [ CASE real-case ] ] > ].
 
 transitive-verb-lex := main-verb-lex & transitive-lex-item &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps >,
+    ARG-ST < [ LOCAL.CAT.HEAD noun &
+                              [ CASE real-case ] ],
+             #comps &
+             [ LOCAL.CAT cat-sat &
+                         [ VAL [ SPR < >,
+                                 COMPS < > ],
+                           HEAD noun &
+                                [ CASE real-case ] ] ] > ].
+
+transitive-mood-satisfied-verb-lex := main-verb-mood-satisfied-lex & transitive-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps >,
     ARG-ST < [ LOCAL.CAT.HEAD noun &
                               [ CASE real-case ] ],
@@ -293,6 +337,12 @@ agn-intransitive-verb-lex := intransitive-verb-lex &
                                 [ CASE agn ] ].
 
 agn-pat-transitive-verb-lex := transitive-verb-lex &
+  [ ARG-ST < [ LOCAL.CAT.HEAD noun &
+                              [ CASE agn ] ],
+             [ LOCAL.CAT.HEAD noun &
+                              [ CASE pat ] ] > ].
+
+agn-pat-transitive-mood-satisfied-verb-lex := transitive-mood-satisfied-verb-lex &
   [ ARG-ST < [ LOCAL.CAT.HEAD noun &
                               [ CASE agn ] ],
              [ LOCAL.CAT.HEAD noun &
@@ -323,13 +373,13 @@ verb22-verb-lex := intransitive-verb-lex.
 
 verb25-verb-lex := intransitive-verb-lex & verb-pc16-rule-dtr.
 
-verb30-verb-lex := transitive-verb-lex.
+verb30-verb-lex := agn-pat-transitive-verb-lex.
 
 verb37-verb-lex := intransitive-verb-lex & verb-pc16-rule-dtr & verb-pc3-rule-dtr & verb-pc30-rule-dtr.
 
-verb40-verb-lex := transitive-verb-lex.
+verb40-verb-lex := agn-pat-transitive-verb-lex.
 
-verb42-verb-lex := transitive-verb-lex & verb-pc16-rule-dtr.
+verb42-verb-lex := agn-pat-transitive-verb-lex & verb-pc16-rule-dtr.
 
 verb43-verb-lex := intransitive-verb-lex.
 
@@ -337,39 +387,41 @@ verb47-verb-lex := intransitive-verb-lex.
 
 verb58-verb-lex := intransitive-verb-lex.
 
-verb61-verb-lex := transitive-verb-lex & verb-pc3-rule-dtr.
+verb61-verb-lex := agn-pat-transitive-verb-lex & verb-pc3-rule-dtr.
 
-verb68-verb-lex := transitive-verb-lex.
+verb68-verb-lex := agn-pat-transitive-verb-lex.
 
-verb78-verb-lex := transitive-verb-lex.
+verb78-verb-lex := agn-pat-transitive-verb-lex.
 
 verb79-verb-lex := intransitive-verb-lex.
 
-verb89-verb-lex := transitive-verb-lex.
+verb89-verb-lex := agn-pat-transitive-verb-lex.
 
-verb98-verb-lex := transitive-verb-lex.
+verb98-verb-lex := agn-pat-transitive-verb-lex.
 
-verb104-verb-lex := transitive-verb-lex.
+verb104-verb-lex := agn-pat-transitive-verb-lex.
 
 verb106-verb-lex := intransitive-verb-lex.
 
 verb111-verb-lex := intransitive-verb-lex & verb-pc3-rule-dtr.
 
-verb124-verb-lex := clausal-verb-lex & verb-pc69-rule-dtr &
+verb124-verb-lex := clausal-verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < [ LOCAL.CAT.HEAD +vc ] > ].
 
 verb127-verb-lex := intransitive-verb-lex.
 
 verb132-verb-lex := agn-intransitive-verb-lex.
 
-verb133-verb-lex := transitive-verb-lex.
+verb133-verb-lex := agn-pat-transitive-verb-lex.
 
-verb134-verb-lex := transitive-verb-lex & verb-pc34-rule-dtr.
+verb134-verb-lex := agn-pat-transitive-verb-lex & verb-pc34-rule-dtr.
 
-verb138-verb-lex := clausal-verb-lex & verb-pc1-rule-dtr & verb-pc16-rule-dtr & verb-pc19-rule-dtr & verb-pc3-rule-dtr & verb-pc30-rule-dtr & verb-pc34-rule-dtr & verb-pc69-rule-dtr &
+verb138-verb-lex := clausal-verb-lex & verb-pc1-rule-dtr & verb-pc16-rule-dtr & verb-pc19-rule-dtr & verb-pc3-rule-dtr & verb-pc30-rule-dtr & verb-pc34-rule-dtr &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < [ LOCAL.CAT.HEAD +vc ] > ].
 
-verb156-verb-lex := transitive-verb-lex.
+verb156-verb-lex := agn-pat-transitive-verb-lex.
+
+verb-attributive-lex := agn-pat-transitive-verb-lex & verb-attributive-pc-rule-dtr.
 
 ;;; Auxiliaries
 
@@ -398,6 +450,52 @@ subj-raise-aux-with-pred := subj-raise-aux & norm-sem-lex-item & trans-first-arg
 
 aux1-aux-lex := subj-raise-aux-with-pred &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM finite ].
+
+;;; Copulas
+
+cop-lex := basic-verb-lex-super & trans-first-arg-raising-lex-item-2 & non-mod-lex-item &
+  [ SYNSEM.LOCAL [ CONT.HOOK.XARG #xarg,
+                   CAT.VAL [ COMPS < [ LOCAL.CAT cat-sat &
+                                                 [ HEAD adp & [ PRD + ],
+                                                   VAL [ SUBJ < >,
+                                                         COMPS < > ] ] ] >,
+                             SPEC < >,
+                             SUBJ < [ LOCAL [ CONT.HOOK.INDEX #xarg,
+                                              CAT cat-sat &
+                                                  [ VAL [ SPR < >,
+                                                          COMPS < > ],
+                                                    HEAD noun &
+                                                         [ CASE agn ] ] ] ] > ] ] ].
+
+; Copula type taking adjectival complements.
+; Need to define more for additional complement types.
+
+noun-comp-copula-verb-lex := agn-pat-transitive-mood-satisfied-verb-lex.
+
+locative-pp-phrase := unary-phrase &
+[ SYNSEM [ NON-LOCAL #nl,
+           LOCAL.CAT [ HEAD adp & [ MOD < [ LOCAL intersective-mod &
+    [ CAT.HEAD verb,
+                                                          CONT.HOOK.INDEX #xarg ] ] > ],
+                      VAL [ COMPS < >,
+                        SUBJ < >,
+                        SPR < > ]]],
+        C-CONT [ HOOK [ LTOP #ltop,
+                INDEX #index,
+                XARG #xarg ],
+          RELS.LIST < arg12-ev-relation &
+               [ PRED "_in_p_rel",
+                 LBL #ltop,
+                 ARG0 #index,
+                 ARG1 #xarg,
+                 ARG2 #dtr ] >,
+             HCONS.LIST < >  ],
+          ARGS < [ SYNSEM [ NON-LOCAL #nl,
+                        LOCAL [ CAT [ HEAD noun & [CASE loc],
+                                      VAL.SPR < > ],
+                            CONT.HOOK [ INDEX #dtr ] ] ] ] > ].
+
+;; Adposition
 
 ;;; Complementizers
 
@@ -476,39 +574,45 @@ low-nmz-subjid-compsid-lex-rule := low-nominalization-lex-rule &
 
 ;;; Intermediate rule types
 
-verb-pc27-rule-dtr := word-or-lexrule.
-verb-pc69-rule-dtr := word-or-lexrule.
-verb-pc34-rule-dtr := word-or-lexrule.
-noun-possessum-pc-rule-dtr := word-or-lexrule.
-verb-pc3-rule-dtr := word-or-lexrule.
 verb-pc1-rule-dtr := word-or-lexrule.
+verb-mood-not-satisfied-dtr := word-or-lexrule.
+verb-attributive-pc-rule-dtr := word-or-lexrule.
+verb-pc19-rule-dtr := word-or-lexrule.
+verb-pc27-rule-dtr := word-or-lexrule.
 noun-possessor-pc-rule-dtr := word-or-lexrule.
 verb-pc30-rule-dtr := word-or-lexrule.
-verb-pc16-rule-dtr := word-or-lexrule.
-verb-pc19-rule-dtr := word-or-lexrule.
-nominalizer-rule-dtr := word-or-lexrule.
 noun-case-rule-dtr := word-or-lexrule.
+verb-pc34-rule-dtr := word-or-lexrule.
+verb-pc3-rule-dtr := word-or-lexrule.
+noun-possessum-pc-rule-dtr := word-or-lexrule.
+nominalizer-rule-dtr := word-or-lexrule.
+noun-determiner-pc-dtr := word-or-lexrule.
+verb-pc16-rule-dtr := word-or-lexrule.
 
 ;;; Lexical rule types
 
-noun-case-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ INFLECTED #infl,
+noun-case-lex-rule-super := add-only-no-ccont-rule &
+  [ INFLECTED [ NOUN-CASE-FLAG +,
+                SENTENCE-MOOD-FLAG #sentence-mood ],
     DTR noun-case-rule-dtr &
-        [ INFLECTED #infl ] ].
+        [ INFLECTED.SENTENCE-MOOD-FLAG #sentence-mood ] ].
 
-noun-case-ablative-lex-rule := noun-case-lex-rule-super &
+noun-case-null-lex-rule := const-lex-rule & noun-case-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.HEAD.CASE agn+pat ].
+
+noun-case-ablative-lex-rule := infl-lex-rule & noun-case-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.HEAD.CASE abl ].
 
-noun-case-locative-lex-rule := noun-case-lex-rule-super &
+noun-case-locative-lex-rule := infl-lex-rule & noun-case-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.HEAD.CASE loc ].
 
-noun-case-associative-lex-rule := noun-case-lex-rule-super &
+noun-case-associative-lex-rule := infl-lex-rule & noun-case-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.HEAD.CASE ass ].
 
-noun-case-agentive-lex-rule := noun-case-lex-rule-super &
+noun-case-agentive-lex-rule := infl-lex-rule & noun-case-null-lex-rule &
   [ SYNSEM.LOCAL.CAT.HEAD.CASE agn ].
 
-noun-case-patient-lex-rule := noun-case-lex-rule-super &
+noun-case-patient-lex-rule := infl-lex-rule & noun-case-null-lex-rule &
   [ SYNSEM.LOCAL.CAT.HEAD.CASE pat ].
 
 noun-possessor-pc-lex-rule-super := infl-lex-rule &
@@ -539,6 +643,13 @@ possessor-lex-rule-1 := head-change-with-ccont-lex-rule &
     DTR.SYNSEM.LOCAL [ CONT.HOOK #hook &
                                  [ INDEX #possessor ],
                        CAT.VAL #val ] ].
+
+noun-determiner-pc-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & noun-case-rule-dtr &
+  [ DTR noun-determiner-pc-dtr ].
+
+noun-determiner-pc-distance_lrt-lex-rule := noun-determiner-pc-lex-rule-super.
+
+noun-determiner-pc-proximate_lrt-lex-rule := noun-determiner-pc-lex-rule-super.
 
 noun-possessor-pc_lrt1-lex-rule := noun-possessor-pc-lex-rule-super & possessor-lex-rule-1.
 
@@ -748,12 +859,12 @@ verb-pc42-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
 
 verb-pc42_lrt1-lex-rule := verb-pc42-lex-rule-super.
 
-verb-pc69-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+verb-attributive-pc-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ INFLECTED #infl,
-    DTR verb-pc69-rule-dtr &
+    DTR verb-attributive-pc-rule-dtr &
         [ INFLECTED #infl ] ].
 
-verb-pc69_lrt1-lex-rule := verb-pc69-lex-rule-super.
+verb-attributive-pc_lrt1-lex-rule := verb-attributive-pc-lex-rule-super.
 
 verb-pc70-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ INFLECTED #infl,
@@ -772,11 +883,10 @@ nom-lex-rule := nominalizer-lex-rule-super.
 
 sentence-mood-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ INFLECTED.SENTENCE-MOOD-FLAG +,
-    DTR verb-lex ].
+    DTR verb-mood-not-satisfied-dtr ].
 
 nhyp-lex-rule := sentence-mood-lex-rule-super &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX [ E.MOOD nhyp-declarative ],
-				 [ SF prop ]].
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.MOOD nhyp-declarative ].
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Phrasal Types

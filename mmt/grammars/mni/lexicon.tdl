@@ -1046,6 +1046,10 @@ nóŋ := noun1-noun-lex &
   [ STEM < "nóŋ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_rain_n_rel" ].
 
+bəzar := noun1-noun-lex &
+  [ STEM < "bəzar" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_park_n_rel" ].
+
 beŋgol := noun2-noun-lex &
   [ STEM < "beŋgol" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bengal_n_rel" ].
@@ -2522,11 +2526,28 @@ kham := verb138-verb-lex &
   [ STEM < "ŋáŋ" >,
     SYNSEM.LKEYS.KEYREL.PRED "_speak_v_rel" ].
 
+ŋəw := verb-attributive-lex &
+  [ STEM < "ŋəw" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be+white_v_rel" ].
+
+nuŋŋay := verb-attributive-lex &
+  [ STEM < "nuŋŋay" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be+happy_v_rel" ].
+
 ;;; Auxiliaries
 
-nə́tte_7 := aux1-aux-lex &
-  [ STEM < "nə́tte" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_is_v_rel" ].
+_3Dni_1 := aux1-aux-lex &
+  [ STEM < "PLACEHOLDER" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be_v_rel" ].
+
+;;; Copulas
+ni_cop := cop-lex &
+ [ STEM < "=ni" > ].
+
+noun-cop := noun-comp-copula-verb-lex &
+  [ STEM < "=ni" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be_v_id_rel" ].
+
 
 ;;; Adverbs
 

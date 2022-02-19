@@ -639,6 +639,8 @@ section=lexicon
     noun1_stem266_pred=_car_n_rel
     noun1_stem267_orth=nóŋ
     noun1_stem267_pred=_rain_n_rel
+    noun1_stem268_orth=bəzar
+    noun1_stem268_pred=_market_n_rel
   noun2_name=noun2
     noun2_feat1_name=person
     noun2_feat1_value=3rd
@@ -1044,6 +1046,8 @@ section=lexicon
     verb2_stem23_pred=_ride_v_rel
     verb2_stem24_orth=kə́k
     verb2_stem24_pred=_cut_v_rel
+    verb2_stem25_orth=nuŋŋay
+    verb2_stem25_pred=_be_happy_v_rel
   verb3_name=verb3
   verb3_valence=trans,comps1
     verb3_stem1_orth=hay
@@ -1575,8 +1579,11 @@ section=lexicon
   aux1_subj=np
     aux1_compfeature1_name=form
     aux1_compfeature1_value=finite
-    aux1_stem1_orth=nə́tte
-    aux1_stem1_pred=_is_v_rel
+    aux1_stem1_orth==ni
+    aux1_stem1_pred=_be_v_rel
+  cop1_name=cop1
+  cop1_comptype=ap
+    cop1_stem1_orth==ni
 
 section=morphology
   noun-pc1_name=noun-case

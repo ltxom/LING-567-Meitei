@@ -1,6 +1,10 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
 ;;; Inflecting Lexical Rule Instances
 
+noun-case-null-suffix :=
+%suffix (* )
+noun-case-null-lex-rule.
+
 noun-case-ablative-suffix :=
 %suffix (* =təgi)
 noun-case-ablative-lex-rule.
@@ -20,6 +24,14 @@ noun-case-agentive-lex-rule.
 noun-case-patient-suffix :=
 %suffix (* =pu)
 noun-case-patient-lex-rule.
+
+;noun-determiner-pc-distance_lrt-suffix :=
+;%suffix (* -tú)
+;noun-determiner-pc-distance_lrt-lex-rule.
+
+;noun-determiner-pc-proximate_lrt-suffix :=
+;%suffix (* -čhí)
+;noun-determiner-pc-proximate_lrt-lex-rule.
 
 noun-possessor-pc_lrt1-suffix :=
 %suffix (* =ki)
@@ -89,9 +101,9 @@ verb-pc42_lrt1-suffix :=
 %suffix (* =tə)
 verb-pc42_lrt1-lex-rule.
 
-verb-pc69_lrt1-prefix :=
+attributive-prefix :=
 %prefix (* ə́-)
-verb-pc69_lrt1-lex-rule.
+verb-attributive-pc_lrt1-lex-rule.
 
 verb-pc70_lrt1-suffix :=
 %suffix (* -loy)
@@ -104,3 +116,4 @@ nom-lex-rule.
 nhyp-suffix :=
 %suffix (* -í)
 nhyp-lex-rule.
+

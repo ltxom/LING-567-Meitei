@@ -1,203 +1,276 @@
-lab6 write-up
+lab7 write-up
 By Tongxi(Tom) Liu, Jessie Zeng
-Feb 11th, 2022
+Feb 16th, 2022
+====================
+COP Intro:
+1. pg.249 copula: The copula -ni which indicates a declarative sentence has a special status in
+that it has a category-changing function.  the copula derives verbs from nouns.
 
-1. Changes made to semi.vpm:
-  In semi.vpm, for each phenomenon, we deleted E. and PNG on the right-hand side. We deleted unnecessary sections for Gender and Tense that mni grammar does not exhibit.
-  We changed the right-hand side from 1st, 2nd, 3rd to the first, second, and third for the PER section. We have set the default aspect to be perfective. We have a mood marker on every sentence(illocutionary markers), so we did not put any default value in the Mood section.
+pg.86 adjectives: An adjective is derived through the affixation of the attributive derivational
+prefix ə́- to a verbal noun. For example, the adjective acawba 'big' is derived
+from the stative verb čaw 'be big': thus, ə́-čaw-pə mí  'big man' where mí is
+'man'.
+
+====================
+Stative Verb as an ADJ, it behaves as an intransitive verb with can take mood markers such as -í as suffixes.
+Therefore, we define them as verb-attributive-lex which inherits from agn-intransitive-verb-lex.
+
+We also defined a verb-attributive-pc and didn't add features to it yet.
+
+Semantic is _be+happy_v_rel. You indicate we need a transfer rule.
+
+TDL:
+
+verb-attributive-lex := agn-intransitive-verb-lex & verb-attributive-pc-rule-dtr.
+verb-attributive-pc-rule-dtr := word-or-lexrule.
+verb-attributive-pc-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+  [ INFLECTED #infl,
+    DTR verb-attributive-pc-rule-dtr &
+        [ INFLECTED #infl ] ].
+
+verb-attributive-pc_lrt1-lex-rule := verb-attributive-pc-lex-rule-super.
 
 
-2.
-Morphology clean-up:
-	The large chunk of affixes defined in morphology caused MMT to produce over 20k sentences for just "Dogs sleep." We deleted a large section of the morphology section because many of them have no constraint, and we planned to add them back after limiting readings to a reasonable number. We've also looked into auxiliaries and deleted them for the same reasons.  Since our grammar has inflected morphemes (mood/aspect/case/etc.), this move could cause our corpus to parse even fewer sentences.
+# 24
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+ə́y nuŋŋayí
+ə́y nuŋŋay-í
+1P happy-NHYP
+'I am happy.'
 
-Phenomenon CASE markers:
-	Here are tracks of how we eliminate results when translating "Dogs sleep" into Meitei:
+=============
 
-	After refining morphology and auxilary, our result surge down from 20k+ to only 18 results:
-	"Dogs sleep"
-	  {
-	  Húy túm
-	  Húy=tə túm
-	  Húy=pu túm
-	  Húy=təgi túm-í
-	  Húy=nə túm-kə
-	  Húy=kə túm
-	  Húy=tə túm-kə
-	  Húy=pu túm-í
-	  Húy túm-kə
-	  Húy=nə túm-í
-	  Húy=tə túm-í
-	  Húy=təgi túm
-	  Húy=təgi túm-kə
-	  Húy=kə túm-í
-	  Húy=pu túm-kə
-	  Húy=nə túm
-	  Húy túm-í
-	  Húy=kə túm-kə
-	  }
+Dogs are cars. -> mni
 
-	The correct translation we expect is "Húy túm-í", or "Húy=nə túm-í". The agentive suffix is optional so that the subject could be agentive(with suffix=nə) or actor(no affix).
-	We noticed that aspectual particle suffix "-kə" was incorrectly attached as in "Húy=təgi túm-kə" or "Húy=pu túm-kə." We found we didn't remove the E from E.ASPECT in the semi.vpm. After correction, the number of results went down to 12.
+=ni == transitive verb / mood already satisfied
+=ni ->
+noun-cop := noun-comp-copula-verb-lex &
+  [ STEM < "=ni" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be_v_id_rel" ].
 
-	"Dogs sleep"
-	  {
-	  Húy túm
-	  Húy=tə túm
-	  Húy=pu túm
-	  Húy=nə túm-í
-	  Húy=kə túm
-	  Húy=tə túm-í
-	  Húy túm-í
-	  Húy=təgi túm
-	  Húy=təgi túm-í
-	  Húy=pu túm-í
-	  Húy=nə túm
-	  Húy=kə túm-í
-	  }
+noun-comp-copula-verb-lex -> agn-pat-transitive-mood-satisfied-verb-lex. -> transitive-mood-satisfied-verb-lex -> main-verb-mood-satisfied-lex
 
-	Then, observing the translations, we found that the matrix clause mood marker -í for non-hypothetical declarative appears optional to the matrix clause.
-	This is incorrect since a declarative sentence in Meitei needs a mood marker on its matrix clause verb. We went back to the customization system and kept the verb-pc72 as obligatory, and we then eliminated another 6 translations.
+Normal verbs: mood not satisfied:
+    main-verb-lex := verb-lex & basic-verb-lex & basic-non-wh-word-lex & verb-mood-not-satisfied-dtr &
+      [ SYNSEM [ L-QUE -,
+                 LOCAL [ CAT [ HEAD.AUX -,
+                               VAL [ SPEC < >,
+                                     SUBJ < #subj > ] ],
+                         CONT.HOOK.XARG #xarg ] ],
+        ARG-ST.FIRST #subj &
+                     [ LOCAL [ CAT cat-sat &
+                                   [ VAL [ SPR < >,
+                                           COMPS < > ] ],
+                               CONT.HOOK.INDEX #xarg ] ],
+        INFLECTED.SENTENCE-MOOD-FLAG - ].
 
-	"Dogs sleep"
-	{
-	Húy túm-í
-	Húy=tə túm-í
-	Húy=pu túm-í
-	Húy=kə túm-í
-	Húy=təgi túm-í
-	Húy=nə túm-í
-	}
+Enclitics typed verbs: mood already satisfied
+main-verb-mood-satisfied-lex := verb-lex & basic-verb-lex & basic-non-wh-word-lex & verb-pc27-rule-dtr &
+  [ SYNSEM [ L-QUE -,
+             LOCAL [ CAT [ HEAD.AUX -,
+                           VAL [ SPEC < >,
+                                 SUBJ < #subj > ] ],
+                     CONT.HOOK.XARG #xarg ] ],
+    ARG-ST.FIRST #subj &
+                 [ LOCAL [ CAT cat-sat &
+                               [ VAL [ SPR < >,
+                                       COMPS < > ] ],
+                           CONT.HOOK.INDEX #xarg ] ],
+    INFLECTED.SENTENCE-MOOD-FLAG + ].
 
-	For the left 6 sentences, we observed that all cases are marked to the subject. We raised this question to the discussion board and found out in the lexicon for verb sleep. We need to specify its argument structure as agn-intransitive to give a correct case marking to the verb's subject.
-	  mni.tdl:
-		verb132-verb-lex := agn-intransitive-verb-lex.
 
-	The case is optional, and we did mark that in the case position class, so both possible outputs are allowed.
-	After the steps, we successfully elimintate possible output to 2, and it is what we expected.
-	"Dogs sleep"
-	  {
-	  Húy túm-í
-	  Húy=nə túm-í
-	  }
-IGTs to test case markers:
-	húy túm-í
-	dog sleep-NHYP
-	'Dogs sleep.'
-	
-	húy=nə túm-í
-	dog=AGN sleep-NHYP
-	'Dogs sleep.'
-	
-	húy=nə čá-í
-	dogs=AGN eat-NHYP
-	'Dogs eat.'
-	
-	húy čá-í
-	dogs eat-NHYP
-	'Dogs eat.'
-	
-	
-Phenomenon Word Order:
-	For the sentence "Dogs chase cars", we found out that the translation gives possibilities that free ordering of subject and object (e.g. cars chase dogs):
-	"Dogs chase cars"
-	{
-	Húy garí tan-í
-	Garí húy tan-í
-	Garí=pu húy tan-í
-	Húy=nə garí tan-í
-	Húy=nə garí=pu tan-í
-	Garí=pu húy=nə tan-í
-	Garí húy=nə tan-í
-	Húy garí=pu tan-í
-	}
+--> no more -í, because -í is in nhyp-lex-rule, which provide mood (while our main-verb-mood-satisfied-lex takes no mood)
+nhyp-lex-rule := sentence-mood-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.MOOD nhyp-declarative ].
 
-	However, we observe all simple sentences (i.e., sentences without embedded clauses) have a word order of SOV. Therefore, we then defined mni's word order to SOV.
+> 36 results
 
-	According to our literature, it indicates Meithei as free word order, but we couldn't find any free order examples that are against the SOV order. Therefore, we changed the word order, but we might need to revise it back to free order if we see any counterexamples.
-IGTs to test word order:
-	ə́y nə́ŋ=pu tan-í
-	I you=ACC chase-NHYP
-	'I chase you.'
-	
-	húy garí=pu tan-í
-	dog car=ACC chase-NHYP
-	'Dogs chase cars.'
-	
-Phenomenon Adnominal Possession:
-	In adnominal possession, we did the customization editing last week. At first, we encountered the same problems as in case markers section (dogs sleep), which generated incorrect case markers; attached with incorrect affixes. These problems are solved identically in the ways stated above.
+72 results:
 
-	For the sentence "The dog's car sleeps", there could be several translations. "Húy=ki garí túm-í" or "Húy=ki garí=nə túm-í". The translation gives us the results quickly without any other changes.
-	The other sentence "My dogs sleep" also gives correct translations.
+Húy garí =ni
+Húy-čhí garí =ni-í
+Húy garí=pu =ni
+Húy garí =ni-í
+Húy=nə garí =ni
+Húy-tú garí =ni
+Húy garí=pu =ni-í
+Húy-tú garí=pu =ni
+Húy garí-tú =ni-í
+Húy garí-tú =ni
+Húy garí-čhí =ni-í
+Húy garí-tú=pu =ni
+Húy garí-tú=pu =ni-í
+Húy garí-čhí=pu =ni
+Húy garí-čhí=pu =ni-í
+Húy garí-čhí =ni
+Húy-čhí garí =ni
+Húy-tú garí =ni-í
+Húy-tú=nə garí =ni
+Húy-čhí garí=pu =ni-í
+Húy=nə garí=pu =ni
+Húy-čhí garí-tú =ni-í
+Húy=nə garí-tú =ni
+Húy-čhí garí-čhí =ni-í
+Húy=nə garí-tú=pu =ni
+Húy-čhí garí-tú=pu =ni-í
+Húy-čhí garí=pu =ni
+Húy-čhí garí-tú =ni
+Húy=nə garí-čhí=pu =ni
+Húy-čhí garí-tú=pu =ni
+Húy=nə garí-čhí =ni
+Húy-čhí garí-čhí=pu =ni
+Húy=nə garí =ni-í
+Húy-čhí=nə garí =ni
+Húy-čhí garí-čhí =ni
+Húy=nə garí=pu =ni-í
+Húy=nə garí-tú =ni-í
+Húy-čhí garí-čhí=pu =ni-í
+Húy-tú garí=pu =ni-í
+Húy-tú=nə garí=pu =ni
+Húy-čhí=nə garí=pu =ni
+Húy-tú=nə garí-tú =ni
+Húy-tú garí-tú =ni-í
+Húy-tú=nə garí =ni-í
+Húy-tú=nə garí-tú=pu =ni
+Húy-čhí=nə garí =ni-í
+Húy-tú garí-tú =ni
+Húy-tú garí-tú=pu =ni
+Húy-tú=nə garí=pu =ni-í
+Húy-tú=nə garí-tú =ni-í
+Húy=nə garí-čhí =ni-í
+Húy-tú=nə garí-čhí=pu =ni
+Húy-tú garí-čhí =ni-í
+Húy-čhí=nə garí=pu =ni-í
+Húy-tú garí-čhí=pu =ni
+Húy-čhí=nə garí-tú =ni-í
+Húy-tú=nə garí-čhí =ni
+Húy-tú garí-tú=pu =ni-í
+Húy-čhí=nə garí-tú =ni
+Húy-čhí=nə garí-tú=pu =ni
+Húy-tú garí-čhí=pu =ni-í
+Húy=nə garí-tú=pu =ni-í
+Húy-čhí=nə garí-čhí=pu =ni
+Húy-tú=nə garí-čhí =ni-í
+Húy-tú garí-čhí =ni
+Húy-čhí=nə garí-čhí =ni-í
+Húy=nə garí-čhí=pu =ni-í
 
-	"The dog's car sleeps"
-	  {
-	  Húy=ki garí túm-í
-	  Húy=ki garí=nə túm-í
-	  }
-	
-	Noticeably, it also correctly translated sentences with either possessive marker "=ki" or the possessive pronoun prefixes "Í-."
-	"My dogs sleep"
-	  {Ə́y=ki húy túm-í
-	  Í-húy=nə túm-í
-	  Í-húy túm-í
-	  Ə́y=ki húy=nə túm-í
-	  }
+====================
+ə́y bəzar=tə =ni
+1P park=LOC =COP
+'I am in the park.'
 
-	A last change we made is include SF prop to the nhyp-declarative rule, to make sure that only the matrix verb gets the suffix.
 
-	tdl:
-	nhyp-lex-rule := sentence-mood-lex-rule-super &
-	  [ SYNSEM.LOCAL.CONT.HOOK.INDEX [ E.MOOD nhyp-declarative ],
-					 [ SF prop ]].
+To account for non-verbal PP, we first need to build a N node above bəzar=tə which contains the CASE loc value. To achieve this goal,
+we defined the following TDLs:
 
-IGTs to test adnominal possession:
-	mə́-húy čən čá-í
-	3P-dogs rice eat-NHYP
-	'His/her dogs eat rice'
+In irules.tdl:
+noun-case-locative-suffix :=
+%suffix (* =tə)
+noun-case-locative-lex-rule.
 
-	má=ki húy čən čá-í
-	3P=POSS dogs rice eat-NHYP
-	'His/her dogs eat rice'
-	
-	garí=ki húy túm-í
-	Car=POSS dogs sleep-NHYP
-	'The car's dogs sleeps'
-	
-3. 
-How many items parsed?
-  Before improvements:
-  	test corpus: 86/1784 items parsed;
-  	test suite: 1/22.
-  After improvements:
-  	test corpus: 3/1784 items parsed (p.s. because we removed many affixes defined in morphology that have zero features. We plan to define their features later);
-  	test suite: all (19/22) items parsed (with 3 ungrammatical sentences eliminated).
+In mni.tdl:
+noun-case-locative-lex-rule := noun-case-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.HEAD.CASE loc ].
 
-What is the average number of parses per parsed item?
-  Before improvements:
-  	test corpus: 95.45 parses on average;
-  	test suite: 256 parses on average.
-  After improvements:
-  	test corpus: 1.33 parses on average;
-  	test suite: 1.16 parses on average.
+Then, we need to build a non-branching phrase structure rule that builds a PP out of the locative case NP.
+In rules.tdl:
+    loc-pp := locative-pp-phrase.
 
-How many parses did the most ambiguous item receive?
-  Before improvements:
-  	test corpus: 840 parses;
-  	test suite: 256 parses.
-  After improvements:
-  	test corpus: 2 parses;
-  	test suite: 2 parses;
+In mni.tdl:
+    locative-pp-phrase := unary-phrase &
+    [ SYNSEM [ NON-LOCAL #nl,
+               LOCAL.CAT [ HEAD adp & [ MOD < [ LOCAL intersective-mod &
+        [ CAT.HEAD verb,
+                                                              CONT.HOOK.INDEX #xarg ] ] > ],
+                          VAL [ COMPS < >,
+                            SUBJ < >,
+                            SPR < > ]]],
+            C-CONT [ HOOK [ LTOP #ltop,
+                    INDEX #index,
+                    XARG #xarg ],
+              RELS.LIST < arg12-ev-relation &
+                   [ PRED "_in_p_rel",
+                     LBL #ltop,
+                     ARG0 #index,
+                     ARG1 #xarg,
+                     ARG2 #dtr ] >,
+                 HCONS.LIST < >  ],
+              ARGS < [ SYNSEM [ NON-LOCAL #nl,
+                            LOCAL [ CAT [ HEAD noun & [CASE loc],
+                                          VAL.SPR < > ],
+                                CONT.HOOK [ INDEX #dtr ] ] ] ] > ].
 
-What NEW sources of ambiguity can you identify?
-  Although our clean-up with morphology leads to surge decrease in number of items parsed, the ambiguity is significantly reduced with a max number of 2. The source of ambiguity comes from lexical ambiguity of má, which means "mother" or "he/she." This ambiguity should be legit.
-Here are some IGTs:
-In #3270 from corpus: 
-	má 		yeŋ-í
-	mother/3P  	look-NHYP
-	'Mother is looking./He or she is looking.'
- 
-And #9 from our testsuite:
-	má=ki 		húy  túm-í
-	mother/3P=POSS	dogs sleep-NHYP
-	'Mother's dogs sleep./His or her dogs sleep.'
+Noticeably, =ni here behaves differently compared to =ni in the previous seciton, where =ni is type of noun-comp-copula-verb-lex.
+=ni in non-verbal PP belongs to cop-lex as defined below:
+
+In lexicon.tdl, we assign
+    ni_cop := cop-lex &
+     [ STEM < "=ni" > ].
+
+In mni.tdl:
+    cop-lex := basic-verb-lex-super & trans-first-arg-raising-lex-item-2 & non-mod-lex-item &
+      [ SYNSEM.LOCAL [ CONT.HOOK.XARG #xarg,
+                       CAT.VAL [ COMPS < [ LOCAL.CAT cat-sat &
+                                                     [ HEAD adp & [ PRD + ],
+                                                       VAL [ SUBJ < >,
+                                                             COMPS < > ] ] ] >,
+                                 SPEC < >,
+                                 SUBJ < [ LOCAL [ CONT.HOOK.INDEX #xarg,
+                                                  CAT cat-sat &
+                                                      [ VAL [ SPR < >,
+                                                              COMPS < > ],
+                                                        HEAD noun &
+                                                             [ CASE agn ] ] ] ] > ] ] ].
+
+Problem:
+The subject NP "ə́y" had an incorrect mother PP out of its NP, because the CASE PC was optional before, so that anyone
+without specified CASE value can be any CASE. Grammatically, the subject here can have CASE agn with either null suffix of =nə. Therefore,
+we modified the CASE definition in our mni.tdl:
+    case := *top*.
+    real-case := case.
+    agn+pat := real-case.
+    agn := agn+pat.
+    pat := agn+pat.
+    abl := real-case.
+    loc := real-case.
+    ass := real-case.
+    ins := real-case.
+
+We must make noun-case-lex-rule-super obligatory for all nouns. To achieve this, we added the NOUN-CASE-FLAG in mni.tdl:
+    inflected :+ [ SENTENCE-MOOD-FLAG luk,
+                   NOUN-CASE-FLAG luk  ].
+
+    infl-satisfied :+ [ SENTENCE-MOOD-FLAG na-or-+,
+                        NOUN-CASE-FLAG na-or-+  ].
+
+Then, we modified the noun-case-lex-rule-super to say it can satisfy NOUN-CASE-FLAG, and noun-lex to say it requires NOUN-CASE-FLAG:
+    noun-case-lex-rule-super := add-only-no-ccont-rule &
+      [ INFLECTED [ NOUN-CASE-FLAG +,
+                    SENTENCE-MOOD-FLAG #sentence-mood ],
+        DTR noun-case-rule-dtr &
+            [ INFLECTED.SENTENCE-MOOD-FLAG #sentence-mood ] ].
+
+    noun1-noun-lex := noun-lex & noun-case-rule-dtr &
+      [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd,
+        INFLECTED.NOUN-CASE-FLAG -  ].
+
+
+    noun2-noun-lex := noun-lex & noun-case-rule-dtr &
+      [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd,
+        INFLECTED.NOUN-CASE-FLAG -  ].
+    ......
+
+We introduces noun-case-null-lex-rule which inherits noun-case-lex-rule-super to specify the CASE agn+pat:
+noun-case-null-lex-rule := const-lex-rule & noun-case-lex-rule-super &
+                [ SYNSEM.LOCAL.CAT.HEAD.CASE agn+pat ].
+
+And add corresponding irule:
+    noun-case-null-suffix :=
+    %suffix (* )
+    noun-case-null-lex-rule.
+
+Eventually, it can rule out......

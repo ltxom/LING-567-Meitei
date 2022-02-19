@@ -9,8 +9,10 @@ comp-head := comp-head-phrase.
 
 subj-head := subj-head-phrase.
 
-adj-head-int := adj-head-int-phrase.
+;adj-head-int := adj-head-int-phrase.
 
 head-spec := head-spec-phrase.
 
 bare-np := bare-np-phrase.
+
+loc-pp := locative-pp-phrase.
