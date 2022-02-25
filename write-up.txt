@@ -1,60 +1,87 @@
 lab7 write-up
 By Tongxi(Tom) Liu, Jessie Zeng
 Feb 16th, 2022
+
+
+1. Description of non-verbal predicates in Meithei.
+
+COP for Non-verbal predicates that takes a noun compliment:
+According to pg.249 in our literature, the copula =ni, which indicates a declarative sentence, has a special status in its category-changing function. For example,
+    núpí daktər =ni
+    female  doctor =COP
+    'The woman is a doctor.'
+The copula =ni derives a VP from nouns compliment daktər. This sentence is well-formed, and copula =ni already satisfied mood requirement in Meitei.
+
+Definition for Adjectives in Meitei:
+According to pg.86, an adjective in Meitei is derived through the affixation of the attributive derivational prefix ə́- to a nominalized verb. For example, the adjective acawba 'big' is derived from the stative verb čaw 'be big', as shown below.
+    ə́y ə́-čaw-pə    =ni
+    1P ATT-big-NOM =COP
+    'I am big.'
+
+Alternatively, the adjective expression can be formed differently with a stative verb with required mood suffix attached:
+    ə́y čaw-í
+    1P big-NHYP
+    'I am big.'
+
+"big" here is a stative verb (i.e., _be+big_v_rel). In this lab, we plan to modify TDL to account for the second case 'ə́y čaw-í' instead of 'ə́y ə́-čaw-pə =ni'.
+
+For PP and NP non-verbal predicates, the copula =ni is the enclitics that attacthes to the noun/locative PP as shown in IGT below:
+    ə́y bəzar=tə =ni
+    1P park=LOC =COP
+    'I am in the park.'
+
+
+2. Description of implementation of the phenomena.
 ====================
-COP Intro:
-1. pg.249 copula: The copula -ni which indicates a declarative sentence has a special status in
-that it has a category-changing function.  the copula derives verbs from nouns.
+AdjPs
+IGT in this part:
+    ə́y nuŋŋay-í
+    1P happy-NHYP
+    'I am happy.'
 
-pg.86 adjectives: An adjective is derived through the affixation of the attributive derivational
-prefix ə́- to a verbal noun. For example, the adjective acawba 'big' is derived
-from the stative verb čaw 'be big': thus, ə́-čaw-pə mí  'big man' where mí is
-'man'.
-
-====================
-Stative Verb as an ADJ, it behaves as an intransitive verb with can take mood markers such as -í as suffixes.
-Therefore, we define them as verb-attributive-lex which inherits from agn-intransitive-verb-lex.
-
-We also defined a verb-attributive-pc and didn't add features to it yet.
-
-Semantic is _be+happy_v_rel. You indicate we need a transfer rule.
+Stative Verb as an ADJ behaves as an intransitive verb with can take mood markers such as -í as suffixes. Therefore, we define them as verb-attributive-lex which inherits from agn-intransitive-verb-lex. In the above IGT, PRED for happy is _be+happy_v_rel. You indicate we need a transfer rule to make the translation work.
 
 TDL:
+    verb-attributive-lex := agn-intransitive-verb-lex & verb-attributive-pc-rule-dtr.
+    verb-attributive-pc-rule-dtr := word-or-lexrule.
+    verb-attributive-pc-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+      [ INFLECTED #infl,
+        DTR verb-attributive-pc-rule-dtr &
+            [ INFLECTED #infl ] ].
 
-verb-attributive-lex := agn-intransitive-verb-lex & verb-attributive-pc-rule-dtr.
-verb-attributive-pc-rule-dtr := word-or-lexrule.
-verb-attributive-pc-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ INFLECTED #infl,
-    DTR verb-attributive-pc-rule-dtr &
-        [ INFLECTED #infl ] ].
+    verb-attributive-pc_lrt1-lex-rule := verb-attributive-pc-lex-rule-super.
 
-verb-attributive-pc_lrt1-lex-rule := verb-attributive-pc-lex-rule-super.
+IGTs:
+    ə́y nuŋŋay-í
+    1P happy-NHYP
+    'I am happy.'
 
+    mə́hárani čhíŋ-í
+    queen wise-NHYP
+    'The queen is wise.'
 
-# 24
-Source: {a: 79, b: 218, author}
-Vetted: t
-Judgment: g
-Phenomena: {}
-ə́y nuŋŋayí
-ə́y nuŋŋay-í
-1P happy-NHYP
-'I am happy.'
+    núpá nuŋčhi =ni
+    male love =COP
+    'The man is sweet.'
+==========================
+For NPs:
+First, here's an IGT to work with:
+    Húy garí =ni
+    dog car =COP
+    'Dogs are cars.'
 
-=============
+We defined a =ni as noun-cop with following IGT to make it have correct PRED _be_v_id_rel.
+    noun-cop := noun-comp-copula-verb-lex &
+                       [ STEM < "=ni" >,
+                         SYNSEM.LKEYS.KEYREL.PRED "_be_v_id_rel" ].
 
-Dogs are cars. -> mni
+Firstly, we treat =ni as a transitive verb that inherits our agn-pat-transitive-verb-lex. However, a problem that occurred when translating "Dogs are cars" from English to Meitei: mood marker -í can attach to =ni, which is ungrammatical as shown below.
+    Húy garí =ni-í
+    dog car =COP-NHYP
+    '*Dogs are cars.'
 
-=ni == transitive verb / mood already satisfied
-=ni ->
-noun-cop := noun-comp-copula-verb-lex &
-  [ STEM < "=ni" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_be_v_id_rel" ].
-
-noun-comp-copula-verb-lex -> agn-pat-transitive-mood-satisfied-verb-lex. -> transitive-mood-satisfied-verb-lex -> main-verb-mood-satisfied-lex
-
-Normal verbs: mood not satisfied:
-    main-verb-lex := verb-lex & basic-verb-lex & basic-non-wh-word-lex & verb-mood-not-satisfied-dtr &
+We realized the COP does not behave identically to normal verbs so we cannot simply inherit it from agn-pat-transitive-verb-lex. The crucial point is that the super type main-verb-lex indicates "INFLECTED.SENTENCE-MOOD-FLAG -" so all verbs require mood to be satisfied from somewhere else. Therefore, we renamed the main-verb-lex to main-verb-mood-not-satisfied-lex, and created a new main-verb-mood-satisfied-lex type as follows:
+    main-verb-mood-satisfied-lex := verb-lex & basic-verb-lex & basic-non-wh-word-lex & verb-pc27-rule-dtr &
       [ SYNSEM [ L-QUE -,
                  LOCAL [ CAT [ HEAD.AUX -,
                                VAL [ SPEC < >,
@@ -65,116 +92,68 @@ Normal verbs: mood not satisfied:
                                    [ VAL [ SPR < >,
                                            COMPS < > ] ],
                                CONT.HOOK.INDEX #xarg ] ],
-        INFLECTED.SENTENCE-MOOD-FLAG - ].
+        INFLECTED.SENTENCE-MOOD-FLAG + ].
 
-Enclitics typed verbs: mood already satisfied
-main-verb-mood-satisfied-lex := verb-lex & basic-verb-lex & basic-non-wh-word-lex & verb-pc27-rule-dtr &
-  [ SYNSEM [ L-QUE -,
-             LOCAL [ CAT [ HEAD.AUX -,
-                           VAL [ SPEC < >,
-                                 SUBJ < #subj > ] ],
-                     CONT.HOOK.XARG #xarg ] ],
-    ARG-ST.FIRST #subj &
-                 [ LOCAL [ CAT cat-sat &
-                               [ VAL [ SPR < >,
-                                       COMPS < > ] ],
-                           CONT.HOOK.INDEX #xarg ] ],
-    INFLECTED.SENTENCE-MOOD-FLAG + ].
+Then, we defined its corresponding transitive-mood-satisfied-verb-lex, agn-pat-transitive-mood-satisfied-verb-lex, and make noun-comp-copula-verb-lex inherit from it, as shown in following IGTs:
+    transitive-mood-satisfied-verb-lex := main-verb-mood-satisfied-lex & transitive-lex-item &
+      [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps >,
+        ARG-ST < [ LOCAL.CAT.HEAD noun &
+                                  [ CASE real-case ] ],
+                 #comps &
+                 [ LOCAL.CAT cat-sat &
+                             [ VAL [ SPR < >,
+                                     COMPS < > ],
+                               HEAD noun &
+                                    [ CASE real-case ] ] ] > ].
+
+    agn-pat-transitive-mood-satisfied-verb-lex := transitive-mood-satisfied-verb-lex &
+      [ ARG-ST < [ LOCAL.CAT.HEAD noun &
+                                  [ CASE agn ] ],
+                 [ LOCAL.CAT.HEAD noun &
+                                  [ CASE pat ] ] > ].
+
+    noun-comp-copula-verb-lex := agn-pat-transitive-mood-satisfied-verb-lex.
 
 
---> no more -í, because -í is in nhyp-lex-rule, which provide mood (while our main-verb-mood-satisfied-lex takes no mood)
-nhyp-lex-rule := sentence-mood-lex-rule-super &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.MOOD nhyp-declarative ].
+After the modification, we had no more -í, because -í is in nhyp-lex-rule, which provide mood (while our main-verb-mood-satisfied-lex takes no mood).
+    nhyp-lex-rule := sentence-mood-lex-rule-super &
+      [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.MOOD nhyp-declarative ].
 
-> 36 results
+Other IGTs to test:
+    húy hə́wdóŋ =ni
+    dog  cat =COP
+    'The dog is the cat.'
 
-72 results:
+    mə́-húy mə́-hə́wdóŋ =ni
+    3P-dog  3P-cat =COP
+    'Our dogs are our cats.'
 
-Húy garí =ni
-Húy-čhí garí =ni-í
-Húy garí=pu =ni
-Húy garí =ni-í
-Húy=nə garí =ni
-Húy-tú garí =ni
-Húy garí=pu =ni-í
-Húy-tú garí=pu =ni
-Húy garí-tú =ni-í
-Húy garí-tú =ni
-Húy garí-čhí =ni-í
-Húy garí-tú=pu =ni
-Húy garí-tú=pu =ni-í
-Húy garí-čhí=pu =ni
-Húy garí-čhí=pu =ni-í
-Húy garí-čhí =ni
-Húy-čhí garí =ni
-Húy-tú garí =ni-í
-Húy-tú=nə garí =ni
-Húy-čhí garí=pu =ni-í
-Húy=nə garí=pu =ni
-Húy-čhí garí-tú =ni-í
-Húy=nə garí-tú =ni
-Húy-čhí garí-čhí =ni-í
-Húy=nə garí-tú=pu =ni
-Húy-čhí garí-tú=pu =ni-í
-Húy-čhí garí=pu =ni
-Húy-čhí garí-tú =ni
-Húy=nə garí-čhí=pu =ni
-Húy-čhí garí-tú=pu =ni
-Húy=nə garí-čhí =ni
-Húy-čhí garí-čhí=pu =ni
-Húy=nə garí =ni-í
-Húy-čhí=nə garí =ni
-Húy-čhí garí-čhí =ni
-Húy=nə garí=pu =ni-í
-Húy=nə garí-tú =ni-í
-Húy-čhí garí-čhí=pu =ni-í
-Húy-tú garí=pu =ni-í
-Húy-tú=nə garí=pu =ni
-Húy-čhí=nə garí=pu =ni
-Húy-tú=nə garí-tú =ni
-Húy-tú garí-tú =ni-í
-Húy-tú=nə garí =ni-í
-Húy-tú=nə garí-tú=pu =ni
-Húy-čhí=nə garí =ni-í
-Húy-tú garí-tú =ni
-Húy-tú garí-tú=pu =ni
-Húy-tú=nə garí=pu =ni-í
-Húy-tú=nə garí-tú =ni-í
-Húy=nə garí-čhí =ni-í
-Húy-tú=nə garí-čhí=pu =ni
-Húy-tú garí-čhí =ni-í
-Húy-čhí=nə garí=pu =ni-í
-Húy-tú garí-čhí=pu =ni
-Húy-čhí=nə garí-tú =ni-í
-Húy-tú=nə garí-čhí =ni
-Húy-tú garí-tú=pu =ni-í
-Húy-čhí=nə garí-tú =ni
-Húy-čhí=nə garí-tú=pu =ni
-Húy-tú garí-čhí=pu =ni-í
-Húy=nə garí-tú=pu =ni-í
-Húy-čhí=nə garí-čhí=pu =ni
-Húy-tú=nə garí-čhí =ni-í
-Húy-tú garí-čhí =ni
-Húy-čhí=nə garí-čhí =ni-í
-Húy=nə garí-čhí=pu =ni-í
+    núpí daktər =ni
+    female  doctor =COP
+    'The woman is a doctor.'
+
+    má oǰa =ni-í
+    3P teacher =COP-NHYP
+    '*He/she is a teacher.'
+
 
 ====================
-ə́y bəzar=tə =ni
-1P park=LOC =COP
-'I am in the park.'
+PP tdl modifications:
+Here's an IGT in this part:
+    ə́y bəzar=tə =ni
+    1P park=LOC =COP
+    'I am in the park.
 
-
-To account for non-verbal PP, we first need to build a N node above bəzar=tə which contains the CASE loc value. To achieve this goal,
-we defined the following TDLs:
+To account for non-verbal PP, we first need to build an N node above bəzar=tə which contains the CASE loc value. To achieve this goal, we defined the following TDLs:
 
 In irules.tdl:
-noun-case-locative-suffix :=
-%suffix (* =tə)
-noun-case-locative-lex-rule.
+    noun-case-locative-suffix :=
+    %suffix (* =tə)
+    noun-case-locative-lex-rule.
 
 In mni.tdl:
-noun-case-locative-lex-rule := noun-case-lex-rule-super &
-  [ SYNSEM.LOCAL.CAT.HEAD.CASE loc ].
+    noun-case-locative-lex-rule := noun-case-lex-rule-super &
+      [ SYNSEM.LOCAL.CAT.HEAD.CASE loc ].
 
 Then, we need to build a non-branching phrase structure rule that builds a PP out of the locative case NP.
 In rules.tdl:
@@ -227,9 +206,10 @@ In mni.tdl:
                                                              [ CASE agn ] ] ] ] > ] ] ].
 
 Problem:
-The subject NP "ə́y" had an incorrect mother PP out of its NP, because the CASE PC was optional before, so that anyone
-without specified CASE value can be any CASE. Grammatically, the subject here can have CASE agn with either null suffix of =nə. Therefore,
-we modified the CASE definition in our mni.tdl:
+The subject NP "ə́y" had an incorrect mother PP out of its NP, because the CASE PC was optional before, so that any noun without specified CASE value can be any CASE. Grammatically, the subject here can have CASE agn with either suffix =nə or omitted affix. Therefore, we need to make CASE obligatory for nouns.
+
+As you kindly helped us in demo day, we learned we need to modify the following parts:
+ First, we modified the CASE definition in our mni.tdl:
     case := *top*.
     real-case := case.
     agn+pat := real-case.
@@ -273,4 +253,127 @@ And add corresponding irule:
     %suffix (* )
     noun-case-null-lex-rule.
 
-Eventually, it can rule out......
+Eventually, it can rule out PP phrase rule taking a case unspecified NP phrase as its daughter to form a PP.
+
+Other IGTs to test:
+    ə́y bəzar=tə =ni
+    1P park=LOC =COP
+    'I am in the park.
+
+    húy bəzar=tə =ni
+    dog park=LOC =COP
+    'The dog is in the park.'
+
+3.
+When translating #15, The dogs are hungry, from English to Meitei, we got
+    NOTE: EP '"_hungry_a_rel"' is unknown in the semantic index
+    WARNING: EP '"_hungry_a_rel"' is not covered
+This is because "hungry" in Meitei functions as a stative verb mentioned above, and its MRS is "_be+hungry_v_rel," which indicates that we need a transfer rule to account for this.
+
+When translating #16, The dogs are in the park, we got 0 results without any error messages. We attempted to translate this sentence from Meitei to English, and it gave correct results. When we translate it from mni to mni, we still got 0 results. However, we can get one identical sentence from generating from the parse of it in the LKB. We posted it on Canvas and were waiting to find a solution to it.
+We compared their MRS and found they are about identical (differences are marked between ***):
+ENG:
+    [ LTOP: h0 INDEX: e1 [ e
+
+        ***TENSE: present***
+
+    ASPECT: aspect SF: prop-or-ques ] RELS: < [ "
+    exist_q_rel"<-1:-1> LBL: h2 ARG0: x3 [ x PER: third NUM: pl
+
+        ***COG-ST: uniq+fam+act***
+
+    ] RS
+    TR: h4 BODY: h5 ]  [ "_dog_n_rel"<-1:-1> LBL: h6 ARG0: x3 ]  [ "_in_p_rel"<-1:-1> LBL
+    : h7 ARG0: e1 ARG1: x3 ARG2: x8 [ x PER: third NUM:
+
+        ***sg COG-ST: uniq+fam+act***
+
+    ] ]  [ "exist_q_rel"<-1:-1> LBL: h9 ARG0: x8 RSTR: h10 BODY: h11 ]  [ "_park_n_rel"<-1:-1> LBL
+    : h12 ARG0: x8 ] > HCONS: < h0 qeq h7 h4 qeq h6 h10 qeq h12 > ICONS: < > ]
+
+MNI:
+    [ LTOP: h0 INDEX: e1 [ e
+
+        *** ***
+
+     ASPECT: aspect SF: prop-or-ques ] RELS: < [ "exist_q_rel"<-1
+    :-1> LBL: h2 ARG0: x3 [ x PER: third NUM: number
+
+        ***COG-ST: cog-st***
+
+     ] RSTR: h4 BODY: h5 ] [ "_dog_n_rel"<-1:-1> LBL: h6 ARG0: x3 ]  [ "_in_p_rel"<-1:-1> LBL: h7 ARG0: e1 ARG
+    1: x3 ARG2: x8 [ x PER: third
+
+        ***NUM: number COG-ST: cog-st***
+
+     ] ]  [ "exist_q_rel"<-1:-1>
+    LBL: h9 ARG0: x8 RSTR: h10 BODY: h11 ]  [ "_park_n_rel"<-1:-1> LBL: h12 ARG0: x8 ] >
+    HCONS: < h0 qeq h7 h4 qeq h6 h10 qeq h12 > ICONS: < > ]
+
+We wonder the problem comes from COG-ST or PNG.NUM sections in our semi.vpm, but we don't find any issues:
+    COG-ST : COG-ST
+      type-id <> type-id
+      uniq-id <> uniq-id
+      familiar <> familiar
+      activated <> activated
+      in-foc <> in-foc
+      activ+fam <> activ+fam
+      uniq+fam <> uniq+fam
+      activ-or-more <> activ-or-more
+      uniq-or-less <> uniq-or-less
+      uniq+fam+act <> uniq+fam+act
+      fam-or-more <> fam-or-more
+      fam-or-less <> fam-or-less
+      uniq-or-more <> uniq-or-more
+      activ-or-less <> activ-or-less
+      * <> *
+
+
+    PNG.PER : PER
+      3rd <> third
+      2nd <> second
+      1st <> first
+      * <> *
+
+    PNG.NUM : NUM
+      dual <> dual
+      pl <> pl
+      sg <> sg
+      * <> *
+
+You indicated the problem might come from trigger rules, and we need to define rules for ACE. We are still working on this and hope make improvements in next week.
+
+It can translate #17, The dogs are the cats, from English to Meitei and give 1 correct result:
+    Húy hə́wdóŋ =ni
+
+
+4. We haven't worked on wh questions and couldn't find wh questions of non-verbal predicates examples yet since our literature doesn't have a specific section to discuss this phenomenon. We would like to consult Prof. Shobhana Chelliah to learn more about it.
+
+5.
+How many items parsed?
+  Before improvements:
+  	test corpus: 3/1784 items parsed;
+  	test suite: 16/35.
+  After improvements:
+  	test corpus: 5/1784 items parsed;
+  	test suite: all 35 items parsed.
+
+What is the average number of parses per parsed item?
+  Before improvements:
+  	test corpus: 1.33 parses on average;
+  	test suite: 1.13 parses on average.
+  After improvements:
+  	test corpus: 1.2 parses on average;
+  	test suite: 1.25 parses on average.
+
+How many parses did the most ambiguous item receive?
+  Before improvements:
+  	test corpus: 2 parses;
+  	test suite: 2 parses.
+  After improvements:
+  	test corpus: 2 parses;
+  	test suite: 2 parses;
+
+What NEW sources of ambiguity can you identify?
+  The source of ambiguity comes from lexical ambiguity of má, which means "mother" or "he or she." This ambiguity should be legit.
+

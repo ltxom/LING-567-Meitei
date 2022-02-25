@@ -1,0 +1,50 @@
+lab8 write-up
+By Tongxi(Tom) Liu, Jessie Zeng
+Feb 22th, 2022
+
+1.
+húy túm-í
+dog sleep-NHYP
+'Dogs sleep.'
+
+húy túm-tə-e
+dog sleep-NEG-NHYP
+'Dogs don't sleep.'
+
+húy túm-e
+dog sleep-ASRT
+'Dogs sleep.'
+
+// u
+húy túm-tə-í
+dog sleep-NEG-ASRT
+'Dogs don't sleep.'
+
+2.
+
+má oǰa =ni
+3P teacher =COP
+'He/she is a teacher.'
+
+má oǰa =nəttə
+3P teacher =NEGCOP
+'He/she is not a teacher.'
+
+ə́y bəzar=tə =ni
+1P park=LOC =COP
+'I am in the park.'
+
+ə́y bəzar=tə =nəttə
+1P park=LOC =NEGCOP
+'I am not in the park.'
+
+
+3.
+ə́y hén čá-pə =ni
+1P fish eat-POM =COP
+'I am fish eating (person).'
+
+ə́y hén čá-tə-pə =ni
+1P fish eat-NEG-POM =COP
+'I am not-eat-fish (person).'
+
