@@ -2543,6 +2543,10 @@ nuŋčhi_2 := verb-attributive-lex &
   [ STEM < "nuŋčhi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be+lovely_v_rel" ].
 
+čá_mood := verb-mood-satisfied-verb-lex &
+  [ STEM < "čá" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
+
 ;;; Auxiliaries
 
 _3Dni_1 := aux1-aux-lex &
@@ -2553,10 +2557,17 @@ _3Dni_1 := aux1-aux-lex &
 ni_cop := cop-lex &
  [ STEM < "=ni" > ].
 
+ni_neg_cop := cop-lex &
+  [ STEM < "=nəttə" >,
+    SYNSEM.LKEYS.KEYREL.PRED "neg_rel" ].
+
 noun-cop := noun-comp-copula-verb-lex &
   [ STEM < "=ni" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be_v_id_rel" ].
 
+noun-neg-cop := noun-comp-copula-verb-lex &
+  [ STEM < "=nəttə" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be+not_v_id_rel" ].
 
 ;;; Adverbs
 

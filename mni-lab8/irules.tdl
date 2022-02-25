@@ -2,7 +2,6 @@
 ;;; Inflecting Lexical Rule Instances
 
 noun-case-null-suffix :=
-%suffix (* )
 noun-case-null-lex-rule.
 
 noun-case-ablative-suffix :=
@@ -77,10 +76,6 @@ verb-pc16_lrt2-suffix :=
 %suffix (* -čhi)
 verb-pc16_lrt2-lex-rule.
 
-verb-pc19_lrt1-suffix :=
-%suffix (* -tə)
-verb-pc19_lrt1-lex-rule.
-
 verb-pc19_lrt2-suffix :=
 %suffix (* -u)
 verb-pc19_lrt2-lex-rule.
@@ -117,3 +112,17 @@ nhyp-suffix :=
 %suffix (* -í)
 nhyp-lex-rule.
 
+asrt-suffix :=
+%suffix (* -e)
+asrt-lex-rule.
+
+null-mood-suffix :=
+null-mood-lex-rule.
+
+verb-neg_lrt-suffix :=
+%suffix (* -tə)
+verb-neg_lrt-lex-rule.
+
+nom-neg_lrt-suffix :=
+%suffix (* -tə)
+nom-neg_lrt-lex-rule.

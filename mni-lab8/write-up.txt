@@ -1,6 +1,16 @@
 lab8 write-up
 By Tongxi(Tom) Liu, Jessie Zeng
 Feb 22th, 2022
+0. Fix last lab 7:
+
+noun-case-agentive-lex-rule := infl-lex-rule & noun-case-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.HEAD.CASE agn ].
+
+noun-case-patient-lex-rule := infl-lex-rule & noun-case-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.HEAD.CASE pat ].
+
+
+
 
 1.
 húy túm-í
@@ -8,8 +18,52 @@ dog sleep-NHYP
 'Dogs sleep.'
 
 húy túm-tə-e
-dog sleep-NEG-NHYP
+dog sleep-NEG-ASRT
 'Dogs don't sleep.'
+
+asrt-mood-rule-dtr := word-or-lexrule.
+asrt-mood-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+  [ INFLECTED.SENTENCE-MOOD-FLAG +,
+    DTR asrt-mood-rule-dtr  ].
+
+asrt-lex-rule := asrt-mood-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.MOOD asrt-assertive ].
+
+
+verb-lex := non-mod-lex-item & nominalizer-rule-dtr & sentence-mood-rule-dtr & asrt-mood-rule-dtr & verb-pc3-rule-dtr &
+  [ SYNSEM [ L-QUE -,
+             LOCAL.CAT.HEAD verb &
+                            [ NMZ - ] ] ,
+                                             INFLECTED.SENTENCE-MOOD-FLAG - ].
+
+
+verb-neg_lrt-suffix :=
+%suffix (* -tə)
+verb-neg_lrt-lex-rule.
+
+verb-neg-lex-rule-super := infl-lex-rule & asrt-mood-rule-dtr & verb-pc3-rule-dtr &
+  [ INFLECTED #infl,
+    DTR verb-lex &
+        [ INFLECTED #infl ] ].
+
+verb-neg_lrt-lex-rule := cont-change-only-lex-rule & verb-neg-lex-rule-super &
+  [ C-CONT [ HOOK [ XARG #xarg,
+                    LTOP #ltop,
+                    INDEX #ind ],
+             RELS.LIST < event-relation &
+                         [ PRED "neg_rel",
+                           LBL #ltop,
+                           ARG1 #harg ] >,
+             HCONS.LIST < qeq &
+                          [ HARG #harg,
+                            LARG #larg ] > ],
+    SYNSEM.LKEYS #lkeys,
+    DTR.SYNSEM [ LKEYS #lkeys,
+                 LOCAL [ CONT.HOOK [ XARG #xarg,
+                                     INDEX #ind,
+                                     LTOP #larg ],
+                         CAT.HEAD verb ] ] ].
+
 
 húy túm-e
 dog sleep-ASRT
