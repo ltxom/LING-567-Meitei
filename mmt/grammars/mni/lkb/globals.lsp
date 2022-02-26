@@ -1,7 +1,7 @@
 ;;; LinGO grammar specific globals file
 ;;; parameters only - grammar specific functions 
 ;;; should go in user-fns.lsp
-
+(defparameter *gen-start-symbol* '(root))
 
 (defparameter *active-parsing-p* t)
 

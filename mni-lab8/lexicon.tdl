@@ -2547,6 +2547,10 @@ nuŋčhi_2 := verb-attributive-lex &
   [ STEM < "čá" >,
     SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
 
+tan_mood := verb-mood-satisfied-verb-lex &
+  [ STEM < "tan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_chase_v_rel" ].
+
 ;;; Auxiliaries
 
 _3Dni_1 := aux1-aux-lex &

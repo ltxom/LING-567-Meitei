@@ -10,7 +10,7 @@ Source b: Singh, S. I. (2013). Agreements in Manipuri. Language in India, 13(11)
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
-Phenomena: {}
+Phenomena: {wo}
 húy túmí
 húy túm-í
 dog sleep-NHYP
@@ -20,7 +20,7 @@ dog sleep-NHYP
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
-Phenomena: {}
+Phenomena: {wo}
 húy garípu taní
 húy garí=pu tan-í
 dog car=ACC chase-NHYP
@@ -30,7 +30,7 @@ dog car=ACC chase-NHYP
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
-Phenomena: {}
+Phenomena: {wo}
 ə́y nə́ŋpu taní
 ə́y nə́ŋ=pu tan-í
 I you=ACC chase-NHYP
@@ -40,7 +40,7 @@ I you=ACC chase-NHYP
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
-Phenomena: {}
+Phenomena: {wo}
 húy čáí
 húy čá-í
 dogs eat-NHYP
@@ -50,7 +50,7 @@ dogs eat-NHYP
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
-Phenomena: {}
+Phenomena: {poss}
 íhúy túmí
 í-húy túm-í
 1P-dogs sleep-NHYP
@@ -60,7 +60,7 @@ Phenomena: {}
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
-Phenomena: {}
+Phenomena: {poss}
 nə́húy túmí
 nə́-húy túm-í
 2P-dogs sleep-NHYP
@@ -70,7 +70,7 @@ nə́-húy túm-í
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
-Phenomena: {}
+Phenomena: {poss}
 mə́húy túmí
 mə́-húy túm-í
 3P-dogs sleep-NHYP
@@ -80,7 +80,7 @@ mə́-húy túm-í
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
-Phenomena: {}
+Phenomena: {wo}
 ə́y čən čáí
 ə́y čən čá-í
 I rice eat-NHYP
@@ -90,7 +90,7 @@ I rice eat-NHYP
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
-Phenomena: {}
+Phenomena: {poss}
 ə́yki húy čən čáí
 í-húy čən čá-í
 1P-dogs rice eat-NHYP
@@ -100,7 +100,7 @@ Phenomena: {}
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
-Phenomena: {}
+Phenomena: {poss}
 nə́ŋki húy čən čáí
 nə́-húy čən čá-í
 2P-dogs rice eat-NHYP
@@ -110,7 +110,7 @@ nə́-húy čən čá-í
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
-Phenomena: {}
+Phenomena: {poss}
 máki húy čən čáí
 mə́-húy čən čá-í
 3P-dogs rice eat-NHYP
@@ -120,7 +120,7 @@ mə́-húy čən čá-í
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
-Phenomena: {}
+Phenomena: {poss}
 íhúy čən čáí
 í-húy čən čá-í
 1P-dogs rice eat-NHYP
@@ -130,7 +130,7 @@ Phenomena: {}
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
-Phenomena: {}
+Phenomena: {poss}
 nə́húy čən čáí
 nə́-húy čən čá-í
 2P-dogs rice eat-NHYP
@@ -140,7 +140,7 @@ nə́-húy čən čá-í
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
-Phenomena: {}
+Phenomena: {poss}
 mə́húy čən čáí
 mə́-húy čən čá-í
 3P-dogs rice eat-NHYP
@@ -150,17 +150,17 @@ mə́-húy čən čá-í
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: u
-Phenomena: {}
+Phenomena: {poss}
 íhúy čáí čən
 í-húy čá-í čən
-1P-dogs eat-NHYP rice 
+1P-dogs eat-NHYP rice
 '*My dogs rice eat'
 
 # 16
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: u
-Phenomena: {}
+Phenomena: {poss}
 nə́húy čáí čən
 nə́-húy čá-í čən
 2P-dogs eat-NHYP rice
@@ -170,7 +170,7 @@ nə́-húy čá-í čən
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: u
-Phenomena: {}
+Phenomena: {poss}
 mə́húy čáí čən
 mə́-húy čá-í čən
 3P-dogs eat-NHYP rice
@@ -180,7 +180,7 @@ mə́-húy čá-í čən
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
-Phenomena: {}
+Phenomena: {cop}
 má oǰani
 má oǰa =ni
 3P teacher =COP
@@ -190,7 +190,7 @@ má oǰa =ni
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
-Phenomena: {}
+Phenomena: {cop}
 ə́y nuŋŋayí
 ə́y nuŋŋay-í
 1P happy-NHYP
@@ -200,7 +200,7 @@ Phenomena: {}
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
-Phenomena: {}
+Phenomena: {cop}
 ə́y bəzartəni
 ə́y bəzar=tə =ni
 1P park=LOC =COP
@@ -210,7 +210,7 @@ Phenomena: {}
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
-Phenomena: {}
+Phenomena: {cop}
 phurit ŋəwí
 phurit ŋəw-í
 shirt white-NHYP
@@ -220,7 +220,7 @@ shirt white-NHYP
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
-Phenomena: {}
+Phenomena: {cop}
 húy bəzartə =ni
 húy bəzar=tə =ni
 dog market=LOC =COP
@@ -230,7 +230,7 @@ dog market=LOC =COP
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
-Phenomena: {}
+Phenomena: {cop}
 nə́húy bəzartə =ni
 nə́-húy bəzar=tə =ni
 2P-dogs market=LOC =COP
@@ -240,7 +240,7 @@ nə́-húy bəzar=tə =ni
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
-Phenomena: {}
+Phenomena: {cop}
 húy hə́wdóŋ =ni
 húy hə́wdóŋ =ni
 dog  cat =COP
@@ -250,7 +250,7 @@ dog  cat =COP
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
-Phenomena: {}
+Phenomena: {cop}
 mə́húy mə́hə́wdóŋ =ni
 mə́-húy mə́-hə́wdóŋ =ni
 3P-dog  3P-cat =COP
@@ -260,7 +260,7 @@ mə́-húy mə́-hə́wdóŋ =ni
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
-Phenomena: {}
+Phenomena: {cop}
 núpí daktər =ni
 núpí daktər =ni
 female  doctor =COP
@@ -270,7 +270,7 @@ female  doctor =COP
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
-Phenomena: {}
+Phenomena: {cop}
 mə́hárani čhíŋí
 mə́hárani čhíŋ-í
 queen wise-NHYP
@@ -280,7 +280,7 @@ queen wise-NHYP
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
-Phenomena: {}
+Phenomena: {cop}
 núpí ə́yki mə́rúp =ni
 núpí mə́-mə́rúp =ni
 female 3P-friend =COP
@@ -290,7 +290,7 @@ female 3P-friend =COP
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
-Phenomena: {}
+Phenomena: {cop}
 húy čawí
 húy čaw-í
 húy big-NHYP
@@ -300,7 +300,7 @@ húy big-NHYP
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: u
-Phenomena: {}
+Phenomena: {cop}
 čhíŋí mə́hárani
 čhíŋ-í mə́hárani
 wise-NHYP queen
@@ -310,7 +310,7 @@ wise-NHYP queen
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: u
-Phenomena: {}
+Phenomena: {cop}
 mə́húy mə́hə́wdóŋ =ni-í
 mə́-húy mə́-hə́wdóŋ =ni-í
 3P-dog  3P-cat =COP-í
@@ -320,7 +320,7 @@ mə́-húy mə́-hə́wdóŋ =ni-í
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: u
-Phenomena: {}
+Phenomena: {cop}
 ə́y təbəzar =ni
 ə́y tə=bəzar =ni
 I LOC=market =COP
@@ -330,7 +330,7 @@ I LOC=market =COP
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: u
-Phenomena: {}
+Phenomena: {cop}
 núpí =ni daktər
 núpí =ni daktər
 female =COP doctor
@@ -340,7 +340,7 @@ female =COP doctor
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
-Phenomena: {}
+Phenomena: {cop}
 núpá nuŋčhi =ni
 núpá nuŋčhi =ni
 male love =COP
@@ -350,8 +350,69 @@ male love =COP
 Source: {a: 79, b: 218, author}
 Vetted: t
 Judgment: g
-Phenomena: {}
+Phenomena: {cop}
 núpá nuŋčhi-í
 núpá nuŋčhi-í
 male love-NHYP
 'The man is sweet.'
+
+# 36
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {neg}
+húy túmtəe
+húy túm-tə-e
+dog sleep-NEG-ASRT
+'Dogs don't sleep.'
+
+# 37
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: u
+Phenomena: {neg}
+húy túmtəí
+húy túm-tə-í
+dog sleep-NEG-ASRT
+'Dogs don't sleep.'
+
+# 38
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {neg}
+má oǰa =nəttə
+má oǰa =nəttə
+3P teacher =NEGCOP
+'He/she is not a teacher.'
+
+# 39
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {neg}
+ə́y bəzartə nəttə
+ə́y bəzar=tə =nəttə
+1P park=LOC =NEGCOP
+'I am not in the park.'
+
+# 40
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {emb-d}
+ə́y hén čá-pə =ni
+ə́y hén čá-pə =ni
+1P fish eat-POM =COP
+'I am fish eating (person).'
+
+# 41
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {emb-d,neg}
+ə́y hén čá-tə-pə =ni
+ə́y hén čá-tə-pə =ni
+1P fish eat-NEG-POM =COP
+'I am not-eat-fish (person).'
+

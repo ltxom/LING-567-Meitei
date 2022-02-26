@@ -1,9 +1,8 @@
-húy bəzar=tə =ni
-húy garí =ni
 húy túm-í
 húy garí=pu tan-í
 ə́y nə́ŋ=pu tan-í
 húy čá-í
+húy garí tan-tə-e
 PASS
 PASS
 PASS
@@ -14,9 +13,8 @@ PASS
 PASS
 PASS
 PASS
-PASS
-PASS
-PASS
+húy bəzar=tə =ni
+húy hə́wdóŋ =ni
 húy=ki garí túm-í
 ə́y=ki húy túm-í
 PASS
@@ -26,4 +24,4 @@ PASS
 PASS
 PASS
 PASS
-
+húy garí=pu tan-tə-pə =ni

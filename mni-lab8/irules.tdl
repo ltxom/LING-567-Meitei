@@ -76,9 +76,9 @@ verb-pc16_lrt2-suffix :=
 %suffix (* -čhi)
 verb-pc16_lrt2-lex-rule.
 
-verb-pc19_lrt2-suffix :=
-%suffix (* -u)
-verb-pc19_lrt2-lex-rule.
+;verb-pc19_lrt2-suffix :=
+;%suffix (* -u)
+;verb-pc19_lrt2-lex-rule.
 
 verb-pc27_lrt1-suffix :=
 %suffix (* -kə)
@@ -116,8 +116,8 @@ asrt-suffix :=
 %suffix (* -e)
 asrt-lex-rule.
 
-null-mood-suffix :=
-null-mood-lex-rule.
+;null-mood-suffix :=
+;null-mood-lex-rule.
 
 verb-neg_lrt-suffix :=
 %suffix (* -tə)

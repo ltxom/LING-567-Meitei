@@ -16,3 +16,5 @@ head-spec := head-spec-phrase.
 bare-np := bare-np-phrase.
 
 loc-pp := locative-pp-phrase.
+
+mid-nominalized-clause := mid-nominalized-clause-phrase.

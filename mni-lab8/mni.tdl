@@ -263,7 +263,7 @@ noun122-noun-lex := noun-lex & noun-case-rule-dtr & noun-possessor-pc-rule-dtr &
 
 ;;; Verbs
 
-verb-lex := non-mod-lex-item & nominalizer-rule-dtr & sentence-mood-rule-dtr & asrt-mood-rule-dtr & verb-pc3-rule-dtr &
+verb-lex := non-mod-lex-item & nominalizer-rule-dtr & nhyp-mood-rule-dtr & asrt-mood-rule-dtr & verb-pc3-rule-dtr &
   [ SYNSEM [ L-QUE -,
              LOCAL.CAT.HEAD verb &
                             [ NMZ - ] ] ,
@@ -322,7 +322,7 @@ agn-pat-transitive-verb-lex := transitive-verb-lex &
                               [ CASE pat ] ] > ].
 
 ;; mood satisfied verb cat (nominal sentences)
-verb-mood-satisfied-lex := non-mod-lex-item & nominalizer-rule-dtr & sentence-mood-rule-dtr &
+verb-mood-satisfied-lex := non-mod-lex-item & nominalizer-rule-dtr &
   [ SYNSEM [ L-QUE -,
              LOCAL.CAT.HEAD verb &
                             [ NMZ - ] ] ,
@@ -592,14 +592,13 @@ noun-possessor-pc-rule-dtr := word-or-lexrule.
 verb-pc30-rule-dtr := word-or-lexrule.
 noun-case-rule-dtr := word-or-lexrule.
 verb-pc34-rule-dtr := word-or-lexrule.
-sentence-mood-rule-dtr := word-or-lexrule.
 verb-pc3-rule-dtr := word-or-lexrule.
 noun-possessum-pc-rule-dtr := word-or-lexrule.
 nominalizer-rule-dtr := word-or-lexrule.
 noun-determiner-pc-dtr := word-or-lexrule.
 verb-pc16-rule-dtr := word-or-lexrule.
-null-mood-dtr := word-or-lexrule.
 asrt-mood-rule-dtr := word-or-lexrule.
+nhyp-mood-rule-dtr := word-or-lexrule.
 
 ;;; Lexical rule types
 
@@ -930,7 +929,7 @@ nominalizer-lex-rule-super := infl-lex-rule & high-or-mid-nominalization-lex-rul
     DTR nominalizer-rule-dtr &
         [ INFLECTED #infl ] ].
 
-nom-lex-rule := nominalizer-lex-rule-super & [INFLECTED.SENTENCE-MOOD-FLAG +].
+nom-lex-rule := nominalizer-lex-rule-super.
 
 mid-nominalized-clause-phrase := unary-phrase &
   [ SYNSEM [ LOCAL [ CAT [ HEAD noun &
@@ -961,28 +960,20 @@ mid-nominalized-clause-phrase := unary-phrase &
                               CONT.HOOK [ XARG #xarg,
                                           LTOP #larg ],
                               COORD - ] ] ] > ].
+mood-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+                         [ INFLECTED.SENTENCE-MOOD-FLAG +].
 
-sentence-mood-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ INFLECTED.SENTENCE-MOOD-FLAG +,
-    DTR sentence-mood-rule-dtr ].
+nhyp-mood-lex-rule-super := mood-lex-rule-super &
+                            [ DTR nhyp-mood-rule-dtr ].
 
-nhyp-lex-rule := sentence-mood-lex-rule-super &
+nhyp-lex-rule := nhyp-mood-lex-rule-super &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.MOOD nhyp-declarative ].
 
-asrt-mood-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ INFLECTED.SENTENCE-MOOD-FLAG +,
-    DTR asrt-mood-rule-dtr  ].
+asrt-mood-lex-rule-super := mood-lex-rule-super &
+    [ DTR asrt-mood-rule-dtr  ].
 
 asrt-lex-rule := asrt-mood-lex-rule-super &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.MOOD asrt-assertive ].
-
-null-mood-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ INFLECTED.SENTENCE-MOOD-FLAG +,
-    DTR null-mood-dtr ].
-
-
-null-mood-lex-rule := null-mood-lex-rule-super &
-                        [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.MOOD null ].
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Phrasal Types
