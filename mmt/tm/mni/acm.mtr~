@@ -1,0 +1,6 @@
+;;; Hey, emacs(1), this is -*- Mode: TDL; Coding: utf-8; -*- got it?
+
+loc-in := loc-in-mtr & [].
+in-loc := in-loc-mtr & [].
+stative-v-a := stative-v-a-mtr & [].
+a-stative-v := a-stative-v-mtr & [].

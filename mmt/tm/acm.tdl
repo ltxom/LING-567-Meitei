@@ -99,6 +99,7 @@ hurt-mtr := monotonic_mtr &
 		   LBL #lbl,
 		   ARG0 #arg0,
 		   ARG1 #arg1,
+		   
 		   ARG2 #arg2 ] >,
 	  HCONS < > ],
   OUTPUT [ RELS < [ PRED "_make_v_rel",
@@ -385,7 +386,7 @@ loc-in-mtr := monotonic_mtr &
 	  HCONS < > ],
   INPUT [ RELS < [ PRED "_loc_p_rel",
 		     LBL #lbl,
-                     ARG0 #arg0,
+             ARG0 #arg0,
 		     ARG1 #arg1,
 		     ARG2 #arg2 ] > ]].
 
@@ -439,3 +440,33 @@ eat-mtr := monotonic_mtr &
   OUTPUT [ RELS < [ PRED "_eat_v_rel",
 		     ARG0 #arg0,
 		     ARG1 #arg1 ] > ] ].
+
+
+
+
+;; mni
+stative-v-a-mtr := monotonic_mtr &
+[ OUTPUT [ RELS < [PRED "_hungry_a_rel",
+		   LBL #lbl,
+		   ARG0 #arg0,
+		   ARG1 #arg1,
+		   ARG2 #arg2 ] >,
+	  HCONS < > ],
+  INPUT [ RELS < [ PRED "_be+hungry_v_rel",
+		     LBL #lbl,
+             ARG0 #arg0,
+		     ARG1 #arg1,
+		     ARG2 #arg2 ] > ]].
+
+a-stative-v-mtr := monotonic_mtr &
+[ INPUT [ RELS < [PRED "_hungry_a_rel",
+		   LBL #lbl,
+		   ARG0 #arg0,
+		   ARG1 #arg1,
+		   ARG2 #arg2 ] >,
+	  HCONS < > ],
+  OUTPUT [ RELS < [ PRED "_be+hungry_v_rel",
+		     LBL #lbl,
+                     ARG0 #arg0,
+		     ARG1 #arg1,
+		     ARG2 #arg2 ] > ]].

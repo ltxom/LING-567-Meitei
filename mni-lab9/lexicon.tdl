@@ -1,0 +1,2587 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+;;; Nouns
+
+aša := noun1-noun-lex &
+  [ STEM < "aša" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_wish_n_rel" ].
+
+ba := noun1-noun-lex &
+  [ STEM < "ba" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_father_n_rel" ].
+
+barton := noun1-noun-lex &
+  [ STEM < "barton" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_invitation_n_rel" ].
+
+bebhar := noun1-noun-lex &
+  [ STEM < "bebhar" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_behavior_n_rel" ].
+
+bharǰa := noun1-noun-lex &
+  [ STEM < "bharǰa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_wife_n_rel" ].
+
+bháp := noun1-noun-lex &
+  [ STEM < "bháp" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_idea_n_rel" ].
+
+bháy := noun1-noun-lex &
+  [ STEM < "bháy" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_brother_n_rel" ].
+
+bibahkərmə := noun1-noun-lex &
+  [ STEM < "bibahkərmə" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_marriage_n_rel" ].
+
+bidya := noun1-noun-lex &
+  [ STEM < "bidya" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_knowledge_n_rel" ].
+
+bil := noun1-noun-lex &
+  [ STEM < "bil" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bill_n_rel" ].
+
+biǰines := noun1-noun-lex &
+  [ STEM < "biǰines" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_business_n_rel" ].
+
+budhí := noun1-noun-lex &
+  [ STEM < "budhí" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_intelligence-or-wisdom_n_rel" ].
+
+bón := noun1-noun-lex &
+  [ STEM < "bón" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_forest_n_rel" ].
+
+bə́s := noun1-noun-lex &
+  [ STEM < "bə́s" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bus_n_rel" ].
+
+daktər := noun1-noun-lex &
+  [ STEM < "daktər" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_doctor_n_rel" ].
+
+daytó := noun1-noun-lex &
+  [ STEM < "daytó" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_responsibility_n_rel" ].
+
+deli := noun1-noun-lex &
+  [ STEM < "deli" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_delhi_n_rel" ].
+
+dewali := noun1-noun-lex &
+  [ STEM < "dewali" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dewali_n_rel" ].
+
+dhúp := noun1-noun-lex &
+  [ STEM < "dhúp" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_incense_n_rel" ].
+
+dəkhína := noun1-noun-lex &
+  [ STEM < "dəkhína" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_gift_n_rel" ].
+
+dərbar := noun1-noun-lex &
+  [ STEM < "dərbar" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cabinet_n_rel" ].
+
+dərgas := noun1-noun-lex &
+  [ STEM < "dərgas" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_application_n_rel" ].
+
+envəlop := noun1-noun-lex &
+  [ STEM < "envəlop" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_envelope_n_rel" ].
+
+famər := noun1-noun-lex &
+  [ STEM < "famər" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_farmer_n_rel" ].
+
+farmer := noun1-noun-lex &
+  [ STEM < "farmer" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_farmer_n_rel" ].
+
+garlz := noun1-noun-lex &
+  [ STEM < "garlz" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_girls_n_rel" ].
+
+grəmar := noun1-noun-lex &
+  [ STEM < "grəmar" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_grammar_n_rel" ].
+
+guru := noun1-noun-lex &
+  [ STEM < "guru" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_mentor_n_rel" ].
+
+gyan := noun1-noun-lex &
+  [ STEM < "gyan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_knowledge_n_rel" ].
+
+gét := noun1-noun-lex &
+  [ STEM < "gét" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_gate_n_rel" ].
+
+hameŋ := noun1-noun-lex &
+  [ STEM < "hameŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_goat_n_rel" ].
+
+hisap := noun1-noun-lex &
+  [ STEM < "hisap" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_account_n_rel" ].
+
+hol := noun1-noun-lex &
+  [ STEM < "hol" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hall_n_rel" ].
+
+hélóy := noun1-noun-lex &
+  [ STEM < "hélóy" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_nymph_n_rel" ].
+
+hén := noun1-noun-lex &
+  [ STEM < "hén" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_fish_n_rel" ].
+
+həwáy := noun1-noun-lex &
+  [ STEM < "həwáy" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bean_n_rel" ].
+
+həyeŋ := noun1-noun-lex &
+  [ STEM < "həyeŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tomorrow_n_rel" ].
+
+hə́wdóŋ := noun1-noun-lex &
+  [ STEM < "hə́wdóŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cat_n_rel" ].
+
+hə́ŋčit := noun1-noun-lex &
+  [ STEM < "hə́ŋčit" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_day.after.tomorrow_n_rel" ].
+
+ibetombi := noun1-noun-lex &
+  [ STEM < "ibetombi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ibetombi_n_rel" ].
+
+intərbyu := noun1-noun-lex &
+  [ STEM < "intərbyu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_interview_n_rel" ].
+
+iŋkhon := noun1-noun-lex &
+  [ STEM < "iŋkhon" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_garden_n_rel" ].
+
+ka := noun1-noun-lex &
+  [ STEM < "ka" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_room_n_rel" ].
+
+kekrú := noun1-noun-lex &
+  [ STEM < "kekrú" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_blackberry_n_rel" ].
+
+keso := noun1-noun-lex &
+  [ STEM < "keso" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_case_n_rel" ].
+
+khaw := noun1-noun-lex &
+  [ STEM < "khaw" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bag-or-purse_n_rel" ].
+
+khoy_1 := noun1-noun-lex &
+  [ STEM < "khoy" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bee_n_rel" ].
+
+khoŋ_1 := noun1-noun-lex &
+  [ STEM < "khoŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_foot_n_rel" ].
+
+khun_1 := noun1-noun-lex &
+  [ STEM < "khun" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_village_n_rel" ].
+
+khura := noun1-noun-lex &
+  [ STEM < "khura" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_uncle_n_rel" ].
+
+khwairəmbəm := noun1-noun-lex &
+  [ STEM < "khwairəmbəm" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_khwairamban_n_rel" ].
+
+khóy := noun1-noun-lex &
+  [ STEM < "khóy" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hpl_n_rel" ].
+
+khóŋ := noun1-noun-lex &
+  [ STEM < "khóŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_leg_n_rel" ].
+
+khút := noun1-noun-lex &
+  [ STEM < "khút" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hand_n_rel" ].
+
+khəbər := noun1-noun-lex &
+  [ STEM < "khəbər" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_news_n_rel" ].
+
+khəw := noun1-noun-lex &
+  [ STEM < "khəw" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_throat_n_rel" ].
+
+khə́mbraŋ := noun1-noun-lex &
+  [ STEM < "khə́mbraŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pair_n_rel" ].
+
+khə́rúŋ := noun1-noun-lex &
+  [ STEM < "khə́rúŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_jar_n_rel" ].
+
+koleǰ := noun1-noun-lex &
+  [ STEM < "koleǰ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_college_n_rel" ].
+
+kon := noun1-noun-lex &
+  [ STEM < "kon" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_area_n_rel" ].
+
+koysən := noun1-noun-lex &
+  [ STEM < "koysən" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_question_n_rel" ].
+
+koŋgrés := noun1-noun-lex &
+  [ STEM < "koŋgrés" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_congress_n_rel" ].
+
+kuthi := noun1-noun-lex &
+  [ STEM < "kuthi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_horoscope_n_rel" ].
+
+kábrəŋ := noun1-noun-lex &
+  [ STEM < "kábrəŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_silk_n_rel" ].
+
+káŋbu := noun1-noun-lex &
+  [ STEM < "káŋbu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_group_n_rel" ].
+
+kók := noun1-noun-lex &
+  [ STEM < "kók" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_shave_n_rel" ].
+
+kórə́w := noun1-noun-lex &
+  [ STEM < "kórə́w" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_heaven_n_rel" ].
+
+kəri := noun1-noun-lex &
+  [ STEM < "kəri" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_what_n_rel" ].
+
+kəy := noun1-noun-lex &
+  [ STEM < "kəy" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tiger_n_rel" ].
+
+kəyrak := noun1-noun-lex &
+  [ STEM < "kəyrak" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ladder_n_rel" ].
+
+kə́bo := noun1-noun-lex &
+  [ STEM < "kə́bo" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_burma_n_rel" ].
+
+kə́ŋ := noun1-noun-lex &
+  [ STEM < "kə́ŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_aquatic.plant_n_rel" ].
+
+lan := noun1-noun-lex &
+  [ STEM < "lan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_war_n_rel" ].
+
+layrík := noun1-noun-lex &
+  [ STEM < "layrík" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_book_n_rel" ].
+
+lok := noun1-noun-lex &
+  [ STEM < "lok" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_people_n_rel" ].
+
+lu_1 := noun1-noun-lex &
+  [ STEM < "lu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_head_n_rel" ].
+
+lupá := noun1-noun-lex &
+  [ STEM < "lupá" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_rupee_n_rel" ].
+
+lá := noun1-noun-lex &
+  [ STEM < "lá" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_banana.leaf_n_rel" ].
+
+lép := noun1-noun-lex &
+  [ STEM < "lép" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_height_n_rel" ].
+
+lí_1 := noun1-noun-lex &
+  [ STEM < "lí" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cane-or-narrate-or-string_n_rel" ].
+
+lón_1 := noun1-noun-lex &
+  [ STEM < "lón" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_language_n_rel" ].
+
+lúk_1 := noun1-noun-lex &
+  [ STEM < "lúk" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_basket_n_rel" ].
+
+ləmən := noun1-noun-lex &
+  [ STEM < "ləmən" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_debt_n_rel" ].
+
+ləphút := noun1-noun-lex &
+  [ STEM < "ləphút" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_grassy.knoll_n_rel" ].
+
+ləw := noun1-noun-lex &
+  [ STEM < "ləw" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_paddy_n_rel" ].
+
+lə́m_1 := noun1-noun-lex &
+  [ STEM < "lə́m" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_path_n_rel" ].
+
+mini_20bə́s := noun1-noun-lex &
+  [ STEM < "mini",
+           "bə́s" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_mini bus_n_rel" ].
+
+miŋ := noun1-noun-lex &
+  [ STEM < "miŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_name_n_rel" ].
+
+mud := noun1-noun-lex &
+  [ STEM < "mud" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_mood_n_rel" ].
+
+máo := noun1-noun-lex &
+  [ STEM < "máo" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_mao_n_rel" ].
+
+máygáy := noun1-noun-lex &
+  [ STEM < "máygáy" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_direction_n_rel" ].
+
+máyren := noun1-noun-lex &
+  [ STEM < "máyren" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pumpkin_n_rel" ].
+
+mí := noun1-noun-lex &
+  [ STEM < "mí" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_man_n_rel" ].
+
+məntra := noun1-noun-lex &
+  [ STEM < "məntra" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_mantra_n_rel" ].
+
+məntri := noun1-noun-lex &
+  [ STEM < "məntri" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_minister_n_rel" ].
+
+məral := noun1-noun-lex &
+  [ STEM < "məral" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_moral_n_rel" ].
+
+mə́hárani := noun1-noun-lex &
+  [ STEM < "mə́hárani" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_queen_n_rel" ].
+
+mə́háraǰa := noun1-noun-lex &
+  [ STEM < "mə́háraǰa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_king_n_rel" ].
+
+mə́rúp := noun1-noun-lex &
+  [ STEM < "mə́rúp" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_friend_n_rel" ].
+
+mə́y := noun1-noun-lex &
+  [ STEM < "mə́y" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_fire_n_rel" ].
+
+mə́ytəy := noun1-noun-lex &
+  [ STEM < "mə́ytəy" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_meitei_n_rel" ].
+
+naspati := noun1-noun-lex &
+  [ STEM < "naspati" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pear_n_rel" ].
+
+nimay := noun1-noun-lex &
+  [ STEM < "nimay" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_nimay_n_rel" ].
+
+niŋthəw := noun1-noun-lex &
+  [ STEM < "niŋthəw" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_king_n_rel" ].
+
+not := noun1-noun-lex &
+  [ STEM < "not" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_note_n_rel" ].
+
+noŋ := noun1-noun-lex &
+  [ STEM < "noŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_day_n_rel" ].
+
+numít := noun1-noun-lex &
+  [ STEM < "numít" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_day_n_rel" ].
+
+ná := noun1-noun-lex &
+  [ STEM < "ná" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_leaf-or-no_n_rel" ].
+
+nát := noun1-noun-lex &
+  [ STEM < "nát" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hollow.bamboo_n_rel" ].
+
+ní_1 := noun1-noun-lex &
+  [ STEM < "ní" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_two_n_rel" ].
+
+níŋŋol := noun1-noun-lex &
+  [ STEM < "níŋŋol" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_clan.girl_n_rel" ].
+
+nók := noun1-noun-lex &
+  [ STEM < "nók" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_laugh_n_rel" ].
+
+nəhárol := noun1-noun-lex &
+  [ STEM < "nəhárol" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_youth_n_rel" ].
+
+nəm_1 := noun1-noun-lex &
+  [ STEM < "nəm" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_smell_n_rel" ].
+
+nə́há := noun1-noun-lex &
+  [ STEM < "nə́há" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_younger.brother_n_rel" ].
+
+ophís := noun1-noun-lex &
+  [ STEM < "ophís" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_office_n_rel" ].
+
+oǰa := noun1-noun-lex &
+  [ STEM < "oǰa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_teacher_n_rel" ].
+
+pam := noun1-noun-lex &
+  [ STEM < "pam" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_terraced.area_n_rel" ].
+
+panə := noun1-noun-lex &
+  [ STEM < "panə" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_betel.nut_n_rel" ].
+
+papi := noun1-noun-lex &
+  [ STEM < "papi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_wicked_n_rel" ].
+
+parti := noun1-noun-lex &
+  [ STEM < "parti" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_party_n_rel" ].
+
+paǰi := noun1-noun-lex &
+  [ STEM < "paǰi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_father_n_rel" ].
+
+persiŋ := noun1-noun-lex &
+  [ STEM < "persiŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pears_n_rel" ].
+
+phi_1 := noun1-noun-lex &
+  [ STEM < "phi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cloth_n_rel" ].
+
+phirép := noun1-noun-lex &
+  [ STEM < "phirép" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_attitude_n_rel" ].
+
+phurit := noun1-noun-lex &
+  [ STEM < "phurit" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_shirt_n_rel" ].
+
+phuŋgá := noun1-noun-lex &
+  [ STEM < "phuŋgá" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_fireside_n_rel" ].
+
+phúnán := noun1-noun-lex &
+  [ STEM < "phúnán" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_phunan_n_rel" ].
+
+phəm := noun1-noun-lex &
+  [ STEM < "phəm" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_seat_n_rel" ].
+
+phə́dí := noun1-noun-lex &
+  [ STEM < "phə́dí" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_towel_n_rel" ].
+
+polisi := noun1-noun-lex &
+  [ STEM < "polisi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_policy_n_rel" ].
+
+pres := noun1-noun-lex &
+  [ STEM < "pres" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_press_n_rel" ].
+
+pulis := noun1-noun-lex &
+  [ STEM < "pulis" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_police_n_rel" ].
+
+pámbí := noun1-noun-lex &
+  [ STEM < "pámbí" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_plant_n_rel" ].
+
+pán_1 := noun1-noun-lex &
+  [ STEM < "pán" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_arum-or-brim_n_rel" ].
+
+páw := noun1-noun-lex &
+  [ STEM < "páw" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_news_n_rel" ].
+
+pódón := noun1-noun-lex &
+  [ STEM < "pódón" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lamp_n_rel" ].
+
+pók_1 := noun1-noun-lex &
+  [ STEM < "pók" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_born_n_rel" ].
+
+póynu := noun1-noun-lex &
+  [ STEM < "póynu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_harvest_n_rel" ].
+
+púkhrí := noun1-noun-lex &
+  [ STEM < "púkhrí" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pond_n_rel" ].
+
+púŋ := noun1-noun-lex &
+  [ STEM < "púŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hour-or-time_n_rel" ].
+
+pən := noun1-noun-lex &
+  [ STEM < "pən" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dam_n_rel" ].
+
+pəra := noun1-noun-lex &
+  [ STEM < "pəra" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lesson_n_rel" ].
+
+pərikha := noun1-noun-lex &
+  [ STEM < "pərikha" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_exam_n_rel" ].
+
+pərsént := noun1-noun-lex &
+  [ STEM < "pərsént" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_percent_n_rel" ].
+
+pəysá := noun1-noun-lex &
+  [ STEM < "pəysá" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_money_n_rel" ].
+
+raǰkəyna := noun1-noun-lex &
+  [ STEM < "raǰkəyna" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_princess_n_rel" ].
+
+rita := noun1-noun-lex &
+  [ STEM < "rita" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_rita_n_rel" ].
+
+sadhəbiget := noun1-noun-lex &
+  [ STEM < "sadhəbiget" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_certificate_n_rel" ].
+
+saykəl := noun1-noun-lex &
+  [ STEM < "saykəl" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bicycle_n_rel" ].
+
+seba := noun1-noun-lex &
+  [ STEM < "seba" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_service_n_rel" ].
+
+seketəri := noun1-noun-lex &
+  [ STEM < "seketəri" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_secretary_n_rel" ].
+
+semistər := noun1-noun-lex &
+  [ STEM < "semistər" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_semester_n_rel" ].
+
+siki := noun1-noun-lex &
+  [ STEM < "siki" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_25-paisa coin_n_rel" ].
+
+singh := noun1-noun-lex &
+  [ STEM < "singh" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_singh_n_rel" ].
+
+sit := noun1-noun-lex &
+  [ STEM < "sit" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_seat_n_rel" ].
+
+siŋ := noun1-noun-lex &
+  [ STEM < "siŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ginger_n_rel" ].
+
+skolarsip := noun1-noun-lex &
+  [ STEM < "skolarsip" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_scholarship_n_rel" ].
+
+skul := noun1-noun-lex &
+  [ STEM < "skul" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_school_n_rel" ].
+
+skuliŋ := noun1-noun-lex &
+  [ STEM < "skuliŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_schooling_n_rel" ].
+
+skutər := noun1-noun-lex &
+  [ STEM < "skutər" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_scooter_n_rel" ].
+
+soy := noun1-noun-lex &
+  [ STEM < "soy" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_signature_n_rel" ].
+
+sunu := noun1-noun-lex &
+  [ STEM < "sunu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lime_n_rel" ].
+
+səmaǰ := noun1-noun-lex &
+  [ STEM < "səmaǰ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_society_n_rel" ].
+
+sərat := noun1-noun-lex &
+  [ STEM < "sərat" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sarat_n_rel" ].
+
+sə́námə́hí := noun1-noun-lex &
+  [ STEM < "sə́námə́hí" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sə́námə́hí_n_rel" ].
+
+ta_1 := noun1-noun-lex &
+  [ STEM < "ta" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_brother_n_rel" ].
+
+taŋ_1 := noun1-noun-lex &
+  [ STEM < "taŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_join_n_rel" ].
+
+teks := noun1-noun-lex &
+  [ STEM < "teks" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_text_n_rel" ].
+
+teǰurur := noun1-noun-lex &
+  [ STEM < "teǰurur" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_treasurer_n_rel" ].
+
+tha_1 := noun1-noun-lex &
+  [ STEM < "tha" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_month_n_rel" ].
+
+theŋ := noun1-noun-lex &
+  [ STEM < "theŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_strike_n_rel" ].
+
+thi := noun1-noun-lex &
+  [ STEM < "thi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_search_n_rel" ].
+
+thiyori := noun1-noun-lex &
+  [ STEM < "thiyori" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_theory_n_rel" ].
+
+thumok := noun1-noun-lex &
+  [ STEM < "thumok" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_basket_n_rel" ].
+
+tháŋ := noun1-noun-lex &
+  [ STEM < "tháŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_knife_n_rel" ].
+
+thóŋ := noun1-noun-lex &
+  [ STEM < "thóŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_door_n_rel" ].
+
+thəwna := noun1-noun-lex &
+  [ STEM < "thəwna" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_courage_n_rel" ].
+
+thə́bə́k := noun1-noun-lex &
+  [ STEM < "thə́bə́k" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_work_n_rel" ].
+
+thə́moy := noun1-noun-lex &
+  [ STEM < "thə́moy" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_heart_n_rel" ].
+
+thə́w := noun1-noun-lex &
+  [ STEM < "thə́w" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sharp_n_rel" ].
+
+tičər := noun1-noun-lex &
+  [ STEM < "tičər" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_teacher_n_rel" ].
+
+tolop := noun1-noun-lex &
+  [ STEM < "tolop" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_salary_n_rel" ].
+
+tomba := noun1-noun-lex &
+  [ STEM < "tomba" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tomba_n_rel" ].
+
+tombi := noun1-noun-lex &
+  [ STEM < "tombi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tombi_n_rel" ].
+
+toŋ_1 := noun1-noun-lex &
+  [ STEM < "toŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pipe_n_rel" ].
+
+treǰəri := noun1-noun-lex &
+  [ STEM < "treǰəri" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_treasury_n_rel" ].
+
+trək := noun1-noun-lex &
+  [ STEM < "trək" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_truck_n_rel" ].
+
+tupi := noun1-noun-lex &
+  [ STEM < "tupi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hat_n_rel" ].
+
+ták := noun1-noun-lex &
+  [ STEM < "ták" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_base-or-teach_n_rel" ].
+
+tón := noun1-noun-lex &
+  [ STEM < "tón" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tip_n_rel" ].
+
+tóp := noun1-noun-lex &
+  [ STEM < "tóp" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cover_n_rel" ].
+
+tə := noun1-noun-lex &
+  [ STEM < "tə" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_earnestly,_n_rel" ].
+
+təpta := noun1-noun-lex &
+  [ STEM < "təpta" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bogeyman_n_rel" ].
+
+təreŋ := noun1-noun-lex &
+  [ STEM < "təreŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_spinning.wheel_n_rel" ].
+
+təw_1 := noun1-noun-lex &
+  [ STEM < "təw" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_do_n_rel" ].
+
+tə́dubi := noun1-noun-lex &
+  [ STEM < "tə́dubi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tadubi_n_rel" ].
+
+tə́n := noun1-noun-lex &
+  [ STEM < "tə́n" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bread_n_rel" ].
+
+u_1 := noun1-noun-lex &
+  [ STEM < "u" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_wood_n_rel" ].
+
+upay := noun1-noun-lex &
+  [ STEM < "upay" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_means_n_rel" ].
+
+vičhar := noun1-noun-lex &
+  [ STEM < "vičhar" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_news_n_rel" ].
+
+viǰilens := noun1-noun-lex &
+  [ STEM < "viǰilens" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_vigilance_n_rel" ].
+
+wak := noun1-noun-lex &
+  [ STEM < "wak" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_work_n_rel" ].
+
+wá := noun1-noun-lex &
+  [ STEM < "wá" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bamboo-or-word_n_rel" ].
+
+yam := noun1-noun-lex &
+  [ STEM < "yam" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_much_n_rel" ].
+
+yay := noun1-noun-lex &
+  [ STEM < "yay" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_spell-or-talisman_n_rel" ].
+
+yayŋə́ŋ := noun1-noun-lex &
+  [ STEM < "yayŋə́ŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_turmeric_n_rel" ].
+
+yen := noun1-noun-lex &
+  [ STEM < "yen" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_rooster_n_rel" ].
+
+yenəkhá := noun1-noun-lex &
+  [ STEM < "yenəkhá" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_outhouse_n_rel" ].
+
+yoŋ := noun1-noun-lex &
+  [ STEM < "yoŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_monkey_n_rel" ].
+
+yu := noun1-noun-lex &
+  [ STEM < "yu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_wine_n_rel" ].
+
+yénčhaŋ := noun1-noun-lex &
+  [ STEM < "yénčhaŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_curry-or-vegetable_n_rel" ].
+
+yúm := noun1-noun-lex &
+  [ STEM < "yúm" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_house_n_rel" ].
+
+éksə́n := noun1-noun-lex &
+  [ STEM < "éksə́n" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_axle_n_rel" ].
+
+ímphal := noun1-noun-lex &
+  [ STEM < "ímphal" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_imphal_n_rel" ].
+
+ín_1 := noun1-noun-lex &
+  [ STEM < "ín" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_fishing.net_n_rel" ].
+
+ínák := noun1-noun-lex &
+  [ STEM < "ínák" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_revere-or-revered_n_rel" ].
+
+íruǰə := noun1-noun-lex &
+  [ STEM < "íruǰə" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bathe_n_rel" ].
+
+írón := noun1-noun-lex &
+  [ STEM < "írón" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_chutney_n_rel" ].
+
+íčhiŋ := noun1-noun-lex &
+  [ STEM < "íčhiŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_water_n_rel" ].
+
+íšro := noun1-noun-lex &
+  [ STEM < "íšro" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_god_n_rel" ].
+
+čeŋ := noun1-noun-lex &
+  [ STEM < "čeŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_huskless.rice_n_rel" ].
+
+čhatri := noun1-noun-lex &
+  [ STEM < "čhatri" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_female.student_n_rel" ].
+
+čhatrə := noun1-noun-lex &
+  [ STEM < "čhatrə" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_male.student_n_rel" ].
+
+čhuti := noun1-noun-lex &
+  [ STEM < "čhuti" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_holiday_n_rel" ].
+
+čhá_1 := noun1-noun-lex &
+  [ STEM < "čhá" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_body_n_rel" ].
+
+čhámu := noun1-noun-lex &
+  [ STEM < "čhámu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_elephant_n_rel" ].
+
+čhén := noun1-noun-lex &
+  [ STEM < "čhén" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_money_n_rel" ].
+
+čhəm := noun1-noun-lex &
+  [ STEM < "čhəm" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_fence_n_rel" ].
+
+čhən := noun1-noun-lex &
+  [ STEM < "čhən" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cow_n_rel" ].
+
+čhə́m_1 := noun1-noun-lex &
+  [ STEM < "čhə́m" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hair_n_rel" ].
+
+čithi := noun1-noun-lex &
+  [ STEM < "čithi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_letter_n_rel" ].
+
+ču := noun1-noun-lex &
+  [ STEM < "ču" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sugarcane_n_rel" ].
+
+čák := noun1-noun-lex &
+  [ STEM < "čák" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_food_n_rel" ].
+
+čé_1 := noun1-noun-lex &
+  [ STEM < "čé" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_paper_n_rel" ].
+
+čúrúp := noun1-noun-lex &
+  [ STEM < "čúrúp" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cigarette_n_rel" ].
+
+čəka := noun1-noun-lex &
+  [ STEM < "čəka" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tire_n_rel" ].
+
+čəmprasi := noun1-noun-lex &
+  [ STEM < "čəmprasi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_peon_n_rel" ].
+
+čən_1 := noun1-noun-lex &
+  [ STEM < "čən" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_rice_n_rel" ].
+
+čə́hí := noun1-noun-lex &
+  [ STEM < "čə́hí" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_year_n_rel" ].
+
+čə́y_1 := noun1-noun-lex &
+  [ STEM < "čə́y" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_stick_n_rel" ].
+
+ŋay_1 := noun1-noun-lex &
+  [ STEM < "ŋay" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_covered bamboo clothes-basket_n_rel" ].
+
+ŋá := noun1-noun-lex &
+  [ STEM < "ŋá" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_fish_n_rel" ].
+
+ŋákra := noun1-noun-lex &
+  [ STEM < "ŋákra" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_catfish_n_rel" ].
+
+ŋámu := noun1-noun-lex &
+  [ STEM < "ŋámu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_mudfish_n_rel" ].
+
+ŋə́čhi := noun1-noun-lex &
+  [ STEM < "ŋə́čhi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_today_n_rel" ].
+
+šakhi := noun1-noun-lex &
+  [ STEM < "šakhi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_witness_n_rel" ].
+
+šiloŋ := noun1-noun-lex &
+  [ STEM < "šiloŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_shillong_n_rel" ].
+
+ǰadu := noun1-noun-lex &
+  [ STEM < "ǰadu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_magic_n_rel" ].
+
+ǰel := noun1-noun-lex &
+  [ STEM < "ǰel" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_jail_n_rel" ].
+
+ǰhútmút := noun1-noun-lex &
+  [ STEM < "ǰhútmút" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lies_n_rel" ].
+
+ǰi := noun1-noun-lex &
+  [ STEM < "ǰi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sir_n_rel" ].
+
+ǰuwari := noun1-noun-lex &
+  [ STEM < "ǰuwari" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_gambler_n_rel" ].
+
+ǰwar := noun1-noun-lex &
+  [ STEM < "ǰwar" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cards_n_rel" ].
+
+ǰəgá := noun1-noun-lex &
+  [ STEM < "ǰəgá" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_place_n_rel" ].
+
+əygya := noun1-noun-lex &
+  [ STEM < "əygya" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_minister_n_rel" ].
+
+səɡol := noun1-noun-lex &
+  [ STEM < "səɡol" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_horse_n_rel" ].
+
+ə́ŋáŋ := noun1-noun-lex &
+  [ STEM < "ə́ŋáŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_child_n_rel" ].
+
+húy := noun1-noun-lex &
+  [ STEM < "húy" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dog_n_rel" ].
+
+waŋ_4 := noun1-noun-lex &
+  [ STEM < "waŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tall_n_rel" ].
+
+nuŋčhi_1 := noun1-noun-lex &
+  [ STEM < "nuŋčhi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sweet_n_rel" ].
+
+garí := noun1-noun-lex &
+  [ STEM < "garí" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_car_n_rel" ].
+
+nóŋ := noun1-noun-lex &
+  [ STEM < "nóŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_rain_n_rel" ].
+
+bəzar := noun1-noun-lex &
+  [ STEM < "bəzar" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_park_n_rel" ].
+
+beŋgol := noun2-noun-lex &
+  [ STEM < "beŋgol" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bengal_n_rel" ].
+
+ləykay := noun2-noun-lex &
+  [ STEM < "ləykay" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_neighborhood_n_rel" ].
+
+pebəm := noun2-noun-lex &
+  [ STEM < "pebəm" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pebam_n_rel" ].
+
+pharm := noun2-noun-lex &
+  [ STEM < "pharm" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_farm_n_rel" ].
+
+day := noun2-noun-lex &
+  [ STEM < "day" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_responsibility_n_rel" ].
+
+ibotombi := noun2-noun-lex &
+  [ STEM < "ibotombi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ibotombi_n_rel" ].
+
+kəna := noun2-noun-lex &
+  [ STEM < "kəna" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_who_n_rel" ].
+
+kə́n := noun2-noun-lex &
+  [ STEM < "kə́n" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hard_n_rel" ].
+
+lay := noun2-noun-lex &
+  [ STEM < "lay" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_god_n_rel" ].
+
+parliment := noun2-noun-lex &
+  [ STEM < "parliment" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_parliament_n_rel" ].
+
+eroplen := noun4-noun-lex &
+  [ STEM < "eroplen" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_airplane_n_rel" ].
+
+káy_1 := noun4-noun-lex &
+  [ STEM < "káy" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_break_n_rel" ].
+
+lu_2 := noun4-noun-lex &
+  [ STEM < "lu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_deep_n_rel" ].
+
+lón_2 := noun4-noun-lex &
+  [ STEM < "lón" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_secret_n_rel" ].
+
+thə́k_1 := noun4-noun-lex &
+  [ STEM < "thə́k" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_drink_n_rel" ].
+
+čhéŋ := noun4-noun-lex &
+  [ STEM < "čhéŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_true_n_rel" ].
+
+šéŋ := noun4-noun-lex &
+  [ STEM < "šéŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_true_n_rel" ].
+
+hay_1 := noun6-noun-lex &
+  [ STEM < "hay" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sway_n_rel" ].
+
+khum_1 := noun6-noun-lex &
+  [ STEM < "khum" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_reply_n_rel" ].
+
+kháŋ := noun6-noun-lex &
+  [ STEM < "kháŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_close_n_rel" ].
+
+kánnə_1 := noun6-noun-lex &
+  [ STEM < "kánnə" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_use_n_rel" ].
+
+law_1 := noun6-noun-lex &
+  [ STEM < "law" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_shout_n_rel" ].
+
+loy_1 := noun6-noun-lex &
+  [ STEM < "loy" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_finish_n_rel" ].
+
+lák := noun6-noun-lex &
+  [ STEM < "lák" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dominance_n_rel" ].
+
+ləŋ_1 := noun6-noun-lex &
+  [ STEM < "ləŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cast_n_rel" ].
+
+may := noun6-noun-lex &
+  [ STEM < "may" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_medicine.man_n_rel" ].
+
+máŋ_1 := noun6-noun-lex &
+  [ STEM < "máŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lose_n_rel" ].
+
+ni_1 := noun6-noun-lex &
+  [ STEM < "ni" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_beg_n_rel" ].
+
+
+níŋ_1 := noun6-noun-lex &
+  [ STEM < "níŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_yearn_n_rel" ].
+
+pa_1 := noun6-noun-lex &
+  [ STEM < "pa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_read_n_rel" ].
+
+pannə_1 := noun6-noun-lex &
+  [ STEM < "pannə" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_oversee_n_rel" ].
+
+phá_1 := noun6-noun-lex &
+  [ STEM < "phá" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_arrest_n_rel" ].
+
+phəŋ_1 := noun6-noun-lex &
+  [ STEM < "phəŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_find-or-get_n_rel" ].
+
+pí_1 := noun6-noun-lex &
+  [ STEM < "pí" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_give_n_rel" ].
+
+thí_1 := noun6-noun-lex &
+  [ STEM < "thí" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ugly_n_rel" ].
+
+təm_1 := noun6-noun-lex &
+  [ STEM < "təm" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_learn_n_rel" ].
+
+u_2 := noun6-noun-lex &
+  [ STEM < "u" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_see_n_rel" ].
+
+čhan_1 := noun6-noun-lex &
+  [ STEM < "čhan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_play_n_rel" ].
+
+čhiŋ := noun6-noun-lex &
+  [ STEM < "čhiŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_copy_n_rel" ].
+
+čhíǰinnə_1 := noun6-noun-lex &
+  [ STEM < "čhíǰinnə" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_use_n_rel" ].
+
+čá_1 := noun6-noun-lex &
+  [ STEM < "čá" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_make_n_rel" ].
+
+yáw_1 := noun6-noun-lex &
+  [ STEM < "yáw" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_participate_n_rel" ].
+
+hən_1 := noun6-noun-lex &
+  [ STEM < "hən" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_old_n_rel" ].
+
+gadá := noun6-noun-lex &
+  [ STEM < "gadá" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_club_n_rel" ].
+
+lukhra := noun6-noun-lex &
+  [ STEM < "lukhra" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_widow_n_rel" ].
+
+them := noun8-noun-lex &
+  [ STEM < "them" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pacify_n_rel" ].
+
+čhú_1 := noun8-noun-lex &
+  [ STEM < "čhú" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_work_n_rel" ].
+
+kém := noun17-noun-lex &
+  [ STEM < "kém" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_decay_n_rel" ].
+
+lí_2 := noun29-noun-lex &
+  [ STEM < "lí" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_behavior_n_rel" ].
+
+mot := noun35-noun-lex &
+  [ STEM < "mot" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_opinion_n_rel" ].
+
+pan_1 := noun35-noun-lex &
+  [ STEM < "pan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_subtract_n_rel" ].
+
+ŋə́raŋ := noun35-noun-lex &
+  [ STEM < "ŋə́raŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_yesterday_n_rel" ].
+
+čhá_2 := noun61-noun-lex &
+  [ STEM < "čhá" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_body_n_rel" ].
+
+hum := noun61-noun-lex &
+  [ STEM < "hum" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_three_n_rel" ].
+
+ǰat := noun61-noun-lex &
+  [ STEM < "ǰat" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_-type_n_rel" ].
+
+na_1 := noun61-noun-lex &
+  [ STEM < "na" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ear-or-notch_n_rel" ].
+
+khoy_2 := noun61-noun-lex &
+  [ STEM < "khoy" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hpl_n_rel" ].
+
+khoŋ_2 := noun61-noun-lex &
+  [ STEM < "khoŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_leg_n_rel" ].
+
+khə́l := noun61-noun-lex &
+  [ STEM < "khə́l" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_variety_n_rel" ].
+
+kə́y := noun61-noun-lex &
+  [ STEM < "kə́y" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_granary_n_rel" ].
+
+maŋ := noun61-noun-lex &
+  [ STEM < "maŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_front_n_rel" ].
+
+mən := noun61-noun-lex &
+  [ STEM < "mən" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cost_n_rel" ].
+
+níŋ_2 := noun61-noun-lex &
+  [ STEM < "níŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_back_n_rel" ].
+
+nəm_2 := noun61-noun-lex &
+  [ STEM < "nəm" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_smell_n_rel" ].
+
+nə́m_1 := noun61-noun-lex &
+  [ STEM < "nə́m" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_back_n_rel" ].
+
+phi_2 := noun61-noun-lex &
+  [ STEM < "phi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cloth_n_rel" ].
+
+pá := noun61-noun-lex &
+  [ STEM < "pá" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_father_n_rel" ].
+
+pán_2 := noun61-noun-lex &
+  [ STEM < "pán" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_brim_n_rel" ].
+
+taŋ_2 := noun61-noun-lex &
+  [ STEM < "taŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_joint_n_rel" ].
+
+thə́wáy := noun61-noun-lex &
+  [ STEM < "thə́wáy" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_life_n_rel" ].
+
+tík := noun61-noun-lex &
+  [ STEM < "tík" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_fit_n_rel" ].
+
+túm_1 := noun61-noun-lex &
+  [ STEM < "túm" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_piece_n_rel" ].
+
+təm_2 := noun61-noun-lex &
+  [ STEM < "təm" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_time_n_rel" ].
+
+wóŋ := noun61-noun-lex &
+  [ STEM < "wóŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_method_n_rel" ].
+
+čhék := noun61-noun-lex &
+  [ STEM < "čhék" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ray_n_rel" ].
+
+čhə́m_2 := noun61-noun-lex &
+  [ STEM < "čhə́m" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hair_n_rel" ].
+
+čé_2 := noun61-noun-lex &
+  [ STEM < "čé" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sister_n_rel" ].
+
+čə́y_2 := noun61-noun-lex &
+  [ STEM < "čə́y" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sister_n_rel" ].
+
+má_1 := noun61-noun-lex &
+  [ STEM < "má" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_mother_n_rel" ].
+
+taw_1 := noun61-noun-lex &
+  [ STEM < "taw" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_friend_n_rel" ].
+
+čhú_2 := noun61-noun-lex &
+  [ STEM < "čhú" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_grandchild_n_rel" ].
+
+čá_2 := noun61-noun-lex &
+  [ STEM < "čá" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_child_n_rel" ].
+
+ku := noun61-noun-lex &
+  [ STEM < "ku" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_father.in.law_n_rel" ].
+
+nuŋ_1 := noun69-noun-lex &
+  [ STEM < "nuŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_royal_n_rel" ].
+
+pers := noun79-noun-lex &
+  [ STEM < "pers" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pears_n_rel" ].
+
+wardər := noun79-noun-lex &
+  [ STEM < "wardər" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_warden_n_rel" ].
+
+tinnə := noun89-noun-lex &
+  [ STEM < "tinnə" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_concord_n_rel" ].
+
+ya := noun93-noun-lex &
+  [ STEM < "ya" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_able-or-possible_n_rel" ].
+
+yeŋ_1 := noun95-noun-lex &
+  [ STEM < "yeŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_look_n_rel" ].
+
+yon_1 := noun96-noun-lex &
+  [ STEM < "yon" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sell_n_rel" ].
+
+čhi_1 := noun100-noun-lex &
+  [ STEM < "čhi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_die_n_rel" ].
+
+hiŋ := noun110-noun-lex &
+  [ STEM < "hiŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_night_n_rel" ].
+
+mə := noun110-noun-lex &
+  [ STEM < "mə" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_one_n_rel" ].
+
+yúk := noun110-noun-lex &
+  [ STEM < "yúk" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_morning_n_rel" ].
+
+ŋəm := noun110-noun-lex &
+  [ STEM < "ŋəm" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_able_n_rel" ].
+
+thəw_1 := noun110-noun-lex &
+  [ STEM < "thəw" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_duty_n_rel" ].
+
+iŋraǰi := noun110-noun-lex &
+  [ STEM < "iŋraǰi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_english_n_rel" ].
+
+keriyar := noun110-noun-lex &
+  [ STEM < "keriyar" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_career_n_rel" ].
+
+lu_3 := noun110-noun-lex &
+  [ STEM < "lu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_clear.water_n_rel" ].
+
+má_2 := noun111_he_she-noun-lex &
+  [ STEM < "má" >,
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
+
+ə́y := noun112_I-noun-lex &
+  [ STEM < "ə́y" >,
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
+
+nuŋ_2 := noun114_here-noun-lex &
+  [ STEM < "nuŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
+
+ə́ykhoy := noun115_we-noun-lex &
+  [ STEM < "ə́ykhoy" >,
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
+
+mə́khoy := noun116_they-noun-lex &
+  [ STEM < "mə́khoy" >,
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
+
+nə́khóy := noun117_you_all-noun-lex &
+  [ STEM < "nə́khóy" >,
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
+
+íbani := noun118_we_dual-noun-lex &
+  [ STEM < "íbani" >,
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
+
+nə́bani := noun119_you_dual-noun-lex &
+  [ STEM < "nə́bani" >,
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
+
+mə́bani := noun120_they_dual-noun-lex &
+  [ STEM < "mə́bani" >,
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
+
+núpí := noun121-noun-lex &
+  [ STEM < "núpí" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_female_n_rel" ].
+
+núpá := noun1-noun-lex &
+  [ STEM < "núpá" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_male_n_rel" ].
+
+nə́ŋ := noun122-noun-lex &
+  [ STEM < "nə́ŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
+
+;;; Adjectives
+
+;;; Verbs
+
+edvərtais := verb2-verb-lex &
+  [ STEM < "edvərtais" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_advertise_v_rel" ].
+
+fel := verb2-verb-lex &
+  [ STEM < "fel" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_fail_v_rel" ].
+
+hék_1 := verb2-verb-lex &
+  [ STEM < "hék" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_just-or-pluck_v_rel" ].
+
+kok_1 := verb2-verb-lex &
+  [ STEM < "kok" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_head_v_rel" ].
+
+kólhiŋ_1 := verb2-verb-lex &
+  [ STEM < "kólhiŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_rust_v_rel" ].
+
+kə́rəm_1 := verb2-verb-lex &
+  [ STEM < "kə́rəm" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_how_v_rel" ].
+
+nə́tte_1 := verb2-verb-lex &
+  [ STEM < "nə́tte" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_is_v_rel" ].
+
+téŋ_1 := verb2-verb-lex &
+  [ STEM < "téŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_complete_v_rel" ].
+
+túŋ_1 := verb2-verb-lex &
+  [ STEM < "túŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_store_v_rel" ].
+
+tə́k_1 := verb2-verb-lex &
+  [ STEM < "tə́k" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_rub_v_rel" ].
+
+waŋ_1 := verb2-verb-lex &
+  [ STEM < "waŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tall_v_rel" ].
+
+yon_2 := verb2-verb-lex &
+  [ STEM < "yon" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sell_v_rel" ].
+
+yók_1 := verb2-verb-lex &
+  [ STEM < "yók" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_take.care.of_v_rel" ].
+
+čhi_2 := verb2-verb-lex &
+  [ STEM < "čhi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_die_v_rel" ].
+
+čiŋ_1 := verb2-verb-lex &
+  [ STEM < "čiŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pull_v_rel" ].
+
+čən_2 := verb2-verb-lex &
+  [ STEM < "čən" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_assemble_v_rel" ].
+
+čə́y_3 := verb2-verb-lex &
+  [ STEM < "čə́y" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_abuse_v_rel" ].
+
+ŋáŋ_1 := verb2-verb-lex &
+  [ STEM < "ŋáŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_speak_v_rel" ].
+
+thá_1 := verb2-verb-lex &
+  [ STEM < "thá" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_release_v_rel" ].
+
+tóŋ := verb2-verb-lex &
+  [ STEM < "tóŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ride_v_rel" ].
+
+kə́k := verb2-verb-lex &
+  [ STEM < "kə́k" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cut_v_rel" ].
+
+hay_2 := verb3-verb-lex &
+  [ STEM < "hay" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sway_v_rel" ].
+
+haŋ := verb3-verb-lex &
+  [ STEM < "haŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_open_v_rel" ].
+
+khét := verb3-verb-lex &
+  [ STEM < "khét" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_scrape_v_rel" ].
+
+lán_1 := verb3-verb-lex &
+  [ STEM < "lán" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cross.over_v_rel" ].
+
+nán := verb3-verb-lex &
+  [ STEM < "nán" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_slip_v_rel" ].
+
+phák := verb3-verb-lex &
+  [ STEM < "phák" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_open_v_rel" ].
+
+thaŋ := verb3-verb-lex &
+  [ STEM < "thaŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_carry_v_rel" ].
+
+thá_2 := verb3-verb-lex &
+  [ STEM < "thá" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_release-or-send_v_rel" ].
+
+hə́w := verb3-verb-lex &
+  [ STEM < "hə́w" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_begin-or-start_v_rel" ].
+
+khun_2 := verb3-verb-lex &
+  [ STEM < "khun" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pick_v_rel" ].
+
+khún := verb3-verb-lex &
+  [ STEM < "khún" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pick_v_rel" ].
+
+thon := verb3-verb-lex &
+  [ STEM < "thon" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_wear_v_rel" ].
+
+ləŋ_2 := verb3-verb-lex &
+  [ STEM < "ləŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_shine_v_rel" ].
+
+mun_1 := verb3-verb-lex &
+  [ STEM < "mun" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_care_v_rel" ].
+
+nay := verb3-verb-lex &
+  [ STEM < "nay" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_spin_v_rel" ].
+
+təm_3 := verb3-verb-lex &
+  [ STEM < "təm" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_toward_v_rel" ].
+
+hát_1 := verb6-verb-lex &
+  [ STEM < "hát" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kill_v_rel" ].
+
+həw := verb6-verb-lex &
+  [ STEM < "həw" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bake_v_rel" ].
+
+čhíǰinnə_2 := verb6-verb-lex &
+  [ STEM < "čhíǰinnə" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_use_v_rel" ].
+
+phú := verb6-verb-lex &
+  [ STEM < "phú" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_beat_v_rel" ].
+
+hót := verb12-verb-lex &
+  [ STEM < "hót" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_make.hole_v_rel" ].
+
+tan_1 := verb12-verb-lex &
+  [ STEM < "tan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_chase_v_rel" ].
+
+čə́t := verb12-verb-lex &
+  [ STEM < "čə́t" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_go_v_rel" ].
+
+ləy_1 := verb12-verb-lex &
+  [ STEM < "ləy" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be_v_rel" ].
+
+čá_3 := verb12-verb-lex &
+  [ STEM < "čá" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
+
+hən_2 := verb14-verb-lex &
+  [ STEM < "hən" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_old-or-return_v_rel" ].
+
+khəŋ := verb14-verb-lex &
+  [ STEM < "khəŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_startle_v_rel" ].
+
+khə́ŋ := verb14-verb-lex &
+  [ STEM < "khə́ŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_know_v_rel" ].
+
+kok_2 := verb14-verb-lex &
+  [ STEM < "kok" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_head_v_rel" ].
+
+kólhiŋ_2 := verb14-verb-lex &
+  [ STEM < "kólhiŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_rust_v_rel" ].
+
+kə́rəm_2 := verb14-verb-lex &
+  [ STEM < "kə́rəm" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_how_v_rel" ].
+
+nə́tte_2 := verb14-verb-lex &
+  [ STEM < "nə́tte" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_is_v_rel" ].
+
+téŋ_2 := verb14-verb-lex &
+  [ STEM < "téŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_complete_v_rel" ].
+
+túŋ_2 := verb14-verb-lex &
+  [ STEM < "túŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_store_v_rel" ].
+
+tə́k_2 := verb14-verb-lex &
+  [ STEM < "tə́k" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_rub_v_rel" ].
+
+waŋ_2 := verb14-verb-lex &
+  [ STEM < "waŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tall_v_rel" ].
+
+yon_3 := verb14-verb-lex &
+  [ STEM < "yon" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sell_v_rel" ].
+
+yók_2 := verb14-verb-lex &
+  [ STEM < "yók" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_take.care.of_v_rel" ].
+
+čhi_3 := verb14-verb-lex &
+  [ STEM < "čhi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_die_v_rel" ].
+
+čiŋ_2 := verb14-verb-lex &
+  [ STEM < "čiŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pull_v_rel" ].
+
+čən_3 := verb14-verb-lex &
+  [ STEM < "čən" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_assemble_v_rel" ].
+
+čə́y_4 := verb14-verb-lex &
+  [ STEM < "čə́y" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_abuse_v_rel" ].
+
+ŋáŋ_2 := verb14-verb-lex &
+  [ STEM < "ŋáŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_speak_v_rel" ].
+
+khák := verb14-verb-lex &
+  [ STEM < "khák" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_keep.for.use_v_rel" ].
+
+čha := verb14-verb-lex &
+  [ STEM < "čha" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_make_v_rel" ].
+
+ni_2 := verb14-verb-lex &
+  [ STEM < "ni" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_beg_v_rel" ].
+
+níŋ-čhíŋ := verb14-verb-lex &
+  [ STEM < "níŋ-čhíŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_remember_v_rel" ].
+
+yá := verb22-verb-lex &
+  [ STEM < "yá" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_agree_v_rel" ].
+
+khoŋ_3 := verb25-verb-lex &
+  [ STEM < "khoŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_crow_v_rel" ].
+
+man := verb25-verb-lex &
+  [ STEM < "man" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_seem_v_rel" ].
+
+khét_7E := verb30-verb-lex &
+  [ STEM < "khét~" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cut_v_rel" ].
+
+khə́t := verb37-verb-lex &
+  [ STEM < "khə́t" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_fight_v_rel" ].
+
+thoy := verb37-verb-lex &
+  [ STEM < "thoy" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_win_v_rel" ].
+
+loy_2 := verb37-verb-lex &
+  [ STEM < "loy" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bathe_v_rel" ].
+
+kánnə_2 := verb40-verb-lex &
+  [ STEM < "kánnə" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_use_v_rel" ].
+
+yép_1 := verb40-verb-lex &
+  [ STEM < "yép" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_steal_v_rel" ].
+
+káw := verb42-verb-lex &
+  [ STEM < "káw" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kick_v_rel" ].
+
+káy_2 := verb43-verb-lex &
+  [ STEM < "káy" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_break_v_rel" ].
+
+tan_2 := verb43-verb-lex &
+  [ STEM < "tan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_aim_v_rel" ].
+
+yáw_2 := verb43-verb-lex &
+  [ STEM < "yáw" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_include_v_rel" ].
+
+kúm := verb47-verb-lex &
+  [ STEM < "kúm" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_climb_v_rel" ].
+
+lúk_2 := verb58-verb-lex &
+  [ STEM < "lúk" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bow_v_rel" ].
+
+lə́m_2 := verb61-verb-lex &
+  [ STEM < "lə́m" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_way_v_rel" ].
+
+lə́w := verb61-verb-lex &
+  [ STEM < "lə́w" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_take_v_rel" ].
+
+nə́tte_3 := verb61-verb-lex &
+  [ STEM < "nə́tte" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_is_v_rel" ].
+
+téŋ_3 := verb61-verb-lex &
+  [ STEM < "téŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_complete_v_rel" ].
+
+túŋ_3 := verb61-verb-lex &
+  [ STEM < "túŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_store_v_rel" ].
+
+tə́k_3 := verb61-verb-lex &
+  [ STEM < "tə́k" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_rub_v_rel" ].
+
+waŋ_3 := verb61-verb-lex &
+  [ STEM < "waŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tall_v_rel" ].
+
+yon_4 := verb61-verb-lex &
+  [ STEM < "yon" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sell_v_rel" ].
+
+yók_3 := verb61-verb-lex &
+  [ STEM < "yók" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_take.care.of_v_rel" ].
+
+čhi_4 := verb61-verb-lex &
+  [ STEM < "čhi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_die_v_rel" ].
+
+čiŋ_3 := verb61-verb-lex &
+  [ STEM < "čiŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pull_v_rel" ].
+
+čən_4 := verb61-verb-lex &
+  [ STEM < "čən" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_assemble_v_rel" ].
+
+čə́y_5 := verb61-verb-lex &
+  [ STEM < "čə́y" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_abuse_v_rel" ].
+
+ŋáŋ_3 := verb61-verb-lex &
+  [ STEM < "ŋáŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_speak_v_rel" ].
+
+yóm := verb61-verb-lex &
+  [ STEM < "yóm" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_wrap_v_rel" ].
+
+pók_2 := verb61-verb-lex &
+  [ STEM < "pók" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_born_v_rel" ].
+
+taŋ_3 := verb61-verb-lex &
+  [ STEM < "taŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_join_v_rel" ].
+
+mót := verb68-verb-lex &
+  [ STEM < "mót" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dirty_v_rel" ].
+
+niŋŋay := verb68-verb-lex &
+  [ STEM < "niŋŋay" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_(unid.)_v_rel" ].
+
+ní_2 := verb68-verb-lex &
+  [ STEM < "ní" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_two_v_rel" ].
+
+níŋ_3 := verb68-verb-lex &
+  [ STEM < "níŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_remember_v_rel" ].
+
+nə́tte_4 := verb68-verb-lex &
+  [ STEM < "nə́tte" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_is_v_rel" ].
+
+téŋ_4 := verb68-verb-lex &
+  [ STEM < "téŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_complete_v_rel" ].
+
+túŋ_4 := verb68-verb-lex &
+  [ STEM < "túŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_store_v_rel" ].
+
+tə́k_4 := verb68-verb-lex &
+  [ STEM < "tə́k" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_rub_v_rel" ].
+
+waŋ_4 := verb68-verb-lex &
+  [ STEM < "waŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tall_v_rel" ].
+
+yon_5 := verb68-verb-lex &
+  [ STEM < "yon" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sell_v_rel" ].
+
+yók_4 := verb68-verb-lex &
+  [ STEM < "yók" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_take.care.of_v_rel" ].
+
+čhi_5 := verb68-verb-lex &
+  [ STEM < "čhi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_die_v_rel" ].
+
+čiŋ_4 := verb68-verb-lex &
+  [ STEM < "čiŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pull_v_rel" ].
+
+čən_5 := verb68-verb-lex &
+  [ STEM < "čən" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_assemble_v_rel" ].
+
+čə́y_6 := verb68-verb-lex &
+  [ STEM < "čə́y" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_abuse_v_rel" ].
+
+ŋáŋ_4 := verb68-verb-lex &
+  [ STEM < "ŋáŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_speak_v_rel" ].
+
+níŋ_4 := verb78-verb-lex &
+  [ STEM < "níŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_wish_v_rel" ].
+
+phúk := verb78-verb-lex &
+  [ STEM < "phúk" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_uproot_v_rel" ].
+
+theŋnə := verb78-verb-lex &
+  [ STEM < "theŋnə" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_meet_v_rel" ].
+
+nə := verb79-verb-lex &
+  [ STEM < "nə" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_play[ing]_v_rel" ].
+
+nə́tte_5 := verb79-verb-lex &
+  [ STEM < "nə́tte" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_is_v_rel" ].
+
+pan_2 := verb79-verb-lex &
+  [ STEM < "pan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_subtract_v_rel" ].
+
+pas := verb79-verb-lex &
+  [ STEM < "pas" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pass_v_rel" ].
+
+pót_1 := verb79-verb-lex &
+  [ STEM < "pót" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_thing_v_rel" ].
+
+pə́k := verb79-verb-lex &
+  [ STEM < "pə́k" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_stick.to_v_rel" ].
+
+í := verb79-verb-lex &
+  [ STEM < "í" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_full_v_rel" ].
+
+phéŋ := verb89-verb-lex &
+  [ STEM < "phéŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sharpen_v_rel" ].
+
+pu := verb98-verb-lex &
+  [ STEM < "pu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bring_v_rel" ].
+
+léŋ := verb98-verb-lex &
+  [ STEM < "léŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_go.ahead_v_rel" ].
+
+čhinnə_1 := verb98-verb-lex &
+  [ STEM < "čhinnə" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_entrust_v_rel" ].
+
+hótnə := verb98-verb-lex &
+  [ STEM < "hótnə" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_try_v_rel" ].
+
+khám := verb98-verb-lex &
+  [ STEM < "khám" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_stop_v_rel" ].
+
+ká_1 := verb98-verb-lex &
+  [ STEM < "ká" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_rise_v_rel" ].
+
+oy := verb98-verb-lex &
+  [ STEM < "oy" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be_v_rel" ].
+
+thí_2 := verb98-verb-lex &
+  [ STEM < "thí" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_count_v_rel" ].
+
+thəm := verb98-verb-lex &
+  [ STEM < "thəm" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_keep_v_rel" ].
+
+tə́w := verb98-verb-lex &
+  [ STEM < "tə́w" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dig_v_rel" ].
+
+ín_2 := verb98-verb-lex &
+  [ STEM < "ín" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_push_v_rel" ].
+
+čhín := verb98-verb-lex &
+  [ STEM < "čhín" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_arrange_v_rel" ].
+
+čə́ŋ_1 := verb98-verb-lex &
+  [ STEM < "čə́ŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_enter_v_rel" ].
+
+ŋay_2 := verb98-verb-lex &
+  [ STEM < "ŋay" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_wait_v_rel" ].
+
+phum := verb98-verb-lex &
+  [ STEM < "phum" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_bury_v_rel" ].
+
+sét_1 := verb104-verb-lex &
+  [ STEM < "sét" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tear_v_rel" ].
+
+čhu := verb104-verb-lex &
+  [ STEM < "čhu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_impress_v_rel" ].
+
+ta_2 := verb106-verb-lex &
+  [ STEM < "ta" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_fall_v_rel" ].
+
+than := verb111-verb-lex &
+  [ STEM < "than" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_light_v_rel" ].
+
+ŋə́k := verb111-verb-lex &
+  [ STEM < "ŋə́k" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_surprise_v_rel" ].
+
+thə́k_2 := verb124-verb-lex &
+  [ STEM < "thə́k" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_drink_v_rel" ].
+
+hoŋ := verb124-verb-lex &
+  [ STEM < "hoŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_change_v_rel" ].
+
+na_2 := verb124-verb-lex &
+  [ STEM < "na" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sick_v_rel" ].
+
+tok := verb127-verb-lex &
+  [ STEM < "tok" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_stop_v_rel" ].
+
+yə́y := verb127-verb-lex &
+  [ STEM < "yə́y" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_strike_v_rel" ].
+
+túm_2 := verb132-verb-lex &
+  [ STEM < "túm" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sleep_v_rel" ].
+
+čheŋ := verb133-verb-lex &
+  [ STEM < "čheŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_true_v_rel" ].
+
+təm_4 := verb134-verb-lex &
+  [ STEM < "təm" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_learn_v_rel" ].
+
+phóŋ := verb134-verb-lex &
+  [ STEM < "phóŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_publish_v_rel" ].
+
+u_3 := verb138-verb-lex &
+  [ STEM < "u" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_see_v_rel" ].
+
+phə́m := verb138-verb-lex &
+  [ STEM < "phə́m" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_place-or-sit_v_rel" ].
+
+pót_2 := verb138-verb-lex &
+  [ STEM < "pót" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_thing_v_rel" ].
+
+pə́ŋ := verb138-verb-lex &
+  [ STEM < "pə́ŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_fool-or-foolish_v_rel" ].
+
+sét_2 := verb138-verb-lex &
+  [ STEM < "sét" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_(ideo)_v_rel" ].
+
+tha_2 := verb138-verb-lex &
+  [ STEM < "tha" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_place-or-put.down_v_rel" ].
+
+thák := verb138-verb-lex &
+  [ STEM < "thák" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_(ideo)-or-feed_v_rel" ].
+
+thók := verb138-verb-lex &
+  [ STEM < "thók" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_out_v_rel" ].
+
+túŋ_5 := verb138-verb-lex &
+  [ STEM < "túŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_store_v_rel" ].
+
+tə́k_5 := verb138-verb-lex &
+  [ STEM < "tə́k" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_rub_v_rel" ].
+
+yeŋ_2 := verb138-verb-lex &
+  [ STEM < "yeŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_look_v_rel" ].
+
+yon_6 := verb138-verb-lex &
+  [ STEM < "yon" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sell_v_rel" ].
+
+yók_5 := verb138-verb-lex &
+  [ STEM < "yók" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_take.care.of_v_rel" ].
+
+čhi_6 := verb138-verb-lex &
+  [ STEM < "čhi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_die_v_rel" ].
+
+čiŋ_5 := verb138-verb-lex &
+  [ STEM < "čiŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_drag-or-pull_v_rel" ].
+
+čən_6 := verb138-verb-lex &
+  [ STEM < "čən" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_assemble_v_rel" ].
+
+čə́y_7 := verb138-verb-lex &
+  [ STEM < "čə́y" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_abuse_v_rel" ].
+
+ŋáŋ_5 := verb138-verb-lex &
+  [ STEM < "ŋáŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_speak-or-talk_v_rel" ].
+
+čhém := verb138-verb-lex &
+  [ STEM < "čhém" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_make-or-prepare_v_rel" ].
+
+nék := verb138-verb-lex &
+  [ STEM < "nék" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_gather_v_rel" ].
+
+phəŋ_2 := verb138-verb-lex &
+  [ STEM < "phəŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_find-or-get_v_rel" ].
+
+kə́p := verb138-verb-lex &
+  [ STEM < "kə́p" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cry_v_rel" ].
+
+nə́m_2 := verb138-verb-lex &
+  [ STEM < "nə́m" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_press_v_rel" ].
+
+pan_3 := verb138-verb-lex &
+  [ STEM < "pan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_attack-or-rule_v_rel" ].
+
+khum_2 := verb138-verb-lex &
+  [ STEM < "khum" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_reply_v_rel" ].
+
+phút := verb138-verb-lex &
+  [ STEM < "phút" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_boil_v_rel" ].
+
+tháǰə := verb138-verb-lex &
+  [ STEM < "tháǰə" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_believe_v_rel" ].
+
+pí_2 := verb138-verb-lex &
+  [ STEM < "pí" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_give_v_rel" ].
+
+tá := verb138-verb-lex &
+  [ STEM < "tá" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_fall-or-hear_v_rel" ].
+
+yén := verb138-verb-lex &
+  [ STEM < "yén" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_divide_v_rel" ].
+
+lán_2 := verb138-verb-lex &
+  [ STEM < "lán" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_offer_v_rel" ].
+
+čhan_2 := verb138-verb-lex &
+  [ STEM < "čhan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_play_v_rel" ].
+
+kəw := verb138-verb-lex &
+  [ STEM < "kəw" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_call_v_rel" ].
+
+čə́ŋ_2 := verb138-verb-lex &
+  [ STEM < "čə́ŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_require_v_rel" ].
+
+law_2 := verb138-verb-lex &
+  [ STEM < "law" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_shout_v_rel" ].
+
+hék_2 := verb138-verb-lex &
+  [ STEM < "hék" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pick-or-pluck_v_rel" ].
+
+hən_3 := verb138-verb-lex &
+  [ STEM < "hən" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_plant_v_rel" ].
+
+khók := verb138-verb-lex &
+  [ STEM < "khók" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_peel_v_rel" ].
+
+káp := verb138-verb-lex &
+  [ STEM < "káp" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_shoot_v_rel" ].
+
+loy_3 := verb138-verb-lex &
+  [ STEM < "loy" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_finish_v_rel" ].
+
+lén := verb138-verb-lex &
+  [ STEM < "lén" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_spend.time_v_rel" ].
+
+mun_2 := verb138-verb-lex &
+  [ STEM < "mun" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_snatch_v_rel" ].
+
+nét := verb138-verb-lex &
+  [ STEM < "nét" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_push.down.briefly_v_rel" ].
+
+pannə_2 := verb138-verb-lex &
+  [ STEM < "pannə" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_create_v_rel" ].
+
+pum := verb138-verb-lex &
+  [ STEM < "pum" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_rot_v_rel" ].
+
+pú := verb138-verb-lex &
+  [ STEM < "pú" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_borrow_v_rel" ].
+
+taw_2 := verb138-verb-lex &
+  [ STEM < "taw" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_fry_v_rel" ].
+
+thəw_2 := verb138-verb-lex &
+  [ STEM < "thəw" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_drive_v_rel" ].
+
+tiŋ := verb138-verb-lex &
+  [ STEM < "tiŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lose-or-stretch.limbs_v_rel" ].
+
+tu := verb138-verb-lex &
+  [ STEM < "tu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_fall.down_v_rel" ].
+
+čhon := verb138-verb-lex &
+  [ STEM < "čhon" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_utter_v_rel" ].
+
+ŋan := verb138-verb-lex &
+  [ STEM < "ŋan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_steam_v_rel" ].
+
+i := verb138-verb-lex &
+  [ STEM < "i" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_write_v_rel" ].
+
+lə́y := verb138-verb-lex &
+  [ STEM < "lə́y" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_buy-or-circle_v_rel" ].
+
+khin := verb138-verb-lex &
+  [ STEM < "khin" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_make.upright_v_rel" ].
+
+khə́nnə := verb138-verb-lex &
+  [ STEM < "khə́nnə" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_discuss_v_rel" ].
+
+sék := verb138-verb-lex &
+  [ STEM < "sék" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_limp_v_rel" ].
+
+yép_2 := verb138-verb-lex &
+  [ STEM < "yép" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hide_v_rel" ].
+
+čhók := verb138-verb-lex &
+  [ STEM < "čhók" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_injure_v_rel" ].
+
+yáw_3 := verb138-verb-lex &
+  [ STEM < "yáw" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_participate_v_rel" ].
+
+háy := verb138-verb-lex &
+  [ STEM < "háy" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pace.back.and.forth-or-say_v_rel" ].
+
+khə́n := verb138-verb-lex &
+  [ STEM < "khə́n" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_think_v_rel" ].
+
+pa_2 := verb138-verb-lex &
+  [ STEM < "pa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_read_v_rel" ].
+
+thoŋ := verb138-verb-lex &
+  [ STEM < "thoŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cook_v_rel" ].
+
+phá_2 := verb138-verb-lex &
+  [ STEM < "phá" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_arrest_v_rel" ].
+
+boy := verb138-verb-lex &
+  [ STEM < "boy" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_[wishing to go]_v_rel" ].
+
+kok_3 := verb138-verb-lex &
+  [ STEM < "kok" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_head_v_rel" ].
+
+kólhiŋ_3 := verb138-verb-lex &
+  [ STEM < "kólhiŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_rust_v_rel" ].
+
+kə́rəm_3 := verb138-verb-lex &
+  [ STEM < "kə́rəm" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_how_v_rel" ].
+
+nə́tte_6 := verb138-verb-lex &
+  [ STEM < "nə́tte" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_is_v_rel" ].
+
+téŋ_5 := verb138-verb-lex &
+  [ STEM < "téŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_complete_v_rel" ].
+
+waŋ_5 := verb138-verb-lex &
+  [ STEM < "waŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tall_v_rel" ].
+
+kón := verb138-verb-lex &
+  [ STEM < "kón" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_device-or-tool_v_rel" ].
+
+kót := verb138-verb-lex &
+  [ STEM < "kót" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_contain_v_rel" ].
+
+ləy_2 := verb138-verb-lex &
+  [ STEM < "ləy" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be_v_rel" ].
+
+təw_2 := verb138-verb-lex &
+  [ STEM < "təw" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_do_v_rel" ].
+
+ləŋ_3 := verb138-verb-lex &
+  [ STEM < "ləŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cast_v_rel" ].
+
+toŋ_2 := verb138-verb-lex &
+  [ STEM < "toŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_mount_v_rel" ].
+
+hát_2 := verb138-verb-lex &
+  [ STEM < "hát" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_comb_v_rel" ].
+
+háyčhinnə := verb138-verb-lex &
+  [ STEM < "háyčhinnə" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_wrongly.claim_v_rel" ].
+
+hə́raw := verb138-verb-lex &
+  [ STEM < "hə́raw" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_joy_v_rel" ].
+
+káy_3 := verb138-verb-lex &
+  [ STEM < "káy" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ashamed-or-break.apart_v_rel" ].
+
+lóŋ := verb138-verb-lex &
+  [ STEM < "lóŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_trap_v_rel" ].
+
+sénnə := verb138-verb-lex &
+  [ STEM < "sénnə" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_guard_v_rel" ].
+
+íroy := verb138-verb-lex &
+  [ STEM < "íroy" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_swim_v_rel" ].
+
+khót := verb138-verb-lex &
+  [ STEM < "khót" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_scratch_v_rel" ].
+
+yəw := verb138-verb-lex &
+  [ STEM < "yəw" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_reach_v_rel" ].
+
+sít := verb138-verb-lex &
+  [ STEM < "sít" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sell_v_rel" ].
+
+lak := verb138-verb-lex &
+  [ STEM < "lak" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_come_v_rel" ].
+
+máŋ_2 := verb138-verb-lex &
+  [ STEM < "máŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lose_v_rel" ].
+
+háp := verb138-verb-lex &
+  [ STEM < "háp" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_put_v_rel" ].
+
+ká_2 := verb138-verb-lex &
+  [ STEM < "ká" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_climb_v_rel" ].
+
+kham := verb138-verb-lex &
+  [ STEM < "kham" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_prohibit_v_rel" ].
+
+čhinnə_2 := verb138-verb-lex &
+  [ STEM < "čhinnə" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pretend.to_v_rel" ].
+
+čhét := verb156-verb-lex &
+  [ STEM < "čhét" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_wear_v_rel" ].
+
+čhíŋ := verb-attributive-lex &
+  [ STEM < "čhíŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_wise_v_rel" ].
+
+čə́p := verb156-verb-lex &
+  [ STEM < "čə́p" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_compress_v_rel" ].
+
+ŋáŋ_6 := verb156-verb-lex &
+  [ STEM < "ŋáŋ" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_speak_v_rel" ].
+
+čaw := verb-attributive-lex &
+  [ STEM < "čaw" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be+big_v_rel" ].
+
+ŋəw := verb-attributive-lex &
+  [ STEM < "ŋəw" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be+white_v_rel" ].
+
+nuŋŋay := verb-attributive-lex &
+  [ STEM < "nuŋŋay" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be+happy_v_rel" ].
+
+hungry := verb-attributive-lex &
+  [ STEM < "hungryInMNI" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be+hungry_v_rel" ].
+
+nuŋčhi_2 := verb-attributive-lex &
+  [ STEM < "nuŋčhi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be+lovely_v_rel" ].
+
+čá_mood := verb-mood-satisfied-verb-lex &
+  [ STEM < "čá" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
+
+tan_mood := verb-mood-satisfied-verb-lex &
+  [ STEM < "tan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_chase_v_rel" ].
+
+;;; Auxiliaries
+
+_3Dni_1 := aux1-aux-lex &
+  [ STEM < "PLACEHOLDER" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be_v_rel" ].
+
+;;; Copulas
+ni_cop := cop-lex &
+ [ STEM < "=ni" > ].
+
+ni_neg_cop := cop-lex &
+  [ STEM < "=nəttə" >,
+    SYNSEM.LKEYS.KEYREL.PRED "neg_rel" ].
+
+noun-cop := noun-comp-copula-verb-lex &
+  [ STEM < "=ni" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be_v_id_rel" ].
+
+noun-neg-cop := noun-comp-copula-verb-lex &
+  [ STEM < "=nəttə" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be+not_v_id_rel" ].
+
+;;; Adverbs
+
+;;; Complementizers
+
+háy_3Dnə := comps1-complementizer-lex-item &
+  [ STEM < "háy=nə" > ].
+
+háy-pəsi := comps1-complementizer-lex-item &
+  [ STEM < "háy-pəsi" > ].
+
+háy-pədu := comps1-complementizer-lex-item &
+  [ STEM < "háy-pədu" > ].

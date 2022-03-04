@@ -2543,13 +2543,13 @@ nuŋčhi_2 := verb-attributive-lex &
   [ STEM < "nuŋčhi" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be+lovely_v_rel" ].
 
-čá_mood := verb-mood-satisfied-verb-lex &
-  [ STEM < "čá" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
+;čá_mood := verb-mood-satisfied-verb-lex &
+;  [ STEM < "čá" >,
+;    SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
 
-tan_mood := verb-mood-satisfied-verb-lex &
-  [ STEM < "tan" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_chase_v_rel" ].
+;tan_mood := verb-mood-satisfied-verb-lex &
+;  [ STEM < "tan" >,
+;    SYNSEM.LKEYS.KEYREL.PRED "_chase_v_rel" ].
 
 ;;; Auxiliaries
 

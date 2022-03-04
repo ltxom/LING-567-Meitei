@@ -2549,6 +2549,8 @@ adj-head-phrase := basic-head-mod-phrase-simple & head-final &
 				      REL.LIST < > ],
                           MODIFIED.PERIPH #periph ] ].
 
+
+
 ;;; 2012-26-09 removed this constraint from head-adj-phrase
 ;;    HEAD-DTR.SYNSEM.MODIFIED notmod-or-rmod,
 ;; As Antske Fokkens points out in an e-mail to matrix-dev,

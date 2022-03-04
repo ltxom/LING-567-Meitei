@@ -416,3 +416,52 @@ Phenomena: {emb-d,neg}
 1P fish eat-NEG-POM =COP
 'I am not-eat-fish (person).'
 
+# 42
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+húyki garí túmí
+húy=ki garí túm-í
+Dogs=POSS cars sleep-NHYP
+'The dog's cars sleeps'
+
+# 43
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+garíki húy túmí
+garí=ki húy túm-í
+Car=POSS dogs sleep-NHYP
+'The car's dogs sleeps'
+
+# 44
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+ə́yki húy túmí
+ə́y=ki húy túm-í
+1P=POSS dogs sleep-NHYP
+'My dogs sleep'
+
+# 45
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+nə́ŋki húy túmí
+nə́ŋ=ki húy túm-í
+2P=POSS dogs sleep-NHYP
+'Your dogs sleep'
+
+# 46
+Source: {a: 79, b: 218, author}
+Vetted: t
+Judgment: g
+Phenomena: {}
+máki húy túmí
+má=ki húy túm-í
+3P=POSS dogs sleep-NHYP
+'His/her dogs sleep'

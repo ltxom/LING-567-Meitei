@@ -1,0 +1,128 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+;;; Inflecting Lexical Rule Instances
+
+noun-case-null-suffix :=
+noun-case-null-lex-rule.
+
+noun-case-ablative-suffix :=
+%suffix (* =təgi)
+noun-case-ablative-lex-rule.
+
+noun-case-locative-suffix :=
+%suffix (* =tə)
+noun-case-locative-lex-rule.
+
+noun-case-associative-suffix :=
+%suffix (* =kə)
+noun-case-associative-lex-rule.
+
+noun-case-agentive-suffix :=
+%suffix (* =nə)
+noun-case-agentive-lex-rule.
+
+noun-case-patient-suffix :=
+%suffix (* =pu)
+noun-case-patient-lex-rule.
+
+;noun-determiner-pc-distance_lrt-suffix :=
+;%suffix (* -tú)
+;noun-determiner-pc-distance_lrt-lex-rule.
+
+;noun-determiner-pc-proximate_lrt-suffix :=
+;%suffix (* -čhí)
+;noun-determiner-pc-proximate_lrt-lex-rule.
+
+noun-possessor-pc_lrt1-suffix :=
+%suffix (* =ki)
+noun-possessor-pc_lrt1-lex-rule.
+
+noun-possessum-pc_lrt1-prefix :=
+%prefix (* í-)
+noun-possessum-pc_lrt1-lex-rule.
+
+noun-possessum-pc_lrt2-prefix :=
+%prefix (* nə́-)
+noun-possessum-pc_lrt2-lex-rule.
+
+noun-possessum-pc_lrt3-prefix :=
+%prefix (* mə́-)
+noun-possessum-pc_lrt3-lex-rule.
+
+verb-upward-suffix :=
+%suffix (* -khət)
+verb-upward-lex-rule.
+
+verb-downward-suffix :=
+%suffix (* -thə)
+verb-downward-lex-rule.
+
+verb-inward-suffix :=
+%suffix (* -sin)
+verb-inward-lex-rule.
+
+verb-outward-suffix :=
+%suffix (* -thok)
+verb-outward-lex-rule.
+
+verb-pc3_lrt1-suffix :=
+%suffix (* -lə)
+verb-pc3_lrt1-lex-rule.
+
+verb-pc16_lrt1-suffix :=
+%suffix (* -li)
+verb-pc16_lrt1-lex-rule.
+
+verb-pc16_lrt2-suffix :=
+%suffix (* -čhi)
+verb-pc16_lrt2-lex-rule.
+
+;verb-pc19_lrt2-suffix :=
+;%suffix (* -u)
+;verb-pc19_lrt2-lex-rule.
+
+verb-pc27_lrt1-suffix :=
+%suffix (* -kə)
+verb-pc27_lrt1-lex-rule.
+
+verb-pc30_lrt1-suffix :=
+%suffix (* -nə)
+verb-pc30_lrt1-lex-rule.
+
+verb-pc34_lrt1-suffix :=
+%suffix (* -ke)
+verb-pc34_lrt1-lex-rule.
+
+verb-pc42_lrt1-suffix :=
+%suffix (* =tə)
+verb-pc42_lrt1-lex-rule.
+
+attributive-prefix :=
+%prefix (* ə́-)
+verb-attributive-pc_lrt1-lex-rule.
+
+verb-pc70_lrt1-suffix :=
+%suffix (* -loy)
+verb-pc70_lrt1-lex-rule.
+
+nom-suffix :=
+%suffix (* -pə)
+nom-lex-rule.
+
+nhyp-suffix :=
+%suffix (* -í)
+nhyp-lex-rule.
+
+asrt-suffix :=
+%suffix (* -e)
+asrt-lex-rule.
+
+;null-mood-suffix :=
+;null-mood-lex-rule.
+
+verb-neg_lrt-suffix :=
+%suffix (* -tə)
+verb-neg_lrt-lex-rule.
+
+nom-neg_lrt-suffix :=
+%suffix (* -tə)
+nom-neg_lrt-lex-rule.
