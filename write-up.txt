@@ -7,13 +7,64 @@ Mar 4th, 2022
 
 Fix lab 8:
 
-asrt-assertive := mood. -> asrt := mood.
+1. asrt-assertive := mood. -> asrt := mood.
 
-locative-pp-phrase:
-    1. reduce ambiguity by removing SPEC < >
-    2. PRED "_loc_p_rel"
+2. fixed nom-lex rule to take SENTENCE-MOOD-FLAG + and remove corresponding constraint on mother and daughter:
 
-TODO: Transfer rules, Trigger rules
+    nominalizer-lex-rule-super := infl-lex-rule & high-or-mid-nominalization-lex-rule &
+      [ DTR nominalizer-rule-dtr ].
+
+    nom-lex-rule := nominalizer-lex-rule-super & [ INFLECTED.SENTENCE-MOOD-FLAG + ].
+
+3. Transfer and trigger rules:
+Our mni grammar needs 2 transfer rules: the first is for the locative-pp phrase to translate the sentence like:
+    0. ə́y bəzar=tə =ni
+       1P park=LOC =COP
+       'I am in the park.'
+mni, not like English, has a in_p_rel in its gloss, but rather has a locative marker to indicate a formation of PP. Therefore,
+our transfer rule is to input "in_p_rel" and output as pred value "_loc_p_rel".
+    in-loc-mtr := monotonic_mtr &
+    [ INPUT [ RELS < [PRED "_in_p_rel",
+               LBL #lbl,
+               ARG0 #arg0,
+               ARG1 #arg1,
+               ARG2 #arg2 ] >,
+          HCONS < > ],
+      OUTPUT [ RELS < [ PRED "_loc_p_rel",
+                 LBL #lbl,
+                         ARG0 #arg0,
+                 ARG1 #arg1,
+                 ARG2 #arg2 ] > ]].
+Prior to that, we changed the pred value in locative-pp-phrase to become "_loc_p_rel" to match the rule.
+instantiation in acm.mtr:
+    in-loc := in-loc-mtr & [].
+
+The second transfer rule is the adj-> stative verb. mni uses stative-verb=COP as the counterpart for adjP non-verbal predicates in English,
+so we need a transfer rule to account hungry_a_rel to become be+hungry_v_rel in mni.
+
+the adj->stative transfer rule we added in acm.tdl
+    a-stative-v-mtr := monotonic_mtr &
+    [ INPUT [ RELS < [PRED "_hungry_a_rel",
+               LBL #lbl,
+               ARG0 #arg0,
+               ARG1 #arg1,
+               ARG2 #arg2 ] >,
+          HCONS < > ],
+      OUTPUT [ RELS < [ PRED "_be+hungry_v_rel",
+                 LBL #lbl,
+                         ARG0 #arg0,
+                 ARG1 #arg1,
+                 ARG2 #arg2 ] > ]].
+
+the instantiation in acm.mtr:
+    a-stative-v := a-stative-v-mtr & [].
+
+For the semantically empty copula, we need a trigger rule.
+Trigger rule for copula =ni:
+    ni_gr := generator_rule &
+    [ CONTEXT.RELS <! [ PRED "~._p_" ] !>,
+      FLAGS.TRIGGER "ni_cop" ].
+
 
 2. Documentation of what you changed in your grammar to cut back on overgeneration. Include IGT or pointers to the MMT sentences to illustrate.
 IGT for possessive marker:
@@ -172,6 +223,38 @@ Now, the head-spec-2 still cannot form a NP because it inherits from basic-head-
         HEAD-DTR.SYNSEM.LOCAL.CAT.POSSESSUM #poss ].
 
 Now, the case in #2 and #3 are correctly ruled out, and #1 can be parsed correctly.
+
+locative-pp-phrase fix:
+After the transfer rule and trigger rule worked, we found out in eng to mni translation for sentence No.16
+    húy bəzar=tə =ni
+    dog market=LOC =COP
+    'The dog is in the market.'
+generated 'húy =ni bəzar=tə', which uses head-spec rule to put copula before the PP. We add a constraint of SPEC < > in locative-pp-phrase：
+tdl:
+    locative-pp-phrase := unary-phrase &
+    [ SYNSEM [ NON-LOCAL #nl,
+               LOCAL.CAT [ HEAD adp & [ MOD < [ LOCAL intersective-mod &
+                              [ CAT.HEAD verb,
+                                CONT.HOOK.INDEX #xarg ] ] > ],
+                   VAL [ COMPS < >,
+                     SUBJ < >,
+                     SPEC < >,
+                     SPR < > ]]],
+      C-CONT [ HOOK [ LTOP #ltop,
+              INDEX #index,
+              XARG #xarg ],
+              RELS.LIST < arg12-ev-relation &
+                  [ PRED "_loc_p_rel",
+                LBL #ltop,
+                ARG0 #index,
+                ARG1 #xarg,
+                ARG2 #dtr ] >,
+           HCONS.LIST < >  ],
+              ARGS < [ SYNSEM [ NON-LOCAL #nl,
+                    LOCAL [ CAT [ HEAD noun & [CASE loc],
+                          VAL.SPR < > ],
+                        CONT.HOOK [ INDEX #dtr ] ] ] ] > ].
+
 
 
 3. For any residual realization ambiguity (multiple outputs for one input), characterize the sources (e.g. free word order).

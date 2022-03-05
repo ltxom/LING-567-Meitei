@@ -445,18 +445,6 @@ eat-mtr := monotonic_mtr &
 
 
 ;; mni
-stative-v-a-mtr := monotonic_mtr &
-[ OUTPUT [ RELS < [PRED "_hungry_a_rel",
-		   LBL #lbl,
-		   ARG0 #arg0,
-		   ARG1 #arg1,
-		   ARG2 #arg2 ] >,
-	  HCONS < > ],
-  INPUT [ RELS < [ PRED "_be+hungry_v_rel",
-		     LBL #lbl,
-             ARG0 #arg0,
-		     ARG1 #arg1,
-		     ARG2 #arg2 ] > ]].
 
 a-stative-v-mtr := monotonic_mtr &
 [ INPUT [ RELS < [PRED "_hungry_a_rel",
