@@ -16,13 +16,13 @@ noun-case-associative-suffix :=
 %suffix (* =kə)
 noun-case-associative-lex-rule.
 
-noun-case-agentive-suffix :=
-%suffix (* =nə)
-noun-case-agentive-lex-rule.
+;noun-case-agentive-suffix :=
+;%suffix (* =nə)
+;noun-case-agentive-lex-rule.
 
-noun-case-patient-suffix :=
-%suffix (* =pu)
-noun-case-patient-lex-rule.
+;noun-case-patient-suffix :=
+;%suffix (* =pu)
+;noun-case-patient-lex-rule.
 
 ;noun-determiner-pc-distance_lrt-suffix :=
 ;%suffix (* -tú)

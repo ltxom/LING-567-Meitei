@@ -52,6 +52,39 @@ basic-bare-np-phrase :+ [ SYNSEM.LOCAL.CAT [ VAL.SPEC < >,
     HEAD-DTR.SYNSEM.LOCAL.CAT [ HEAD #head,
                                 POSSESSUM #possessum & nonpossessive ] ].
 
+dp-head-only := basic-unary-phrase & headed-phrase &
+  [ HEAD-DTR #head,
+    ARGS < #head > ].
+
+basic-bare-dp-phrase := dp-head-only & unary-nonloc-phrase &
+  [ SYNSEM [ LOCAL.CAT [ WH #wh,
+                       VAL [ SPR < >,
+                           SUBJ < >,
+                           COMPS < >, SPEC #spec ] ] ],
+    HEAD-DTR.SYNSEM.LOCAL [ CAT [ WH #wh,
+                                  HEAD det,
+                                  VAL [ SPR < unexpressed &
+                                              [ LOCAL.CAT.HEAD +nd,
+                                                OPT + ] >,
+                                        SUBJ < >,
+                                        COMPS < >, SPEC #spec ] ],
+                            CONT.HOOK [ INDEX #index,
+                                        LTOP #larg ] ],
+    C-CONT [ RELS.LIST < quant-relation &
+                     [ ARG0 #index,
+                       RSTR #harg ] >,
+             HCONS.LIST < qeq &
+                      [ HARG #harg,
+                        LARG #larg ] >,
+             ICONS.LIST < >,
+             HOOK [ INDEX #index ] ] ].
+
+basic-bare-dp-phrase :+ [ SYNSEM.LOCAL.CAT [ VAL.SPEC < >,
+                       HEAD #head,
+                       POSSESSUM #possessum ],
+    HEAD-DTR.SYNSEM.LOCAL.CAT [ HEAD #head,
+                                POSSESSUM #possessum & nonpossessive ] ] & [INFL-SATISFIED.NOUN-CASE-FLAG -] .
+
 basic-head-1st-comp-phrase :+ [ SYNSEM.LOCAL.CAT.POSSESSUM #poss,
     HEAD-DTR.SYNSEM.LOCAL.CAT.POSSESSUM #poss ].
 
@@ -1073,6 +1106,9 @@ poss-unary-phrase-1 := poss-unary-phrase &
 ; introduced to match the semantic effect of bare NPs in your language.
 
 bare-np-phrase := basic-bare-np-phrase &
+  [ C-CONT.RELS.LIST < [ PRED "exist_q_rel" ] > ].
+
+bare-dp-phrase := basic-bare-dp-phrase &
   [ C-CONT.RELS.LIST < [ PRED "exist_q_rel" ] > ].
 
 basic-filler-phrase :+ [ SYNSEM.NON-LOCAL.SLASH.LIST < >,

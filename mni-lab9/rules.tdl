@@ -18,3 +18,7 @@ bare-np := bare-np-phrase.
 loc-pp := locative-pp-phrase.
 
 mid-nominalized-clause := mid-nominalized-clause-phrase.
+
+head-spec-2 := head-spec-phrase-2.
+
+poss-unary-1 := poss-unary-phrase-1.

@@ -27,15 +27,16 @@ head :+ [ PRON bool,
     PRD bool,
     NMZ bool,
     POSSESSOR poss,
+    SPEC-INIT bool,
     FORM form ].
 
 noun :+ [ CASE case ].
 
 inflected :+ [ SENTENCE-MOOD-FLAG luk,
-                                         NOUN-CASE-FLAG luk  ].
+                                         NOUN-CASE-FLAG luk ].
 
 infl-satisfied :+ [ SENTENCE-MOOD-FLAG na-or-+,
-                                                  NOUN-CASE-FLAG na-or-+  ].
+                                                  NOUN-CASE-FLAG na-or-+ ].
 
 png :+ [ PER person,
     NUM number ].
@@ -56,8 +57,6 @@ basic-head-1st-comp-phrase :+ [ SYNSEM.LOCAL.CAT.POSSESSUM #poss,
 
 basic-head-opt-subj-phrase :+ [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
 
-poss-case := case.
-
 ;;;;;;;;;;;;;;
 ;;; Features
 ;;;;;;;;;;;;;;
@@ -71,6 +70,7 @@ agn := agn+pat.
 pat := agn+pat.  ; pat
 abl := real-case.  ; abl
 loc := real-case.  ; loc
+poss-case := real-case.
 ass := real-case.  ; ass
 ins := real-case.  ; inst
 
@@ -125,7 +125,7 @@ recip := mood.
 opt := mood.
 intt := mood.
 nhyp-declarative := mood.
-asrt-assertive := mood.
+asrt := mood.
 null := mood.
 
 ;;;;;;;;;;;;;;;;;;;
@@ -497,25 +497,26 @@ noun-comp-copula-verb-lex := agn-pat-mood-satisfied-transitive-verb-lex.
 locative-pp-phrase := unary-phrase &
 [ SYNSEM [ NON-LOCAL #nl,
            LOCAL.CAT [ HEAD adp & [ MOD < [ LOCAL intersective-mod &
-    [ CAT.HEAD verb,
-                                                          CONT.HOOK.INDEX #xarg ] ] > ],
-                      VAL [ COMPS < >,
-                        SUBJ < >,
-                        SPR < > ]]],
-        C-CONT [ HOOK [ LTOP #ltop,
-                INDEX #index,
-                XARG #xarg ],
+						  [ CAT.HEAD verb,
+						    CONT.HOOK.INDEX #xarg ] ] > ],
+		       VAL [ COMPS < >,
+			     SUBJ < >,
+			     SPEC < >,
+			     SPR < > ]]],
+  C-CONT [ HOOK [ LTOP #ltop,
+		  INDEX #index,
+		  XARG #xarg ],
           RELS.LIST < arg12-ev-relation &
-               [ PRED "_in_p_rel",
-                 LBL #ltop,
-                 ARG0 #index,
-                 ARG1 #xarg,
-                 ARG2 #dtr ] >,
-             HCONS.LIST < >  ],
+		      [ PRED "_loc_p_rel",
+			LBL #ltop,
+			ARG0 #index,
+			ARG1 #xarg,
+			ARG2 #dtr ] >,
+	   HCONS.LIST < >  ],
           ARGS < [ SYNSEM [ NON-LOCAL #nl,
-                        LOCAL [ CAT [ HEAD noun & [CASE loc],
-                                      VAL.SPR < > ],
-                            CONT.HOOK [ INDEX #dtr ] ] ] ] > ].
+			    LOCAL [ CAT [ HEAD noun & [CASE loc],
+					  VAL.SPR < > ],
+				    CONT.HOOK [ INDEX #dtr ] ] ] ] > ].
 
 ;; Adposition
 
@@ -579,7 +580,8 @@ high-or-mid-nominalization-lex-rule := cat-change-with-ccont-lex-rule & same-con
                            HC-LIGHT #hc-light,
                            POSTHEAD #posthead ],
     C-CONT [ RELS.LIST < >,
-             HCONS.LIST < > ] ].
+             HCONS.LIST < > ],
+    INFLECTED.SENTENCE-MOOD-FLAG + ].
 
 ;;; Intermediate rule types
 
@@ -631,29 +633,10 @@ noun-possessor-pc-lex-rule-super := infl-lex-rule &
     DTR noun-possessor-pc-rule-dtr &
         [ INFLECTED #infl ] ].
 
-possessor-lex-rule-1 := head-change-with-ccont-lex-rule &
-  [ SYNSEM.LOCAL.CAT [ POSTHEAD -,
-                       HEAD noun &
-                            [ CASE poss-case,
-                              MOD.FIRST [ LOCAL [ CAT [ VAL.SPR < [ ] >,
-                                                        HEAD +np &
-                                                             [ PRON - ] ],
-                                                  CONT.HOOK [ INDEX #possessum,
-                                                              LTOP #lbl ] ],
-                                          OPT - ],
-                              POSSESSOR possessor-1 ],
-                       VAL #val ],
-    C-CONT [ HOOK #hook,
-             RELS.LIST < arg12-ev-relation &
-                         [ PRED "poss_rel",
-                           LBL #lbl,
-                           ARG1 #possessum,
-                           ARG2 #possessor ] >,
-             HCONS.LIST < >,
-             ICONS.LIST < > ],
-    DTR.SYNSEM.LOCAL [ CONT.HOOK #hook &
-                                 [ INDEX #possessor ],
-                       CAT.VAL #val ] ].
+possessor-lex-rule-1 := head-change-only-lex-rule &
+  [ SYNSEM.LOCAL.CAT.HEAD det &
+                          [
+                            POSSESSOR possessor-1 ] ].
 
 noun-determiner-pc-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & noun-case-rule-dtr &
   [ DTR noun-determiner-pc-dtr ].
@@ -925,11 +908,9 @@ verb-pc70_lrt1-lex-rule := verb-pc70-lex-rule-super &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT npot ].
 
 nominalizer-lex-rule-super := infl-lex-rule & high-or-mid-nominalization-lex-rule &
-  [ INFLECTED #infl,
-    DTR nominalizer-rule-dtr &
-        [ INFLECTED #infl ] ].
+  [ DTR nominalizer-rule-dtr ].
 
-nom-lex-rule := nominalizer-lex-rule-super.
+nom-lex-rule := nominalizer-lex-rule-super & [ INFLECTED.SENTENCE-MOOD-FLAG + ].
 
 mid-nominalized-clause-phrase := unary-phrase &
   [ SYNSEM [ LOCAL [ CAT [ HEAD noun &
@@ -960,6 +941,7 @@ mid-nominalized-clause-phrase := unary-phrase &
                               CONT.HOOK [ XARG #xarg,
                                           LTOP #larg ],
                               COORD - ] ] ] > ].
+
 mood-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
                          [ INFLECTED.SENTENCE-MOOD-FLAG +].
 
@@ -973,7 +955,7 @@ asrt-mood-lex-rule-super := mood-lex-rule-super &
     [ DTR asrt-mood-rule-dtr  ].
 
 asrt-lex-rule := asrt-mood-lex-rule-super &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.MOOD asrt-assertive ].
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.MOOD asrt ].
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Phrasal Types
@@ -1006,7 +988,86 @@ adj-head-int-phrase :+ possessum-mod-rule.
 ; Rules for building NPs.  Note that the Matrix uses SPR for
 ; the specifier of nouns and SUBJ for the subject (specifier) of verbs.
 
-head-spec-phrase := basic-head-spec-phrase & head-initial.
+basic-head-spec-phrase-custom-super := binary-nonloc-phrase & phrasal &
+              binary-headed-phrase &
+  [ INFLECTED infl-satisfied,
+    SYNSEM [ LOCAL.CAT [ WH [ OR < #or1, #or2 > ],
+                         VAL [ SUBJ #subj,
+                               COMPS #spcomps,
+                               SPR #spr,
+                               SPEC #spec ],
+                         POSTHEAD #ph,
+                         HC-LIGHT - ],
+              MODIFIED #modif ],
+    HEAD-DTR [ INFLECTED infl-satisfied,
+               SYNSEM [ LOCAL [ CAT [ WH #or1,
+                                      VAL [ SUBJ #subj,
+                                            COMPS olist & #comps,
+                                            SPR < #synsem &
+                                                  canonical-synsem . #spr >,
+                                            SPEC #spec ],
+                                      POSTHEAD #ph ],
+                                CONT.HOOK #hdhook ],
+                        MODIFIED #hmodif ] ],
+    NON-HEAD-DTR.SYNSEM #synsem &
+     [ LOCAL [ CAT [ WH #or2, VAL [ SPEC < [ LOCAL [ CAT [
+                                                  VAL.COMPS #comps ],
+                                            CONT.HOOK #hdhook ],
+                                    MODIFIED #hmodif ] >,
+                           COMPS #spcomps ] ] ],
+       MODIFIED #modif ],
+    C-CONT [ RELS.LIST < >, HCONS.LIST < >, ICONS.LIST < > ] ].
+
+head-spec-phrase := basic-head-spec-phrase-super & head-initial &
+  [ HEAD-DTR.SYNSEM.LOCAL.CAT.POSSESSUM #poss,
+    NON-HEAD-DTR.SYNSEM.LOCAL.CAT [ VAL.SPEC < [ LOCAL.CAT.POSSESSUM #poss ] >,
+                                    HEAD.SPEC-INIT - ] ].
+
+head-spec-phrase-2 := head-final & basic-head-spec-phrase-custom-super &
+  [ NON-HEAD-DTR.SYNSEM.LOCAL.CAT [ HEAD.SPEC-INIT +,
+                                    VAL.SPEC < [ LOCAL.CAT.POSSESSUM #poss ] > ],
+    HEAD-DTR.SYNSEM.LOCAL.CAT.POSSESSUM #poss ].
+
+poss-unary-phrase := basic-unary-phrase &
+  [ SYNSEM [ NON-LOCAL #nonloc,
+             LOCAL [ CONT.HOOK #hook,
+                     CAT [ HEAD det &
+                                [ POSSESSOR possessor ],
+                           VAL [ SPR < >,
+                                 COMPS < >,
+                                 SUBJ < >,
+                                 SPEC < [ LOCAL [ CAT [ VAL.COMPS < >,
+                                                        HEAD det &
+                                                             [ PRON - ] ],
+                                                  CONT.HOOK #hook &
+                                                            [ INDEX #possessum &
+                                                                    [ COG-ST uniq-id ],
+                                                              LTOP #lbl ] ] ] > ] ] ] ],
+    C-CONT [ RELS.LIST < arg12-ev-relation &
+                         [ PRED "poss_rel",
+                           LBL #lbl,
+                           ARG1 #possessum,
+                           ARG2 #possessor ],
+                         quant-relation &
+                         [ PRED "exist_q_rel",
+                           ARG0 #possessum,
+                           RSTR #harg ] >,
+             HCONS.LIST < qeq &
+                          [ HARG #harg,
+                            LARG #lbl ] >,
+             ICONS.LIST < > ],
+    ARGS < [ SYNSEM [ LOCAL [ CAT [ VAL [
+                                          COMPS < >,
+                                          SUBJ < >,
+                                          SPEC < > ],
+                                    HEAD det ],
+                              CONT.HOOK.INDEX #possessor ],
+                      NON-LOCAL #nonloc ] ] > ] .
+
+poss-unary-phrase-1 := poss-unary-phrase &
+  [ ARGS < [ SYNSEM.LOCAL.CAT.HEAD.POSSESSOR possessor-1 ] >,
+    SYNSEM.LOCAL.CAT [ HEAD.SPEC-INIT +,
+                       VAL.SPEC.FIRST.LOCAL.CAT.POSSESSUM nonpossessive ] ].
 
 ; Bare NP phrase.  Consider modifying the PRED value of the quantifier relation
 ; introduced to match the semantic effect of bare NPs in your language.
